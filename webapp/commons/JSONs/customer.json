@@ -1,0 +1,54 @@
+{
+    "customer": [
+        {
+            "id": 1,
+            "name": "Aqeel",
+            "primaryContact": 9876543210
+    },
+        {
+            "id": 2,
+            "name": "Pooja Sharma",
+            "primaryContact": 9876543210
+    },
+        {
+            "id": 3,
+            "name": "John Matthew",
+            "primaryContact": 9876543210
+    },
+        {
+            "id": 4,
+            "name": "Arindam S. Roy",
+            "primaryContact": 9876543210
+    },
+        {
+            "id": 5,
+            "name": "Jitendra",
+            "primaryContact": 9876543210
+    },
+        {
+            "id": 6,
+            "name": "Suchitra Rajot",
+            "primaryContact": 9876543210
+    },
+        {
+            "id": 7,
+            "name": "Sourabh Shrivastava",
+            "primaryContact": 9876543210
+    },
+        {
+            "id": 8,
+            "name": "Jagat Pal Singh",
+            "primaryContact": 9876543210
+    },
+        {
+            "id": 9,
+            "name": "Sharda Sharma",
+            "primaryContact": 9876543210
+    },
+        {
+            "id": 10,
+            "name": "Ravi Kumar",
+            "primaryContact": 9876543210
+    }
+  ]
+}
