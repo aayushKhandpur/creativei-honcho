@@ -1,0 +1,1165 @@
+{
+    "menuItem": [
+        {
+            "id": 1,
+            "name": "Velvet Escoffier (Choice Of Cream Soup)",
+            "price": 125,
+            "quantity": 0,
+            "description": "Wild mushroom soup | Cream of broccoli soup | Cream of tomato soup",
+            "isComboMeal": false
+    },
+        {
+            "id": 2,
+            "name": "Basil And Tomato Soup",
+            "price": 120,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 3,
+            "name": "Vegetable Clear Soup",
+            "price": 120,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 4,
+            "name": "Hot & Sour",
+            "price": 125,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 5,
+            "name": "Sweet Corn",
+            "price": 125,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 6,
+            "name": "Cream of Chicken",
+            "price": 150,
+            "quantity": 0,
+            "description": "Creamy chicken soup garnished with chicken dices and parmesan cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 7,
+            "name": "Chicken Clear Soup",
+            "price": 150,
+            "quantity": 0,
+            "description": "Chicken clear soup with chicken dices",
+            "isComboMeal": false
+    },
+        {
+            "id": 8,
+            "name": "Hot and Sour Chicken",
+            "price": 150,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 9,
+            "name": "Sweet corn soup Chicken",
+            "price": 150,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 10,
+            "name": "Greek Salad",
+            "price": 195,
+            "quantity": 0,
+            "description": "Traditional greek salad with assorted lettuce cucumber, tomato, onion, feta chesse",
+            "isComboMeal": false
+    },
+        {
+            "id": 11,
+            "name": "Caesar Salad",
+            "price": 175,
+            "quantity": 0,
+            "description": "Mixed lettuces, croutons, garden vegetable",
+            "isComboMeal": false
+    },
+        {
+            "id": 12,
+            "name": "Whole Wheat Pasta Salad",
+            "price": 175,
+            "quantity": 0,
+            "description": "Mixed lettuces, assorted bellpeppers, with orange, mustard vinaigrette dressing",
+            "isComboMeal": false
+    },
+        {
+            "id": 13,
+            "name": "Sauteed Garden Vegetable Salad",
+            "price": 175,
+            "quantity": 0,
+            "description": "Zucchini, bellpepper, broccoli, babycorn, olives",
+            "isComboMeal": false
+    },
+        {
+            "id": 14,
+            "name": "Apple & Feta Salad",
+            "price": 200,
+            "quantity": 0,
+            "description": "Apple, walnut, lettuce, feta & vinaigrette dressing",
+            "isComboMeal": false
+    },
+        {
+            "id": 15,
+            "name": "Egg White Bhurji With Brown Rice",
+            "price": 180,
+            "quantity": 0,
+            "description": "Slow cooked egg white bhurji with indian spices served with brown rice",
+            "isComboMeal": false
+    },
+        {
+            "id": 16,
+            "name": "Sauted Mushroom & Broccoli With Brown Rice",
+            "price": 160,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 17,
+            "name": "Cafe Lazy Mojo Focaccia Sandwich",
+            "price": 160,
+            "quantity": 0,
+            "description": "Grilled mixed vegetables, cheese, tomato, cucumber, lettuce",
+            "isComboMeal": true
+    },
+        {
+            "id": 18,
+            "name": "Focaccia Veggies",
+            "price": 160,
+            "quantity": 0,
+            "description": "Grilled vegetables, sundried tomato with cheese, tomato, cucumber, lettuce",
+            "isComboMeal": true
+    },
+        {
+            "id": 19,
+            "name": "Classic Masala Grilled Sandwich",
+            "price": 150,
+            "quantity": 0,
+            "description": "Slow cooked potatoes with indian spices served in jumbo bread/brown bread",
+            "isComboMeal": true
+    },
+        {
+            "id": 20,
+            "name": "Chicken Tikka Sandwich (Brown Bread)",
+            "price": 200,
+            "quantity": 0,
+            "description": "Chicken tikka, onion, cheese, lettuce",
+            "isComboMeal": true
+    },
+        {
+            "id": 21,
+            "name": "Classic Chicken Sandwich",
+            "price": 175,
+            "quantity": 0,
+            "description": "Soft chicken dices with mayonnaise, cheese, tomato, cucumber, lettuce (focaccia/white bread/brown bread)",
+            "isComboMeal": true
+    },
+        {
+            "id": 22,
+            "name": "Penne Arrabiata",
+            "price": 270,
+            "quantity": 0,
+            "description": "Penne tossed with spicy tomato sauce and garden vegetables",
+            "isComboMeal": false
+    },
+        {
+            "id": 23,
+            "name": "Slow Baked Macaroni",
+            "price": 150,
+            "quantity": 0,
+            "description": "Oven baked macaroni with cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 24,
+            "name": "Whole Wheat Penne Primavera",
+            "price": 270,
+            "quantity": 0,
+            "description": "Penne tossed with mix sauce and garden vegetables",
+            "isComboMeal": false
+    },
+        {
+            "id": 25,
+            "name": "Penne Primavera",
+            "price": 270,
+            "quantity": 0,
+            "description": "Penne tossed with mix sauce and garden vegetables",
+            "isComboMeal": false
+    },
+        {
+            "id": 26,
+            "name": "Penne Pesto",
+            "price": 270,
+            "quantity": 0,
+            "description": "Penne tossed with Pesto sauce and garden vegetables",
+            "isComboMeal": false
+    },
+        {
+            "id": 27,
+            "name": "Penne Alfredo",
+            "price": 270,
+            "quantity": 0,
+            "description": "Penne tossed with white sauce and garden vegetables",
+            "isComboMeal": false
+    },
+        {
+            "id": 28,
+            "name": "Penne Aglio Olio",
+            "price": 270,
+            "quantity": 0,
+            "description": "Penne, extra vigin olive oil, garlic, chilly flakes, mushroom, broccoli, capsicum",
+            "isComboMeal": false
+    },
+        {
+            "id": 29,
+            "name": "Spaghetti Alfredo",
+            "price": 270,
+            "quantity": 0,
+            "description": "Spaghetti pasta with assorted vegetables in creamy white sauce",
+            "isComboMeal": false
+    },
+        {
+            "id": 30,
+            "name": "Fusilli Ai Fungi",
+            "price": 270,
+            "quantity": 0,
+            "description": "Fusilli pasta tossed in creamy white sauce with button mushroom",
+            "isComboMeal": false
+    },
+        {
+            "id": 31,
+            "name": "Aglio Olio With Vegetable",
+            "price": 270,
+            "quantity": 0,
+            "description": "Spaghetti, extra virgin olive oil, garlic, chilly flakes, garden vegetables",
+            "isComboMeal": false
+    },
+        {
+            "id": 32,
+            "name": "Aglio Olio With Mushroom",
+            "price": 250,
+            "quantity": 0,
+            "description": "Spaghetti, extra virgin olive oil, garlic, chilly flakes, mushroom",
+            "isComboMeal": false
+    },
+        {
+            "id": 33,
+            "name": "Wild Mushroom Risotto",
+            "price": 270,
+            "quantity": 0,
+            "description": "Shitake mushroom, fresh mushroom, parmesan cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 34,
+            "name": "Assorted Vegetable Risotto",
+            "price": 270,
+            "quantity": 0,
+            "description": "Olives, bellpeppers, zuchhuni, parmesan cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 35,
+            "name": "Spinach And Garden Vegetables Lasagne",
+            "price": 260,
+            "quantity": 0,
+            "description": "Spinach, sweetcorn, carrot, zuchhuni, bellpeppers",
+            "isComboMeal": false
+    },
+        {
+            "id": 36,
+            "name": "Wild Mushroom Risotto",
+            "price": 290,
+            "quantity": 0,
+            "description": "Shitake mushroom, mushroom, parmesan cheese, grilled chicken/poached egg",
+            "isComboMeal": false
+    },
+        {
+            "id": 37,
+            "name": "Penne Arrabiata",
+            "price": 290,
+            "quantity": 0,
+            "description": "Penne tosssed with spicy tomato sauce & garden vegetables/chicken",
+            "isComboMeal": false
+    },
+        {
+            "id": 38,
+            "name": "Whole Wheat Penne Primavera",
+            "price": 290,
+            "quantity": 0,
+            "description": "Penne tossed with mix sauce & garden vegetable/chicken",
+            "isComboMeal": false
+    },
+        {
+            "id": 39,
+            "name": "Aglio Olio With Vegetable",
+            "price": 290,
+            "quantity": 0,
+            "description": "Spaghetti, extra virgin olive oil, garlic, chilly flakes/Chicken, garden vegetables",
+            "isComboMeal": false
+    },
+        {
+            "id": 40,
+            "name": "Penne Alfredo",
+            "price": 290,
+            "quantity": 0,
+            "description": "Penne tossed with white sauce & garden vegetables/chicken",
+            "isComboMeal": false
+    },
+        {
+            "id": 41,
+            "name": "Slow Roasted Chicken Lasagne",
+            "price": 290,
+            "quantity": 0,
+            "description": "Spinach, sweetcorn, carrot, zuchhuni, bellpeppers, chicken",
+            "isComboMeal": false
+    },
+        {
+            "id": 42,
+            "name": "Quattro Formaggio",
+            "price": 270,
+            "quantity": 0,
+            "description": "Parmeshan, cheddar, mozzarella and feta cheese with sauted spinach",
+            "isComboMeal": false
+    },
+        {
+            "id": 43,
+            "name": "Mexican Pizza",
+            "price": 270,
+            "quantity": 0,
+            "description": "Red kidney beans, bellpepper, onion, jalapeno, mozzarella cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 44,
+            "name": "OTC Pizza",
+            "price": 270,
+            "quantity": 0,
+            "description": "Onion, capsicum, tomato, mozzarella cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 45,
+            "name": "American Sweet Corn Delight Pizza",
+            "price": 270,
+            "quantity": 0,
+            "description": "American sweetcorn, bellpeppers, mozzarella",
+            "isComboMeal": false
+    },
+        {
+            "id": 46,
+            "name": "No Cheese Pizza",
+            "price": 250,
+            "quantity": 0,
+            "description": "Bellpepper, onion, broccolli, olives, mushroom",
+            "isComboMeal": false
+    },
+        {
+            "id": 47,
+            "name": "Margarita",
+            "price": 270,
+            "quantity": 0,
+            "description": "Tomato, basil, mozzarella cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 48,
+            "name": "Pizza Gardenia",
+            "price": 270,
+            "quantity": 0,
+            "description": "Bellpeppers, onion, mushroom",
+            "isComboMeal": false
+    },
+        {
+            "id": 49,
+            "name": "Corn, Sundried Tomato And Spinach Pizza",
+            "price": 270,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 50,
+            "name": "Pesto Rubbed Cottage Cheese Pizza",
+            "price": 270,
+            "quantity": 0,
+            "description": "Cottage cheese, onion & capsicum with parmeshan cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 51,
+            "name": "Lebanese Pizza",
+            "price": 270,
+            "quantity": 0,
+            "description": "Garden vegetables tossed with hummus/falafel",
+            "isComboMeal": false
+    },
+        {
+            "id": 52,
+            "name": "Barbecue Mushroom & Cottage Cheese Pizza",
+            "price": 270,
+            "quantity": 0,
+            "description": "Mushroom & cottage cheese tossed with barbecue sauce",
+            "isComboMeal": false
+    },
+        {
+            "id": 53,
+            "name": "Chilly Paneer Pizza",
+            "price": 280,
+            "quantity": 0,
+            "description": "Chilly paneer, onion, capsicum, and mozzarella cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 54,
+            "name": "Chicken Tikka Pizza",
+            "price": 290,
+            "quantity": 0,
+            "description": "Chicken tikka, onion and mozzarella cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 55,
+            "name": "Spicy Chicken and Mushroom Pizza",
+            "price": 310,
+            "quantity": 0,
+            "description": "Chicken, onion, capsicum, onion and mozzarella cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 56,
+            "name": "Barbecue Chicken Pizza",
+            "price": 290,
+            "quantity": 0,
+            "description": "Chicken, onion, grilled capsicum and mozzarella cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 57,
+            "name": "Chilly Chicken Pizza",
+            "price": 300,
+            "quantity": 0,
+            "description": "Chilly chicken, onion, capsicum and mozzarella cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 58,
+            "name": "Baked Vegetable",
+            "price": 190,
+            "quantity": 0,
+            "description": "Oven baked assorted vegetable with cheese",
+            "isComboMeal": false
+    },
+        {
+            "id": 59,
+            "name": "Mushroom Cigars",
+            "price": 220,
+            "quantity": 0,
+            "description": "Exotic fresh mushroom roll served with sauted vegetable creamy pink sauce",
+            "isComboMeal": false
+    },
+        {
+            "id": 60,
+            "name": "Cottage Cheese Steak",
+            "price": 250,
+            "quantity": 0,
+            "description": "Served with garden vegetable and herb rice",
+            "isComboMeal": true
+    },
+        {
+            "id": 61,
+            "name": "Spinach And Cottage Cheese, Feta Pie",
+            "price": 280,
+            "quantity": 0,
+            "description": "Grilled vegetables, tomato fondue",
+            "isComboMeal": false
+    },
+        {
+            "id": 62,
+            "name": "Exotic Vegetable & Cottage Cheese Schnitzel",
+            "price": 250,
+            "quantity": 0,
+            "description": "Panko coated vegetables & cottage cheese served with potato wedges",
+            "isComboMeal": true
+    },
+        {
+            "id": 63,
+            "name": "Coriander Pesto Grilled Fish",
+            "price": 280,
+            "quantity": 0,
+            "description": "Grilled vegetables, creamy mustard sauce",
+            "isComboMeal": false
+    },
+        {
+            "id": 64,
+            "name": "Almond Crusted Chicken",
+            "price": 310,
+            "quantity": 0,
+            "description": "Almond crusted chicken leg, poached egg with chicken jus glaze",
+            "isComboMeal": false
+    },
+        {
+            "id": 65,
+            "name": "Pan Grilled Chicken",
+            "price": 310,
+            "quantity": 0,
+            "description": "Grilled chicken with garden vegetable and herb rice served with mashed potatoes",
+            "isComboMeal": true
+    },
+        {
+            "id": 66,
+            "name": "Pan Fry Chicken",
+            "price": 290,
+            "quantity": 0,
+            "description": "Pan fry chicken with sauted onion, mushroom, capsicum",
+            "isComboMeal": false
+    },
+        {
+            "id": 67,
+            "name": "Chicken Schnitzel",
+            "price": 290,
+            "quantity": 0,
+            "description": "Panko coated chicken breast served with vegetables, potato wedges",
+            "isComboMeal": true
+    },
+        {
+            "id": 68,
+            "name": "Chicken Steak",
+            "price": 300,
+            "quantity": 0,
+            "description": "Chicken breast stuffed with mushroom, cheese served with poached egg & creamy barbecue sauce",
+            "isComboMeal": true
+    },
+        {
+            "id": 69,
+            "name": "English Channel",
+            "price": 290,
+            "quantity": 0,
+            "description": "Traditional fish and chips served with french fries, tarter sauce",
+            "isComboMeal": true
+    },
+        {
+            "id": 70,
+            "name": "Cajun Spiced Rubbed Basa Fish",
+            "price": 300,
+            "quantity": 0,
+            "description": "Basa fish marinate with homemade cajun spice, grilled vegetable with mustard saucce",
+            "isComboMeal": false
+    },
+        {
+            "id": 71,
+            "name": "Pan Fry Fish",
+            "price": 280,
+            "quantity": 0,
+            "description": "Pan fry basa fish with sauted onion, mushroom, capsicum",
+            "isComboMeal": false
+    },
+        {
+            "id": 72,
+            "name": "Garlic Flavoured Grilled Prawns",
+            "price": 320,
+            "quantity": 0,
+            "description": "Prawns served with garden vegetables with creamy caper sauce",
+            "isComboMeal": false
+    },
+        {
+            "id": 73,
+            "name": "Norwegian Grilled Salmon",
+            "price": 525,
+            "quantity": 0,
+            "description": "Salmon grilled to the perfection served with creamy caper sauce",
+            "isComboMeal": false
+    },
+        {
+            "id": 74,
+            "name": "Hot Malaysian Delight",
+            "price": 270,
+            "quantity": 0,
+            "description": "Pan grilled cottage cheese with assorted vegetable pepper sauce",
+            "isComboMeal": false
+    },
+        {
+            "id": 75,
+            "name": "Kadhai Paneer Roll",
+            "price": 150,
+            "quantity": 0,
+            "description": "kadhai panneer, mint, shredded capsicum, onion",
+            "isComboMeal": false
+    },
+        {
+            "id": 76,
+            "name": "Panner Makhani Masala Bowl",
+            "price": 230,
+            "quantity": 0,
+            "description": "Slow cooked cottage cheese, malabari partha, salad",
+            "isComboMeal": false
+    },
+        {
+            "id": 77,
+            "name": "Dal Makhani",
+            "price": 220,
+            "quantity": 0,
+            "description": "Fried Chilly, laccha onion, malabari partha",
+            "isComboMeal": false
+    },
+        {
+            "id": 78,
+            "name": "Punjabi Choley",
+            "price": 220,
+            "quantity": 0,
+            "description": "Fried chilly, laccha onion, malabari partha",
+            "isComboMeal": false
+    },
+        {
+            "id": 79,
+            "name": "Kadhai Chicken Roll",
+            "price": 175,
+            "quantity": 0,
+            "description": "Kadhai chicken, mint, shredded cappsicum, onion",
+            "isComboMeal": false
+    },
+        {
+            "id": 80,
+            "name": "Cheese Chilli Egg Roll",
+            "price": 120,
+            "quantity": 0,
+            "description": "Fried egg, cheese served with laccha onion, mint sauce",
+            "isComboMeal": false
+    },
+        {
+            "id": 81,
+            "name": "Vegetable Thai Red Curry",
+            "price": 180,
+            "quantity": 0,
+            "description": "Thai style vegetable curry served with steamed rice",
+            "isComboMeal": true
+    },
+        {
+            "id": 82,
+            "name": "Fried Rice",
+            "price": 160,
+            "quantity": 0,
+            "description": "Fried rice with cabbage, french beans, carrots",
+            "isComboMeal": false
+    },
+        {
+            "id": 83,
+            "name": "Chicken Thai Red Curry",
+            "price": 200,
+            "quantity": 0,
+            "description": "Thai style chicken curry served with steamed rice",
+            "isComboMeal": true
+    },
+        {
+            "id": 84,
+            "name": "Chilli Chicken Box",
+            "price": 220,
+            "quantity": 0,
+            "description": "Chilli chicken served with fried rice topped with crunchy noodles",
+            "isComboMeal": false
+    },
+        {
+            "id": 85,
+            "name": "Blueberry Cheese Cake",
+            "price": 110,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 86,
+            "name": "Oreo Nuttella Cheese Cake",
+            "price": 120,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 87,
+            "name": "Creame De la Caramel Icecream",
+            "price": 99,
+            "quantity": 0,
+            "description": "Vanilla ice cream topped with cream, caramel sauce & choco chips, butter scotch nuts",
+            "isComboMeal": false
+    },
+        {
+            "id": 88,
+            "name": "Strawberry Swirl",
+            "price": 99,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 89,
+            "name": "Fresh Orange Juice",
+            "price": 199,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 90,
+            "name": "Fresh Apple Juice",
+            "price": 199,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 91,
+            "name": "Cookies And Berry Shake",
+            "price": 170,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 92,
+            "name": "Banana Caramel",
+            "price": 170,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 93,
+            "name": "Kitkat Shake",
+            "price": 170,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 94,
+            "name": "Oreo Shake",
+            "price": 170,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 95,
+            "name": "Nuttella Shake",
+            "price": 180,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 96,
+            "name": "Mango Smoothy",
+            "price": 185,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 97,
+            "name": "Strawberry Smoothy",
+            "price": 185,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 98,
+            "name": "Orange Smoothy",
+            "price": 185,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 99,
+            "name": "Pink Cooler Lemonade",
+            "price": 99,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 100,
+            "name": "Chatca",
+            "price": 99,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 101,
+            "name": "Mint Masala",
+            "price": 99,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 102,
+            "name": "Watermelon Lemonade",
+            "price": 99,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 103,
+            "name": "Garden Mint (Mojito)",
+            "price": 120,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 104,
+            "name": "Green Apple And Cucumber",
+            "price": 120,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 105,
+            "name": "Kiwi Cooler",
+            "price": 130,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 106,
+            "name": "Watermelon Mojito",
+            "price": 130,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 107,
+            "name": "Pina Colada",
+            "price": 160,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 108,
+            "name": "Lemon Tea",
+            "price": 60,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 109,
+            "name": "Green Tea",
+            "price": 60,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 110,
+            "name": "Masala Tea",
+            "price": 60,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 111,
+            "name": "Regular Tea",
+            "price": 65,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 112,
+            "name": "Lemon Ice Tea",
+            "price": 99,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 113,
+            "name": "Watermelon Mint Ice Tea",
+            "price": 99,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 114,
+            "name": "Peach Ice Tea",
+            "price": 90,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 115,
+            "name": "Red Bull Ice Tea",
+            "price": 150,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 116,
+            "name": "Cafe Lazy Mojo Frappe",
+            "price": 110,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 117,
+            "name": "Choco Frappe",
+            "price": 120,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 118,
+            "name": "Irish Bitter",
+            "price": 120,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 119,
+            "name": "Cappuchino",
+            "price": 70,
+            "quantity": "small",
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 120,
+            "name": "Cappuchino",
+            "price": 85,
+            "quantity": "tall",
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 121,
+            "name": "Cafe Latte",
+            "price": 75,
+            "quantity": "small",
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 122,
+            "name": "Cafe Latte",
+            "price": 99,
+            "quantity": "tall",
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 123,
+            "name": "Caremal Latte",
+            "price": 110,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 124,
+            "name": "Espresso",
+            "price": 55,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 125,
+            "name": "Cafe Hazelnut",
+            "price": 99,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 126,
+            "name": "American Pancakes",
+            "price": 120,
+            "quantity": 0,
+            "description": "Served with maple syrup & rich chocolate sauce",
+            "isComboMeal": false
+    },
+        {
+            "id": 127,
+            "name": "French toast with nutella, chocolate sauce and wipped cream",
+            "price": 120,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 128,
+            "name": "Savoury french toast with cocktail sauce and mint mayonnaise",
+            "price": 110,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 129,
+            "name": "Scrambled Eggs",
+            "price": 100,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 130,
+            "name": "Three Egg Omelette",
+            "price": 110,
+            "quantity": 0,
+            "description": "Cheese, mushroom served with potato wedges",
+            "isComboMeal": true
+    },
+        {
+            "id": 131,
+            "name": "Masala Omelette",
+            "price": 110,
+            "quantity": 0,
+            "description": "Onion, tomato, chilli and cilantro served with potato wedges",
+            "isComboMeal": true
+    },
+        {
+            "id": 132,
+            "name": "Giant Omelette Pan",
+            "price": 135,
+            "quantity": 0,
+            "description": "Five egg omelette served with sauteed spinach, mushroom, potato wedges",
+            "isComboMeal": true
+    },
+        {
+            "id": 133,
+            "name": "Bun Maska",
+            "price": 80,
+            "quantity": 0,
+            "description": "Popular haunt for youngsters looking out for daily quota of bun-maska",
+            "isComboMeal": false
+    },
+        {
+            "id": 134,
+            "name": "Tacos",
+            "price": 120,
+            "quantity": 0,
+            "description": "Red kidney beans/tomato salsa",
+            "isComboMeal": false
+    },
+        {
+            "id": 135,
+            "name": "Chicken Tacos",
+            "price": 160,
+            "quantity": 0,
+            "description": "Red kidney beans/chicken/tomato salsa",
+            "isComboMeal": false
+    },
+        {
+            "id": 136,
+            "name": "Chicken Chimichanga",
+            "price": 180,
+            "quantity": 0,
+            "description": "Deep fried burrito stuffing of red kidney beans/chicken/bellpeppers",
+            "isComboMeal": false
+    },
+        {
+            "id": 137,
+            "name": "Vegetable Chimichanga",
+            "price": 150,
+            "quantity": 0,
+            "description": "Deep fried burrito stuffing of red kidney beans/chicken/bellpeppers",
+            "isComboMeal": false
+    },
+        {
+            "id": 138,
+            "name": "Oven Baked Nachos",
+            "price": 210,
+            "quantity": 0,
+            "description": "Nachos baked with cheese, spicy mint mayonnaise, tomato salsa",
+            "isComboMeal": false
+    },
+        {
+            "id": 139,
+            "name": "Classic Nachos",
+            "price": 175,
+            "quantity": 0,
+            "description": "Tomato salsa and spicy mint mayonnaise",
+            "isComboMeal": false
+    },
+        {
+            "id": 140,
+            "name": "Vada Pav",
+            "price": 80,
+            "quantity": 0,
+            "description": "Popular spicy mashed potatoes vegetarian fast food dish from maharashtra",
+            "isComboMeal": false
+    },
+        {
+            "id": 141,
+            "name": "Garlic bread",
+            "price": 100,
+            "quantity": 0,
+            "description": "",
+            "isComboMeal": false
+    },
+        {
+            "id": 142,
+            "name": "Peri Peri Crusted Fish",
+            "price": 210,
+            "quantity": 0,
+            "description": "Served with cocktail sauce",
+            "isComboMeal": false
+    },
+        {
+            "id": 143,
+            "name": "Gun Powder Marinated Chicken Finger",
+            "price": 210,
+            "quantity": 0,
+            "description": "served with mint mayonnaise and cocktail sasuce",
+            "isComboMeal": false
+    },
+        {
+            "id": 144,
+            "name": "Herb Crumbed Fish Finger",
+            "price": 210,
+            "quantity": 0,
+            "description": "Herb crusted fried fish served with tarter sauce",
+            "isComboMeal": false
+    },
+        {
+            "id": 145,
+            "name": "Pita Pockets With Chicken Flafal",
+            "price": 210,
+            "quantity": 0,
+            "description": "Pita pockets stuffed with salad and four pieces of chicken flafal",
+            "isComboMeal": false
+    }
+
+  ]
+}
