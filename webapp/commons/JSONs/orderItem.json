@@ -2,38 +2,38 @@
     "orderItem": [
         {
             "id": 1,
-            "menuItemID": 0,
+            "menuItemID": 142,
             "customizationDesc": "",
-            "spiceIndicator": 0,
-            "quantity": 0
+            "spiceIndicator": 4,
+            "quantity": 1
     },
         {
             "id": 2,
-            "menuItemID": 0,
-            "customizationDesc": "",
-            "spiceIndicator": 0,
-            "quantity": 0
+            "menuItemID": 53,
+            "customizationDesc": "No onions",
+            "spiceIndicator": 3,
+            "quantity": 1
     },
         {
             "id": 3,
-            "menuItemID": 0,
+            "menuItemID": 27,
             "customizationDesc": "",
-            "spiceIndicator": 0,
-            "quantity": 0
+            "spiceIndicator": 1,
+            "quantity": 1
     },
         {
             "id": 4,
-            "menuItemID": 0,
-            "customizationDesc": "",
+            "menuItemID": 86,
+            "customizationDesc": "Extra oreos",
             "spiceIndicator": 0,
-            "quantity": 0
+            "quantity": 2
     },
         {
             "id": 5,
-            "menuItemID": 0,
+            "menuItemID": 102,
             "customizationDesc": "",
             "spiceIndicator": 0,
-            "quantity": 0
+            "quantity": 2
     }
   ]
 }
