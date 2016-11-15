@@ -2,9 +2,15 @@
   <head>
     <title>Creative-I Honcho</title>
     <script src="assets/vendor/angular.js"></script>
+    <script src="assets/vendor/angular-ui-router.js"></script>
     <script src="application.js"></script>
+    <script src="modules/services/services-ctrl.js"></script>
+    <script src="modules/order/order-ctrl.js"></script>
+
   </head>
   <body ng-controller="MainController">
-    Hello, {{name}}
+    <h1>hello</h1>
+    <a ui-sref="services" ui-sref-active="active">services</a>
+    <ui-view></ui-view>
   <body>
 </html>

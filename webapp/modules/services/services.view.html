@@ -1,0 +1,9 @@
+<div ng-controller="ServicesController">
+  <h2>I am service view.</h2>
+  <div ng-repeat="service in services">
+
+    <a ui-sref="services.{{service}}" ui-sref-active="active">{{service}}</a>
+    
+  </div>
+
+</div>
