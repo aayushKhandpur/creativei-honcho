@@ -14,14 +14,14 @@ creativei_app.config(function($stateProvider) {
     })
     .state('order.current', {
       url: '/order/current',
-      templateUrl: 'module/order/current/currentOrders.view.html',
+      templateUrl: 'modules/order/current/currentOrders.view.html',
       controller: 'CurrentOrdersController'
     })
-    .state('login'), {
-      url: '/login'
-      templateUrl: 'module/authenticate/authenticate.view.html',
+    .state('login', {
+      url: '/login',
+      templateUrl: 'modules/authenticate/authenticate.view.html',
       controller: 'AuthController'
-    }
+    })
 });
 
 creativei_app.controller("MainController",function($scope){
