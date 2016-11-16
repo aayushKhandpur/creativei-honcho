@@ -5,7 +5,12 @@ creativei_app.config(function($stateProvider) {
     .state('services', {
       url: '/services',
       templateUrl: 'modules/services/services.view.html',
-      controller: 'ServicesController'
+      controller: 'ServicesController',
+      resolve: {
+        servObj : function($http){
+          return $http.get('commons/JSONs/restaurant.json');
+        }
+      }
     })
     .state('order', {
       url: '/order',
