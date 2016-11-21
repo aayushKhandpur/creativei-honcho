@@ -9,6 +9,7 @@ creativei_app.controller('AuthController', function($scope, $rootScope, AuthServ
   $scope.login = function(){
     $scope.restaurant= AuthService.get().then(function(response){
       console.log(response.data.restaurant);
+      $rootScope.restaurant=response.data;
       $state.go('services');
     });
   }

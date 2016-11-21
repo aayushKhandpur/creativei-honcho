@@ -1,6 +1,6 @@
 //
-creativei_app.controller("ServicesController", function($scope,servObj){
-  console.log(servObj);
+creativei_app.controller("ServicesController", function($scope){
+//  console.log(servObj);
   $scope.services = ["order"];
   //dummy comment
 });

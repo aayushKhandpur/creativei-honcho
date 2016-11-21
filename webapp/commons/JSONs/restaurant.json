@@ -1,6 +1,4 @@
 {
-    "restaurant": [
-        {
             "id": 123,
             "name": "Cafe Lazy Mojo",
             "addressLine1": "H1-H2, S.L Marg, Opp. Genpact",
@@ -10,7 +8,8 @@
             "landlineNumber2": 1412309800,
             "mobile1": 9829012345,
             "mobile2": 9929012345,
-            "additionalContact": "cafelazymojo@gmail.com"
+            "additionalContact": "cafelazymojo@gmail.com",
+            "services": ["Order","Waiting"],
+            
+
     }
-  ]
-}
