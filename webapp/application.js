@@ -1,12 +1,12 @@
 var creativei_app= angular.module("creativei_app",['ui.router'])
 
-creativei_app.config(function($stateProvider) {
+creativei_app.config(function($stateProvider,$urlRouterProvider) {
   $stateProvider
     .state('services', {
       url: '/services',
       templateUrl: 'modules/services/services.view.html',
       controller: 'ServicesController',
-    
+
     })
     .state('order', {
       url: '/order',
@@ -23,6 +23,7 @@ creativei_app.config(function($stateProvider) {
       templateUrl: 'modules/authenticate/authenticate.view.html',
       controller: 'AuthController'
     })
+    $urlRouterProvider.otherwise('/login');
 });
 
 creativei_app.controller("MainController",function($scope){
