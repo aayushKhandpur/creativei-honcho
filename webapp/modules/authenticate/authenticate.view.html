@@ -13,13 +13,13 @@
   <!-- form Row starts-->
   <div class="row">
     <div class="col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2 verticalCenter">
-      <form method="post" >
+      <ng-form novalidate>
         <div class="form-group">
-          <input class="formInput" type="text" placeholder="user id"  name="userId" required><br><br>
-          <input class="formInput" type="password" placeholder="password"  name="password" required><br><br><br>
-          <button id="loginButton" class="btn btn-default" ng-click="login();">Login</button>
+          <input class="formInput" type="text" placeholder="user id"  name="userId" ng-model="user.userId" required><br><br>
+          <input class="formInput" type="password" placeholder="password" ng-model="user.password"  name="password" required><br><br><br>
+          <button id="loginButton" class="btn btn-default" ng-click="authenticate();">Login</button>
         </div>
-      </form>
+      </ng-form>
     </div>
   </div>
 
