@@ -23,10 +23,19 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
       templateUrl: 'modules/authenticate/authenticate.view.html',
       controller: 'AuthController'
     })
-    $urlRouterProvider.otherwise('/login');
+    $urlRouterProvider.otherwise('/services');
+
+
 });
 
-creativei_app.controller("MainController",function($scope){
-  $scope.name = "aayush";
-  //dummy comment
+
+creativei_app.controller("MainController",function($scope, $rootScope, $state, $location){
+  $rootScope.$on('$stateChangeStart',
+  function(event, toState, toParams, fromState, fromParams, options){
+    if(toState.name === "login")
+      return;
+    if($rootScope.isAuthenticated)
+      return;
+    $location.path("/login");
+  });
 });
