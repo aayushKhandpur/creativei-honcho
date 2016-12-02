@@ -141,12 +141,12 @@
 }
 
 
-/*
+
 .tableFilterContainer {
-    margin: 0.7%;
-    margin-left: 91%;
+    width: auto!important;
+    margin: 1rem 0;
 }
-*/
+
 
 
 /*table status css ends*/
