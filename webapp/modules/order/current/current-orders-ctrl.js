@@ -1,5 +1,5 @@
 'use strict';
-creativei_app.controller('CurrentOrdersController', function($scope){
+creativei_app.controller('CurrentOrdersController', function($scope,$http){
   console.log("Inside current orders controller.");
     
     
@@ -26,48 +26,8 @@ creativei_app.controller('CurrentOrdersController', function($scope){
     };
     //end filter implementation
     //dummy json for tables
-    $scope.tables = [
-    {
-        "tableNo": 1,
-        "tableOccupancy": 4,
-        "isAvailable": false,
-        "tableStatus": "Table",
-        "tableOccupiedDuration": "1:30Hrs"
-    },
-    {
-        "tableNo": 2,
-        "tableOccupancy": 4,
-        "isAvailable": true,
-        "tableStatus": null,
-        "tableOccupiedDuration": null
-    },
-    {
-        "tableNo": 3,
-        "tableOccupancy": 4,
-        "isAvailable": false,
-        "tableStatus": "Table",
-        "tableOccupiedDuration": "1:30Hrs"
-    },
-    {
-        "tableNo": 4,
-        "tableOccupancy": 4,
-        "isAvailable": true,
-        "tableStatus": null,
-        "tableOccupiedDuration": null
-    },
-        {
-        "tableNo": 5,
-        "tableOccupancy": 4,
-        "isAvailable": true,
-        "tableStatus": null,
-        "tableOccupiedDuration": null
-    },
-    {
-        "tableNo": 6,
-        "tableOccupancy": 4,
-        "isAvailable": true,
-        "tableStatus": null,
-        "tableOccupiedDuration": null
-    }
-]
+    $http.get("../../../commons/JSONs/tableStatus.json")
+    .then(function(response) {
+        $scope.tables = response.data;
+    });
 });
