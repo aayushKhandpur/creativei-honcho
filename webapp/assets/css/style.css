@@ -29,7 +29,8 @@
     color: rgba(2, 17, 44, 1.00);
 }
 
-#loginButton {
+#loginButton,
+#orderInitButton {
     width: 100%;
     background-color: rgba(2, 17, 44, 0.65) !important;
     color: white;
@@ -39,59 +40,76 @@
     outline: none;
 }
 
+#continueAsGuest {
+    font-family: "Microsoft Sans Serif";
+    color: rgba(2, 17, 44, 1.00);
+    text-decoration: underline;
+}
+
 .verticalCenter {
     position: relative;
     -webkit-transform: perspective(1px) translateY(100%);
     transform: perspective(1px) translateY(100%);
 }
 
-#rowService {
-    -webkit-transform: translateY(60%);
-    transform: translateY(60%);
+
+/*service screen css starts*/
+.serviceVerticalCenter {
+    position: relative;
+    -webkit-transform: perspective(1px) translateY(80%);
+    transform: perspective(1px) translateY(80%);
 }
 
-#orderBox {
-    background: rgba(4, 19, 46, 0.66);
-    max-height: 300px;
-    max-width: 300px;
-    color: white;
+serviceh4 {
     font-family: "Open Sans";
-    font-size: 24px;
-    text-align: center;
-    -webkit-transform: translateX(25%);
-    transform: translateX(25%);
+    font-weight: 400;
+    font-size: 1.05em;
 }
 
-#orderBox img {
-    -webkit-transform: translateY(85%);
-    transform: translateY(85%);
+.order {
+    -webkit-transform: translateY(280%);
+    transform: translateY(280%);
 }
 
-#waitingBox {
-    background: rgba(4, 19, 46, 0.66);
-    max-height: 300px;
-    max-width: 300px;
-    color: white;
-    font-family: "Open Sans";
-    font-size: 24px;
-    text-align: center;
-    -webkit-transform: translateX(20%);
-    transform: translateX(20%);
+.waiting {
+    -webkit-transform: translateY(180%);
+    transform: translateY(180%);
 }
 
-#waitingBox img {
+.orderIcon {
+    -webkit-transform: translateY(80%);
+    transform: translateY(80%);
+}
+
+.waitingIcon {
     -webkit-transform: translateY(40%);
     transform: translateY(40%);
 }
 
-#order {
-    margin-top: 45%;
+#orderTab {
+    background-image:url(../images/background_blue.png);
+	background-position:center;
+	background-size:contain;
+	background-repeat:no-repeat;
+    height: 280px;
+    width: 300px;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 24px;
 }
 
-#waiting {
-    margin-top: 30%;
+#waitingTab {
+    background-image:url(../images/background_blue.png);
+	background-position:center;
+	background-size:contain;
+	background-repeat:no-repeat;
+    height: 280px;
+    width: 300px;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 24px;
 }
-
+/*service screen css ends*/
 
 /*table status css starts*/
 
@@ -102,12 +120,11 @@
     box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.1);
 }
 
-.tableOccupied{
+.tableOccupied {
     background-color: #d3d3d3;
 }
 
-.tableAvailiable{
-}
+.tableAvailiable {}
 
 .tableNo {
     width: 25%;
@@ -140,13 +157,152 @@
     padding: 5%;
 }
 
-
-
 .tableFilterContainer {
     width: auto!important;
     margin: 1rem 0;
 }
 
 
-
 /*table status css ends*/
+
+
+/*category screen css starts*/
+
+.categoryh4 {
+    font-family: "Open Sans";
+    font-weight: 500;
+    font-size: 1.4em;
+    color: white;
+    -webkit-transform: translateY(390%);
+    transform: translateY(390%);
+}
+
+#appetizers {
+    background-image: url(../images/appetizers.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 206px;
+    background-position: center;
+    text-align: center;
+}
+
+#maincourse {
+    background-image: url(../images/main_course.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 206px;
+    text-align: center;
+}
+
+#pizza {
+    background-image: url(../images/pizza%27z.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 206px;
+    text-align: center;
+}
+
+#pasta {
+    background-image: url(../images/pasta&rissoto.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 206px;
+    text-align: center;
+}
+
+#sandwich {
+    background-image: url(../images/sandwich.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 206px;
+    text-align: center;
+}
+
+#soups {
+    background-image: url(../images/soups.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 206px;
+    text-align: center;
+}
+
+#salads {
+    background-image: url(../images/salad.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 206px;
+    text-align: center;
+}
+
+#dessert {
+    background-image: url(../images/desserts.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 206px;
+    text-align: center;
+}
+
+#waffles {
+    background-image: url(../images/waffles.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 206px;
+    text-align: center;
+}
+
+@media screen and (max-width: 991px) and (min-width: 320px) {
+    .col-xs-margin {
+        margin-bottom: 5%;
+    }
+}
+
+
+/*category screen css ends*/
+
+
+/*menu screen css starts*/
+
+.topMargin {
+    margin-top: 3%;
+}
+
+.name {
+    width: 100%;
+    background-image: url(../images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -0.2rem;
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    color: #ee2e61;
+}
+
+.ovenBakedNachos {
+    background-image: url(../images/ovenBakedNachos_213.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 186px;
+}
+
+.menuh4 {
+    color: rgba(2, 17, 44, 1.00);
+    /*    -webkit-font-smoothing: antialiased;*/
+}
+
+@media screen and (max-width: 991px) and (min-width: 320px) {
+    .col-xs-margin {
+        margin-bottom: 4%;
+    }
+}
+
+
+/*menu screen css ends*/

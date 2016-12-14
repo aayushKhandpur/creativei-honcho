@@ -14,7 +14,7 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
       controller: 'OrderController'
     })
     .state('order.current', {
-      url: '/order/current',
+      url: '/current',
       templateUrl: 'modules/order/current/currentOrders.view.html',
       controller: 'CurrentOrdersController'
     })
@@ -23,6 +23,26 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
       templateUrl: 'modules/authenticate/authenticate.view.html',
       controller: 'AuthController'
     })
+    .state('buildOrder',{
+      url: '/buildOrder',
+      templateUrl: 'modules/buildOrder/buildOrder.view.html',
+      controller: 'BuildOrderController'
+    })
+    .state('buildOrder.initiate',{
+      url: '/initiate',
+      templateUrl: 'modules/buildOrder/orderInit/orderInitiation.view.html',
+      controller: 'OrderInitiateController'
+    })
+    .state('buildOrder.category',{
+      url: '/category',
+      templateUrl: 'modules/buildOrder/category/category.view.html',
+      controller: 'CategoryController'
+    })
+    .state('buildOrder.menuItem',{
+      url: '/menuItem',
+      templateUrl: 'modules/buildOrder/category/menuItem/menuItem.view.html',
+      controller: 'MenuItemController'
+  })
     $urlRouterProvider.otherwise('/services');
 
 
