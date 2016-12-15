@@ -176,101 +176,13 @@ serviceh4 {
 
 /*category screen css starts*/
 
-.categoryh4 {
-    font-family: "Open Sans";
-    font-weight: 500;
-    font-size: 1.4em;
-    color: white;
-    -webkit-transform: translateY(390%);
-    transform: translateY(390%);
+.categoryContainer{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
 }
-
-#appetizers {
-    background-image: url(../images/appetizers.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    height: 206px;
-    background-position: center;
-    text-align: center;
+.categoryImg{
+    margin: auto;
 }
-
-#maincourse {
-    background-image: url(../images/main_course.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 206px;
-    text-align: center;
-}
-
-#pizza {
-    background-image: url(../images/pizza%27z.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    height: 206px;
-    text-align: center;
-}
-
-#pasta {
-    background-image: url(../images/pasta&rissoto.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 206px;
-    text-align: center;
-}
-
-#sandwich {
-    background-image: url(../images/sandwich.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 206px;
-    text-align: center;
-}
-
-#soups {
-    background-image: url(../images/soups.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 206px;
-    text-align: center;
-}
-
-#salads {
-    background-image: url(../images/salad.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 206px;
-    text-align: center;
-}
-
-#dessert {
-    background-image: url(../images/desserts.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 206px;
-    text-align: center;
-}
-
-#waffles {
-    background-image: url(../images/waffles.png);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    height: 206px;
-    text-align: center;
-}
-
-@media screen and (max-width: 991px) and (min-width: 320px) {
-    .col-xs-margin {
-        margin-bottom: 5%;
-    }
-}
-
 
 /*category screen css ends*/
 
