@@ -54,6 +54,11 @@
 
 
 /*service screen css starts*/
+
+.rowMargin {
+    margin: 0%;
+}
+
 .serviceVerticalCenter {
     position: relative;
     -webkit-transform: perspective(1px) translateY(80%);
@@ -87,10 +92,10 @@ serviceh4 {
 }
 
 #orderTab {
-    background-image:url(../images/background_blue.png);
-	background-position:center;
-	background-size:contain;
-	background-repeat:no-repeat;
+    background-image: url(../images/background_blue.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 280px;
     width: 300px;
     color: white;
@@ -99,17 +104,20 @@ serviceh4 {
 }
 
 #waitingTab {
-    background-image:url(../images/background_blue.png);
-	background-position:center;
-	background-size:contain;
-	background-repeat:no-repeat;
+    background-image: url(../images/background_blue.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     height: 280px;
     width: 300px;
     color: white;
     font-family: "Open Sans";
     font-size: 24px;
 }
+
+
 /*service screen css ends*/
+
 
 /*table status css starts*/
 
