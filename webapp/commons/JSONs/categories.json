@@ -10,7 +10,7 @@
         "availableFromMin": null,
         "availableToHr": null,
         "availableToMin": null,
-        "img": "../../assets/images/appetizers.png"
+        "img": "../../assets/images/appetizers_213.png"
     },
     {
         "id": 2,
@@ -23,7 +23,7 @@
         "availableFromMin": null,
         "availableToHr": null,
         "availableToMin": null,
-        "img": "../../assets/images/main_course.png"
+        "img": "../../assets/images/main_course_213.png"
     },
     {
         "id": 3,
@@ -36,7 +36,7 @@
         "availableFromMin": null,
         "availableToHr": null,
         "availableToMin": null,
-        "img": "../../assets/images/pizza.png"
+        "img": "../../assets/images/pizza'z_213.png"
     },
     {
         "id": 4,
@@ -49,7 +49,7 @@
         "availableFromMin": null,
         "availableToHr": null,
         "availableToMin": null,
-        "img": "../../assets/images/pasta&rissoto.png"
+        "img": "../../assets/images/pasta&rissoto_213.png"
     },
     {
         "id": 5,
@@ -62,7 +62,7 @@
         "availableFromMin": 0,
         "availableToHr": 22,
         "availableToMin": 0,
-        "img": "../../assets/images/sandwich.png"
+        "img": "../../assets/images/sandwich_213.png"
     },
     {
         "id": 6,
@@ -75,7 +75,7 @@
         "availableFromMin": null,
         "availableToHr": null,
         "availableToMin": null,
-        "img": "../../assets/images/soups.png"
+        "img": "../../assets/images/soups_213.png"
     },
     {
         "id": 7,
@@ -88,7 +88,7 @@
         "availableFromMin": null,
         "availableToHr": null,
         "availableToMin": null,
-        "img": "../../assets/images/salad.png"
+        "img": "../../assets/images/salad_213.png"
     },
     {
         "id": 8,
@@ -101,7 +101,7 @@
         "availableFromMin": null,
         "availableToHr": null,
         "availableToMin": null,
-        "img": "../../assets/images/desserts.png"
+        "img": "../../assets/images/desserts_213.png"
     },
     {
         "id": 9,
@@ -114,7 +114,7 @@
         "availableFromMin": null,
         "availableToHr": null,
         "availableToMin": null,
-        "img": "../../assets/images/waffles.png"
+        "img": "../../assets/images/waffles_213.png"
     },
     {
         "id": 10,

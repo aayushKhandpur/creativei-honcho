@@ -1,13 +1,13 @@
 <div ng-controller="CategoryController" ng-cloak>
     <div class="row">
-        <div class="col-md-4 col-sm-6 col-xs-12 categoryContainer" ng-repeat="category in categories" ng-if="category.parentCategoryID==null">
+        <div class="col-md-3 col-sm-4 col-xs-6 categoryContainer" ng-repeat="category in categories" ng-if="category.parentCategoryID==null">
             <div id="categoryCarousel" class="carousel">
                 <div class="carousel-inner">
                     <div class="item active">
                         <img class="categoryImg img-responsive" ng-src="{{category.img}}">
-                        <img class="categoryImg img-responsive" src="http://placehold.it/292x206" ng-if="category.img==null">
+                        <img class="categoryImg img-responsive" src="http://placehold.it/213x186" ng-if="category.img==null">
                         <div class="carousel-caption">
-                            <h4>{{category.name}}</h4>
+                            <h4 class="categoryCaption">{{category.name}}</h4>
                         </div>
                     </div>
                 </div>
