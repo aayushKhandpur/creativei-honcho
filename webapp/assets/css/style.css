@@ -239,3 +239,92 @@ serviceh4 {
 
 
 /*menu screen css ends*/
+
+
+/*Build Order State Header CSS Starts*/
+.header {
+    top: 0;
+    width: auto;
+    height: 70px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35);
+}
+
+.menuTab {
+    top: 3rem;
+    height: 17px;
+    background-image: url(../images/menu_tabIcon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/*
+.arrowClass {
+font-size: 1.8vw;
+}
+*/
+
+.lazyLogo {
+    background-image: url(../images/logo_lazy_210.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 60px;
+    top: .5rem;
+}
+
+.cart {
+    top: 1.8rem;
+    background-image: url(../images/cart-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 42px;
+}
+
+.header2 {
+    background: #f1f1f1;
+    height: 47px;
+}
+
+.h4Text {
+    font-family: open sans;
+    color: #9b9b9b;
+    font-size: 2.7vmin;
+    text-align: center;
+    text-decoration: none;
+}
+
+.topClass {
+    top: .5rem;
+}
+
+.topClass a {
+    text-decoration: none;
+}
+/*
+.topClass a active {
+color: #f12f63;
+}
+*/
+
+span {
+    color: #f12f63;
+}
+
+.arrows {
+    top: 1.5rem;
+    }
+/*Build Order State Header CSS Ends*/
+
+/*Order State Header CSS Ends*/
+.user {
+    top: 1.8rem;
+    background-image: url(../images/user.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 42px;
+    }
+/*Order State Header CSS Ends*/

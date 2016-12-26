@@ -1,41 +1,39 @@
 <div ng-controller="CurrentOrdersController">
-    <div class="container-fluid">
-        <!--filter starts here-->
-        <div class="row">
-            <div class="col-md-1 col-xs-4 col-sm-2 pull-right tableFilterContainer">
-                <select name="tableFilter" class="tableFilter" ng-model="tableFilter" ng-options="filter as filter for filter in tableFilterOptions"></select>
-            </div>
+    <!--filter starts here-->
+    <div class="row">
+        <div class="col-md-1 col-xs-4 col-sm-2 pull-right tableFilterContainer">
+            <select name="tableFilter" class="tableFilter" ng-model="tableFilter" ng-options="filter as filter for filter in tableFilterOptions"></select>
         </div>
-        <!--filter ends here-->
-        <!--Table detail starts here-->
-        <div class="row">
-            <div class="col-md-3 col-sm-6" ng-repeat="table in tables | filter:tableFilterFunction | orderBy : 'tableNo'">
-                <div ng-if="table.isAvailable == false" class="table tableOccupied">
-                    <div class="media">
-                        <div class="media-left tableNo">
-                            <div class="media-object">{{table.tableNo}}</div>
-                        </div>
-                        <div class="media-body tableDetailOccupied">
-                            <div>Occupancy<span class="label label-success pull-right">{{table.tableOccupancy}}</span></div>
-                            <div>Status<span class="label label-info pull-right">{{table.tableStatus}}</span></div>
-                            <div>Occupied For<span class="label label-warning pull-right">{{table.tableOccupiedDuration}}</span></div>
-                        </div>
-                    </div>
-                </div>
-                <div ng-if="table.isAvailable == true" class="table tableAvailable">
-                    <div class="media">
-                        <div class="media-left tableNo">
-                            <div class="media-object">{{table.tableNo}}</div>
-                        </div>
-                        <div class="media-body tableDetailAvailable">
-                            <div>Occupancy<span class="label label-success pull-right">{{table.tableOccupancy}}</span></div>
-                            <br>
-                            <button class="btn btn-success assignButton" ui-sref="buildOrder.initiate">Assign</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
     </div>
+    <!--filter ends here-->
+    <!--Table detail starts here-->
+    <div class="row">
+        <div class="col-md-3 col-sm-6" ng-repeat="table in tables | filter:tableFilterFunction | orderBy : 'tableNo'">
+            <div ng-if="table.isAvailable == false" class="table tableOccupied">
+                <div class="media">
+                    <div class="media-left tableNo">
+                        <div class="media-object">{{table.tableNo}}</div>
+                    </div>
+                    <div class="media-body tableDetailOccupied">
+                        <div>Occupancy<span class="label label-success pull-right">{{table.tableOccupancy}}</span></div>
+                        <div>Status<span class="label label-info pull-right">{{table.tableStatus}}</span></div>
+                        <div>Occupied For<span class="label label-warning pull-right">{{table.tableOccupiedDuration}}</span></div>
+                    </div>
+                </div>
+            </div>
+            <div ng-if="table.isAvailable == true" class="table tableAvailable">
+                <div class="media">
+                    <div class="media-left tableNo">
+                        <div class="media-object">{{table.tableNo}}</div>
+                    </div>
+                    <div class="media-body tableDetailAvailable">
+                        <div>Occupancy<span class="label label-success pull-right">{{table.tableOccupancy}}</span></div>
+                        <br>
+                        <button class="btn btn-success assignButton" ui-sref="buildOrder.initiate">Assign</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
