@@ -1,0 +1,34 @@
+<div class="login-parent" ng-controller="OrderInitiateController" ng-cloak>
+    <!--logo Row starts-->
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4 verticalCenter">
+            <div>
+                <img class="logo img-responsive" src="../../assets/images/logo_lazy.png" alt="logoImage" title="Lazy Mojo">
+
+            </div>
+        </div>
+    </div>
+    <!-- logo Row ends-->
+    <!-- form Row starts-->
+    <div class="row">
+        <div class="col-sm-4 col-sm-offset-4 col-xs-8 col-xs-offset-2 verticalCenter">
+            <ng-form novalidate>
+                <div class="form-group">
+                    <input class="formInput" type="text" placeholder="Name" name="customerName" ng-model="customerName">
+                    <br>
+                    <br>
+                    <input class="formInput" type="text" placeholder="Phone Number" ng-model="customerNumber" name="customerNumber" required>
+                    <br>
+                    <br>
+                    <br>
+                    <button id="orderInitButton" class="btn" ui-sref="buildOrder.category">Login</button>
+                    <br>
+                    <a href="#" ui-sref="buildOrder.category"><h5 id="continueAsGuest" class="text-center">Continue as a Guest?</h5></a>
+                </div>
+            </ng-form>
+        </div>
+    </div>
+    <!-- form Row ends-->
+
+
+</div>

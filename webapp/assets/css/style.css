@@ -1,89 +1,329 @@
-.login-parent
-{
-	width:100%;
-	height:100%;
-	margin:0%;
-	padding:0%;
-	background-image:url(../images/backgroundImage.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+.login-parent {
+    width: 100%;
+    height: 100%;
+    margin: 0%;
+    padding: 0%;
+    background-image: url(../images/backgroundImage.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 
-.logo{
-  margin: 0 auto;
-  width: 50%;
-}
-.formInput
-{
-	width:100%;
-	font-family:"Microsoft Sans Serif";
-	color:rgba(2,17,44,1.00);
-	background:none;
-	outline:none;
-	border:none;
-	border-bottom-style:solid;
-	border-color:rgba(81,81,81,0.47);
-}
-::-webkit-input-placeholder
-{
-	color:rgba(2,17,44,1.00);
-}
-#loginButton
-{
-	width:100%;
-	background-color:rgba(2,17,44,0.65) !important;
-	color:white;
-	font-family:"Microsoft Sans Serif";
-	border-radius:10px;
-	border:none;
-	outline:none;
-}
-.verticalCenter
-{
-	position: relative;
-	transform: perspective(1px) translateY(100%);
-}
-#rowService
-{
-	transform:translateY(60%);
-}
-#orderBox
-{
-	background:rgba(4,19,46,0.66);
-	max-height:300px;
-	max-width:300px;
-	color:white;
-	font-family:"Open Sans";
-	font-size:24px;
-	text-align:center;
-	transform:translateX(25%);
-}
-#orderBox img
-{
-	transform:translateY(85%);
-}
-#waitingBox
-{
-	background:rgba(4,19,46,0.66);
-	max-height:300px;
-	max-width:300px;
-	color:white;
-	font-family:"Open Sans";
-	font-size:24px;
-	text-align:center;
-	transform:translateX(20%);
-}
-#waitingBox img
-{
-	transform:translateY(40%);
+.logo {
+    margin: 0 auto;
+    width: 50%;
 }
 
-#order
-{
-	margin-top:45%;
+.formInput {
+    width: 100%;
+    font-family: "Microsoft Sans Serif";
+    color: rgba(2, 17, 44, 1.00);
+    background: none;
+    outline: none;
+    border: none;
+    border-bottom-style: solid;
+    border-color: rgba(81, 81, 81, 0.47);
 }
-#waiting
-{
-	margin-top:30%;
+
+::-webkit-input-placeholder {
+    color: rgba(2, 17, 44, 1.00);
 }
+
+#loginButton,
+#orderInitButton {
+    width: 100%;
+    background-color: rgba(2, 17, 44, 0.65) !important;
+    color: white;
+    font-family: "Microsoft Sans Serif";
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+#continueAsGuest {
+    font-family: "Microsoft Sans Serif";
+    color: rgba(2, 17, 44, 1.00);
+    text-decoration: underline;
+}
+
+.verticalCenter {
+    position: relative;
+    -webkit-transform: perspective(1px) translateY(100%);
+    transform: perspective(1px) translateY(100%);
+}
+
+
+/*service screen css starts*/
+
+.rowMargin {
+    margin: 0%;
+}
+
+.serviceVerticalCenter {
+    position: relative;
+    -webkit-transform: perspective(1px) translateY(80%);
+    transform: perspective(1px) translateY(80%);
+}
+
+serviceh4 {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 1.05em;
+}
+
+.order {
+    -webkit-transform: translateY(280%);
+    transform: translateY(280%);
+}
+
+.waiting {
+    -webkit-transform: translateY(180%);
+    transform: translateY(180%);
+}
+
+.orderIcon {
+    -webkit-transform: translateY(80%);
+    transform: translateY(80%);
+}
+
+.waitingIcon {
+    -webkit-transform: translateY(40%);
+    transform: translateY(40%);
+}
+
+#orderTab {
+    background-image: url(../images/background_blue.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 300px;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 24px;
+}
+
+#waitingTab {
+    background-image: url(../images/background_blue.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 280px;
+    width: 300px;
+    color: white;
+    font-family: "Open Sans";
+    font-size: 24px;
+}
+
+@media screen and (max-width: 1005px) and (min-width: 320px) {
+    .marginClass {
+        margin-left: 10vw;
+    }
+}
+
+
+/*service screen css ends*/
+
+
+/*table status css starts*/
+
+.table {
+    height: 98px;
+    padding: 5%;
+    background-color: white;
+    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.1);
+}
+
+.tableOccupied {
+    background-color: #d3d3d3;
+}
+
+.tableAvailiable {}
+
+.tableNo {
+    width: 25%;
+    text-align: center;
+    font-size: 3em;
+}
+
+.tableDetailAvailable {
+    border-left: 3px #52934f solid;
+    padding-left: 5%;
+}
+
+.tableDetailOccupied {
+    border-left: 3px #ff4f4f solid;
+    padding-left: 5%;
+}
+
+.assignButton {
+    padding: 0 0 !important;
+    background-color: #52934f;
+    margin-left: 18%;
+    border-radius: 100px;
+    width: 60%;
+}
+
+.tableFilter {
+    text-align: left;
+    color: white;
+    background-color: #05132c;
+    padding: 5%;
+}
+
+.tableFilterContainer {
+    width: auto!important;
+    margin: 1rem 0;
+}
+
+
+/*table status css ends*/
+
+
+/*category screen css starts*/
+
+.categoryContainer {
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.categoryImg {
+    margin: auto;
+}
+
+.categoryCaption {
+/*    font-size: 2.5vmin;*/
+/*    font-weight: 400;*/
+}
+
+
+/*category screen css ends*/
+
+
+/*menu screen css starts*/
+
+.topMargin {
+    margin-top: 3%;
+}
+
+.name {
+    width: 100%;
+    background-image: url(../images/background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: -0.2rem;
+    margin: 0%;
+    padding: 0%;
+    text-decoration: none;
+    color: #ee2e61;
+}
+
+.ovenBakedNachos {
+    background-image: url(../images/ovenBakedNachos_213.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 186px;
+}
+
+.menuh4 {
+    color: rgba(2, 17, 44, 1.00);
+    /*    -webkit-font-smoothing: antialiased;*/
+}
+
+@media screen and (max-width: 991px) and (min-width: 320px) {
+    .col-xs-margin {
+        margin-bottom: 4%;
+    }
+}
+
+
+/*menu screen css ends*/
+
+
+/*Build Order State Header CSS Starts*/
+.header {
+    width: auto;
+    height: 70px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35);
+}
+
+.menuTab {
+    top: 3rem;
+    height: 17px;
+    background-image: url(../images/menu_tabIcon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+/*
+.arrowClass {
+font-size: 1.8vw;
+}
+*/
+
+.lazyLogo {
+    background-image: url(../images/logo_lazy_210.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 60px;
+    top: .5rem;
+}
+
+.cart {
+    top: 1.8rem;
+    background-image: url(../images/cart-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 42px;
+}
+
+.header2 {
+    background: #f1f1f1;
+    height: 47px;
+}
+
+.h4Text {
+    font-family: open sans;
+    color: #9b9b9b;
+    font-size: 2.7vmin;
+    text-align: center;
+    text-decoration: none;
+}
+
+.topClass {
+    top: .5rem;
+}
+
+.topClass a {
+    text-decoration: none;
+}
+/*
+.topClass a active {
+color: #f12f63;
+}
+*/
+
+span {
+    color: #f12f63;
+}
+
+.arrows {
+    top: 1.5rem;
+    }
+/*Build Order State Header CSS Ends*/
+
+/*Order State Header CSS Ends*/
+.user {
+    top: 1.8rem;
+    background-image: url(../images/user.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 42px;
+    }
+/*Order State Header CSS Ends*/
