@@ -251,6 +251,21 @@ serviceh4 {
 
 /*menu screen css ends*/
 
+/*header CSS starts*/
+.headerContainer{
+    position: fixed;
+    top:0;
+    z-index: 1000;
+    width: 100vw;
+    box-shadow: 0 0 5px 5px rgba(0,0,0,0.35);
+}
+.screenHeader{
+    margin-top: 70px;     /*margin affects service screen and order state*/
+}
+.screenHeader2{
+    margin-top: 117px;    /*margin affects build order state*/
+}
+/*header CSS ends*/
 
 /*Build Order State Header CSS Starts*/
 
