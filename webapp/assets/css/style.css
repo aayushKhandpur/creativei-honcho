@@ -127,11 +127,22 @@ serviceh4 {
 
 /*table status css starts*/
 
+
+/*
+.order-parent {
+    background-color: #adadad;
+    height: 100%;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+*/
+
 .table {
     height: 98px;
     padding: 5%;
     background-color: white;
-    box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 5px 5px 8px 1px rgba(0, 0, 0, 0.1);
 }
 
 .tableOccupied {
@@ -192,8 +203,8 @@ serviceh4 {
 }
 
 .categoryCaption {
-/*    font-size: 2.5vmin;*/
-/*    font-weight: 400;*/
+    /*    font-size: 2.5vmin;*/
+    /*    font-weight: 400;*/
 }
 
 
@@ -242,12 +253,13 @@ serviceh4 {
 
 
 /*Build Order State Header CSS Starts*/
+
 .header {
     top: 0;
     width: auto;
     height: 70px;
     background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.35);
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.35);
 }
 
 .menuTab {
@@ -258,6 +270,7 @@ serviceh4 {
     background-position: center;
     background-size: contain;
 }
+
 
 /*
 .arrowClass {
@@ -303,6 +316,8 @@ font-size: 1.8vw;
 .topClass a {
     text-decoration: none;
 }
+
+
 /*
 .topClass a active {
 color: #f12f63;
@@ -315,10 +330,14 @@ span {
 
 .arrows {
     top: 1.5rem;
-    }
+}
+
+
 /*Build Order State Header CSS Ends*/
 
+
 /*Order State Header CSS Ends*/
+
 .user {
     top: 1.8rem;
     background-image: url(../images/user.png);
@@ -326,5 +345,7 @@ span {
     background-position: center;
     background-size: contain;
     height: 42px;
-    }
+}
+
+
 /*Order State Header CSS Ends*/
