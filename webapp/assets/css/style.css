@@ -257,7 +257,7 @@ serviceh4 {
     top:0;
     z-index: 1000;
     width: 100vw;
-    box-shadow: 0 0 5px 5px rgba(0,0,0,0.35);
+    margin: auto;
 }
 .screenHeader{
     margin-top: 70px;     /*margin affects service screen and order state*/
@@ -274,7 +274,6 @@ serviceh4 {
     width: auto;
     height: 70px;
     background-color: white;
-    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.35);
 }
 
 .menuTab {
