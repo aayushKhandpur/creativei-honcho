@@ -157,14 +157,9 @@ serviceh4 {
     font-size: 3em;
 }
 
-.tableDetailAvailable {
-    border-left: 3px #52934f solid;
-    padding-left: 5%;
-}
-
-.tableDetailOccupied {
-    border-left: 3px #ff4f4f solid;
-    padding-left: 5%;
+.tableDetail {
+    border-left: 1px #05132c solid;
+    padding-left: 3%;
 }
 
 .assignButton {
@@ -257,7 +252,7 @@ serviceh4 {
     top:0;
     z-index: 1000;
     width: 100vw;
-    box-shadow: 0 0 5px 5px rgba(0,0,0,0.35);
+/*    box-shadow: 0 0 5px 5px rgba(0,0,0,0.35);*/
 }
 .screenHeader{
     margin-top: 70px;     /*margin affects service screen and order state*/
