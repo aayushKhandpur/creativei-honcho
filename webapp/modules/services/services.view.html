@@ -16,53 +16,41 @@
             </div>
         </div>
         <!--header row ends-->
-        <!--row one starts-->
-        <div class="row">
-            <!--service rows starts-->
-            <div class="row rowMargin serviceVerticalCenter">
-                <!--order column first starts-->
-                <a href="#" ui-sref="order.current">
-                    <div class="col-md-4 col-sm-4 col-xs-2 col-md-offset-2 col-sm-offset-0 marginClass" id="orderTab">
-                        <!--order icon row starts-->
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2 col-xs-8 col-xs-offset-2 orderIcon">
-                                <img class="img-responsive" src="../../assets/images/order_icon.png" alt="order" title="order">
-                            </div>
-                        </div>
-                        <!--order icon row ends-->
+        <!--Service Screen Starts-->
+        <div class="row serviceContainer">
+            <!--order column first starts-->
+            <div class="col-md-3 col-sm-4 col-xs-6 orderTab">
+                <a ui-sref="order.current">
+                    <div class="serviceCard">
+                        <img src="../../assets/images/Order_alternate_icon.png" class="img-responsive" alt="ordericon">
                         <!--order text row starts-->
                         <div class="row">
-                            <div class="col-xs-4 col-xs-offset-4 text-center order">
-                                <h4 class="serviceh4">Order</h4>
+                            <div class="col-xs-4 col-xs-offset-4 text-center textElement">
+                                <h4>Order</h4>
                             </div>
                         </div>
                         <!--order text row ends-->
                     </div>
                 </a>
-                <!--order column first ends-->
-                <!--waiting column starts-->
+            </div>
+            <!--order column first ends-->
+            <!--waiting column starts-->
+            <div class="col-md-3 col-sm-4 col-xs-6 waitingTab">
                 <a href="#">
-                    <div class="col-md-4 col-sm-4 col-xs-2 col-md-offset-2 col-sm-offset-2" id="waitingTab">
-                        <!--waiting icon row starts-->
-                        <div class="row">
-                            <div class="col-xs-8 col-xs-offset-3 waitingIcon">
-                                <img class="img-responsive" src="../../assets/images/waiting_icon.png" alt="Waiting" title="Waiting">
-                            </div>
-                        </div>
-                        <!--waiting icon row ends-->
+                    <div class="serviceCard">
+                        <img src="../../assets/images/Waiting_secondary_icon.png" class="img-responsive" alt="waiting icon">
                         <!--waiting text row starts-->
                         <div class="row">
-                            <div class="col-xs-6 col-xs-offset-3 text-center waiting">
-                                <h4 class="serviceh4">Waiting</h4>
+                            <div class="col-xs-6 col-xs-offset-3 text-center textElement">
+                                <h4>Waiting</h4>
                             </div>
                         </div>
                         <!--waiting text row starts-->
                     </div>
                 </a>
-                <!--waiting column ends-->
             </div>
-            <!--service rows starts-->
+            <!--waiting column ends-->
         </div>
-        <!--row one starts-->
+        <!--Service Screen Ends-->
     </div>
 </div>
