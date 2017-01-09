@@ -3,7 +3,7 @@
 //fetch restaurant info
 //save restaurant info, user role, login info in rootscope
 'use strict';
-creativei_app.controller('AuthController', function($scope, $rootScope, AuthService,$state,CartService){
+creativei_app.controller('AuthController', function($scope, $rootScope, AuthService,$state){
   console.log("Inside auth controller");
 
   $scope.authenticate = function(){
@@ -16,8 +16,6 @@ creativei_app.controller('AuthController', function($scope, $rootScope, AuthServ
           && $scope.user.password === response.data.password){
             $rootScope.isAuthenticated = true;
             $rootScope.restaurant=response.data;
-            var cartService= CartService.addItem();
-            console.log(cartService);
             $state.go('services');
           }else{
             console.log("invalid credentials");
