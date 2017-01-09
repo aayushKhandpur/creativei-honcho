@@ -36,7 +36,7 @@ body{
 #loginButton,
 #orderInitButton {
     width: 100%;
-    background-color: rgba(2, 17, 44, 0.65) !important;
+    background-color: #05132c !important;
     color: white;
     font-family: "Microsoft Sans Serif";
     border-radius: 10px;
@@ -123,14 +123,9 @@ body{
     font-size: 3em;
 }
 
-.tableDetailAvailable {
-    border-left: 3px #52934f solid;
-    padding-left: 5%;
-}
-
-.tableDetailOccupied {
-    border-left: 3px #ff4f4f solid;
-    padding-left: 5%;
+.tableDetail {
+    border-left: 1px #05132c solid;
+    padding-left: 3%;
 }
 
 .assignButton {
@@ -237,7 +232,7 @@ body{
 
 .header {
     top: 0;
-    width: auto;
+    width: 99%;
     height: 70px;
     background-color: white;
 }
@@ -277,13 +272,13 @@ font-size: 1.8vw;
 }
 
 .header2 {
-    background: #f1f1f1;
+    background: #05132c;
     height: 47px;
 }
 
 .h4Text {
     font-family: open sans;
-    color: #9b9b9b;
+    color: #ffffff;
     font-size: 2.7vmin;
     text-align: center;
     text-decoration: none;
@@ -304,7 +299,11 @@ color: #f12f63;
 }
 */
 
-span {
+.stage{
+    color: #ffffff;
+}
+
+.currentStage {
     color: #f12f63;
 }
 
