@@ -1,26 +1,11 @@
 <div ng-controller="ServicesController" ng-cloak>
     <div class="screenHeader">
-        <!--header row starts-->
-        <div class="headerContainer">
-            <div class="row header">
-                <div class="col-md-1 col-sm-1 col-xs-1 menuTab ">
-                    <!--                <img class="img-responsive" src="images/menu_tabIcon.png" alt="menuTab">-->
-                </div>
-                <div class="col-md-4 col-xs-4 col-sm-4"></div>
-                <div class="col-md-2  col-sm-2  col-xs-2 lazyLogo">
-                    <!--                <img class="img-responsive" src="images/logo_lazy-_210.png" alt="lazymojo">-->
-                </div>
-                <div class=" pull-right col-md-1 col-sm-1 col-xs-2 user">
-                    <!--                <img class="img-responsive" src="images/user.png" alt="user">-->
-                </div>
-            </div>
-        </div>
-        <!--header row ends-->
+        <div service-screen-header></div>
         <!--Service Screen Starts-->
         <div class="row serviceContainer">
             <!--order column first starts-->
             <div class="col-md-3 col-sm-4 col-xs-6 orderTab">
-                <a ui-sref="order.current">
+                <a ng-click="selectOrderService();">
                     <div class="serviceCard">
                         <img src="../../assets/images/Order_alternate_icon.png" class="img-responsive" alt="ordericon">
                         <!--order text row starts-->
