@@ -1,4 +1,4 @@
-var creativei_app= angular.module("creativei_app",['ui.router'])
+var creativei_app= angular.module("creativei_app",['ui.router','ui.bootstrap'])
 
 creativei_app.config(function($stateProvider,$urlRouterProvider) {
   $stateProvider
@@ -58,4 +58,36 @@ creativei_app.controller("MainController",function($scope, $rootScope, $state, $
       return;
     $location.path("/login");
   });
+
+  // var modalInstance = $uibModal.open({
+  //     templateUrl: 'myModalContent.html',
+  //     controller: 'ModalInstanceCtrl',
+  //     size: 100,
+  //     resolve: {
+  //       items: function () {
+  //         return $scope.items;
+  //       }
+  //     }
+  //   });
+  //   modalInstance.result.then(function (selectedItem) {
+  //     $scope.selected = selectedItem;
+  //   }, function () {
+  //     $log.info('Modal dismissed at: ' + new Date());
+  //   });
 });
+
+// creativei_app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
+//
+//   $scope.items = [1,2,3];
+//   $scope.selected = {
+//     item: $scope.items[0]
+//   };
+//
+//   $scope.ok = function () {
+//     $uibModalInstance.close($scope.selected.item);
+//   };
+//
+//   $scope.cancel = function () {
+//     $uibModalInstance.dismiss('cancel');
+//   };
+// });
