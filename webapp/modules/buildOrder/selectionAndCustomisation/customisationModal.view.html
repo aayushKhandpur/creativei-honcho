@@ -1,0 +1,57 @@
+<div class="modal-header">
+    <button type="button" class="close" ng-click="cancel()"><span>&times;</span></button>
+    <div class="dishName">
+        <h4 class="modal-title"><span><img src="/assets/images/veg.png">&nbsp;</span>Dish Name</h4>
+    </div>
+</div>
+<div class="modal-body">
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="row">
+                <div class="col-xs-12 dishDetail text-left">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+                </div>
+            </div>
+            <div class="row priceAndQuantity">
+                <div class="col-xs-5 price pull-left">
+                    <div>Price&nbsp;:&nbsp;&#8377;666</div>
+                </div>
+                <div class="col-xs-4 quantityWrapper text-right pull-right">
+                    <div>
+                        <span class="glyphicon glyphicon-minus"></span>
+                        <input class="quantityValue" type="text" />
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row customisationCheckbox">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <div class="row text-center">
+                        <div class="col-xs-4">
+                            <input type="checkbox">
+                            <lable>Mild</lable>
+                        </div>
+                        <div class="col-xs-4">
+                            <input type="checkbox">
+                            <lable>Medium</lable>
+                        </div>
+                        <div class="col-xs-4">
+                            <input type="checkbox">
+                            <lable>Hot</lable>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+                <div class="col-xs-10 col-xs-offset-1">
+                    <textarea class="customisationComment" placeholder="Would you like to customize this dish..."></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-primary" ng-click="ok()">Add To Cart</button>
+</div>
