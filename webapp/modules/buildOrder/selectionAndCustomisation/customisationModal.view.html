@@ -19,7 +19,7 @@
                 <div class="col-xs-4 quantityWrapper text-right pull-right">
                     <div>
                         <span class="glyphicon glyphicon-minus"></span>
-                        <input class="quantityValue" type="text" />
+                        <input class="quantityValue" type="text" ng-model="itemQuantity"/>
                         <span class="glyphicon glyphicon-plus"></span>
                     </div>
                 </div>
@@ -53,5 +53,5 @@
     </div>
 </div>
 <div class="modal-footer">
-    <button type="button" class="btn btn-primary" ng-click="ok()">Add To Cart</button>
+    <button id="addButton" class="btn" ng-click="ok()">Add To Cart</button>
 </div>

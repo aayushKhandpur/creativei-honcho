@@ -1,5 +1,6 @@
 creativei_app.controller('CustomisationModalController', function($scope,$uibModalInstance){
     console.log("Inside customisation modal controller.");
+    $scope.itemQuantity = 1;
     console.log("Modal Opened at "+ new Date());
     $scope.ok = function () {                       //function called on add to cart button
       //send the status as true

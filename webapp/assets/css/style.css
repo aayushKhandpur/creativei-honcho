@@ -331,6 +331,14 @@ color: #f12f63;
 
 
 /*Customisation Modal Css Starts*/
+#addButton{
+    background-color: #05132c !important;
+    color: white;
+    font-family: "Microsoft Sans Serif";
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
 .priceAndQuantity {
     background-color: whitesmoke;
 }
