@@ -11,7 +11,8 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
     .state('order', {
       url: '/order',
       templateUrl: 'modules/order/order.view.html',
-      controller: 'OrderController'
+      controller: 'OrderController',
+      abstract: true
     })
     .state('order.current', {
       url: '/current',
@@ -26,7 +27,8 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
     .state('buildOrder',{
       url: '/buildOrder',
       templateUrl: 'modules/buildOrder/buildOrder.view.html',
-      controller: 'BuildOrderController'
+      controller: 'BuildOrderController',
+      abstract: true
     })
     .state('buildOrder.initiate',{
       url: '/initiate',
@@ -39,7 +41,7 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
       controller: 'CategoryController'
     })
     .state('buildOrder.menuItem',{
-      url: '/menuItem',
+      url: '/menuItem/:categoryName',
       templateUrl: 'modules/buildOrder/category/menuItem/menuItem.view.html',
       controller: 'MenuItemController'
   })
