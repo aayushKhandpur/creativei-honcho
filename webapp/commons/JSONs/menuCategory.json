@@ -1,0 +1,37 @@
+[
+    {
+        "categoryName": "Drinks",
+        "Id": "124A",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "23:00",
+        "isAvailable": true,
+        "subCategories": [
+            {
+                "categoryName": "Tea",
+                "Id": "124A1",
+                "parentId": "124A",
+                "availableFrom": "10:00",
+                "availableTo": "23:00",
+                "subCategories": null
+            },
+            {
+                "categoryName": "Coffee",
+                "Id": "124A2",
+                "parentId": "124A",
+                "availableFrom": "10:00",
+                "availableTo": "23:00",
+                "subCategories": null
+            }
+        ]
+    },
+    {
+        "categoryName": "Appetizers",
+        "Id": "125A",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "22:00",
+        "isAvailable": true,
+        "subCategories": null
+    }
+]

@@ -174,11 +174,23 @@ body{
 
 /*menu screen css starts*/
 .categoryHeading{
-    background-color: #05132c;
-    color: white;
+    background-color: gainsboro;
+    color: #05132c;
 }
 .menuItemName{
     border-bottom: 1px solid #05132c;
+}
+.asideCategory{
+    background-color: gainsboro;
+    color: #05132c;
+}
+.categoryAsideContainer{
+    height: 100%;
+    position: fixed;
+    margin-top: 1rem;
+}
+.menuItemContainer{
+    margin-top: 1rem;
 }
 /*menu screen css ends*/
 
@@ -189,6 +201,7 @@ body{
     z-index: 1000;
     width: 100vw;
     margin: auto;
+    background-color: white;
 }
 .screenHeader{
     margin-top: 70px;     /*margin affects service screen and order state*/

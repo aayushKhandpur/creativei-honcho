@@ -1,0 +1,80 @@
+[
+    {
+        "categoryId": "124A1",
+        "menuItems": [
+            {
+                "Id": "124A101",
+                "name": "Lemon Tea",
+                "price": 60,
+                "description": "",
+                "isVeg" : true
+            },
+            {
+                "Id": "124A102",
+                "name": "Green Tea",
+                "price": 60,
+                "description": "",
+                "isVeg" : true
+            },
+            {
+                "Id": "124A103",
+                "name": "Masala Tea",
+                "price": 60,
+                "description": "",
+                "isVeg" : true
+            }
+        ]
+    },
+    {
+        "categoryId": "124A2",
+        "menuItems": [
+            {
+                "Id": "124A201",
+                "name": "Cappuchino",
+                "price": 85,
+                "description": "",
+                "isVeg" : true
+            },
+            {
+                "Id": "124A202",
+                "name": "Cafe Latte",
+                "price": 75,
+                "description": "",
+                "isVeg" : true
+            },
+            {
+                "Id": "124A203",
+                "name": "Espresso",
+                "price": 55,
+                "description": "",
+                "isVeg" : true
+            },
+            {
+                "Id" : "124A204",
+                "name" : "Cafe Hazelnut",
+                "price" : 99,
+                "description" : "",
+                "isVeg" : true
+            }
+        ]
+    },
+    {
+        "categoryId": "125A",
+        "menuItems": [
+            {
+                "Id": "125A01",
+                "name": "Oven Baked Nachos",
+                "price": 210,
+                "description": "Nachos baked with cheese, spicy mint mayonnaise, tomato salsa",
+                "isVeg" : false
+            },
+            {
+                "Id": "125A02",
+                "name": "Classic Nachos",
+                "price": 175,
+                "description": "Tomato salsa and spicy mint mayonnaise",
+                "isVeg" : false
+            }
+        ]
+    }
+]
