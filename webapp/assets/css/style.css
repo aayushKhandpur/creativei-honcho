@@ -311,3 +311,36 @@ color: #f12f63;
 
 
 /*Order State Header CSS Ends*/
+
+
+/*Customisation Modal Css Starts*/
+#addButton{
+    background-color: #05132c !important;
+    color: white;
+    font-family: "Microsoft Sans Serif";
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+.priceAndQuantity {
+    background-color: whitesmoke;
+}
+
+.price {
+    font-size: 2.2rem;
+    padding: 1rem;
+}
+
+.quantityWrapper {
+    padding: 1rem;
+}
+.quantityValue {
+    width: 4rem;
+    text-align: center;
+}
+.customisationComment {
+    width: 100%;
+    height: 8rem;
+    resize: none;
+}
+/*Customisation Modal Css Ends*/

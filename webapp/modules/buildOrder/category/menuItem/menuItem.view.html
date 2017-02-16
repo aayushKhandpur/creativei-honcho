@@ -35,19 +35,19 @@
                                 </div>
                                 <div class="col-md-2">
                                     &#8377;&nbsp;{{menuItem.price}}
-                                    <span class="glyphicon glyphicon-plus pull-right"></span>
+                                    <span ng-click="customiseDish(menuItem.Id)" class="glyphicon glyphicon-plus pull-right"></span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!--Menu Item List Ends Here-->
+                    <!--Menu Item List Starts Here-->
                 </div>
                 <div ng-if="category.subCategories" ng-repeat="subCategory in category.subCategories" class="panel">
-                    <!--Category Name Starts Here-->
+                    <!--Sub Category Name Starts Here-->
                     <div class="panel-heading categoryHeading">
                         <h3 class="panel-title">{{subCategory.categoryName}}</h3>
                     </div>
-                    <!--Category Name Ends Here-->
+                    <!--Sub Category Name Ends Here-->
                     <!--Menu Item List Starts Here-->
                     <div ng-repeat="menuCategory in menuItems">
                         <div ng-if="subCategory.Id == menuCategory.categoryId" ng-repeat="menuItem in menuCategory.menuItems" class="panel-body menuItemName">
@@ -58,7 +58,7 @@
                                 </div>
                                 <div class="col-md-2">
                                     &#8377;&nbsp;{{menuItem.price}}
-                                    <span class="glyphicon glyphicon-plus pull-right"></span>
+                                    <span ng-click="customiseDish(menuItem.Id)" class="glyphicon glyphicon-plus pull-right"></span>
                                 </div>
                             </div>
                         </div>
