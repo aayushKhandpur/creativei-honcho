@@ -1,8 +1,9 @@
-creativei_app.controller('CustomisationModalController', function($scope,$uibModalInstance){
+creativei_app.controller('CustomisationModalController', function($scope,$uibModalInstance,CartService){
     console.log("Inside customisation modal controller.");
     $scope.itemQuantity = 1;
     console.log("Modal Opened at "+ new Date());
     $scope.ok = function () {                       //function called on add to cart button
+      CartService.addItem();
       //send the status as true
       $uibModalInstance.close( true );
     };
