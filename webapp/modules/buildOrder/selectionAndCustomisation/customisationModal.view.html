@@ -1,7 +1,7 @@
 <div class="modal-header">
     <button type="button" class="close" ng-click="cancel()"><span>&times;</span></button>
     <div class="dishName">
-        <h4 class="modal-title"><span><img src="/assets/images/veg.png">&nbsp;</span>Dish Name</h4>
+        <h4 class="modal-title"><span><img src="../../../assets/images/veg.png">&nbsp;</span>Dish Name</h4>
     </div>
 </div>
 <div class="modal-body">
@@ -18,9 +18,9 @@
                 </div>
                 <div class="col-xs-4 quantityWrapper text-right pull-right">
                     <div>
-                        <span class="glyphicon glyphicon-minus"></span>
+                        <span ng-click="decreaseQuantity()" class="glyphicon glyphicon-minus"></span>
                         <input class="quantityValue" type="text" ng-model="itemQuantity"/>
-                        <span class="glyphicon glyphicon-plus"></span>
+                        <span ng-click="increaseQuantity()" class="glyphicon glyphicon-plus"></span>
                     </div>
                 </div>
             </div>
