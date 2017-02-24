@@ -1,4 +1,4 @@
-creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stateParams,$http) {
+creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stateParams,$http,CartService) {
     console.log("Inside menu item controller.");
 
     console.log($stateParams);
@@ -39,14 +39,14 @@ creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stat
             }}
         });
 
-        console.log(menuItemId);
-
-        modalInstance.result.then(function (status) {
-            if(status){
-                console.log('You clicked on add to cart');              //log when the modal is dismissed with add to cart button
-            }else{
-                console.log('You clicked on close button');             //log when the modal is dismissed with close button
-            }
+        modalInstance.result.then(function (data) {
+            console.log(data);
+            CartService.addItem();
+            // if(status){
+            //     console.log('You clicked on add to cart');              //log when the modal is dismissed with add to cart button
+            // }else{
+            //     console.log('You clicked on close button');             //log when the modal is dismissed with close button
+            // }
         }, function () {
             console.log('Modal dismissed at: ' + new Date());           //log when the modal is dismissed by clicking on the modal backdrop,set backdrop as true or false to enable
         });
