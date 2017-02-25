@@ -8,7 +8,7 @@
                             <img class="categoryImg img-responsive" ng-src="{{category.img}}">
                             <img class="categoryImg img-responsive" src="http://placehold.it/213x186" ng-if="category.img==null">
                             <div class="carousel-caption">
-                                <h4 class="categoryCaption">{{category.name}}</h4>
+                                <h4 ng-class="{'unavailableCategoryCaption': !isAvailable(category)}">{{category.name}}</h4>
                             </div>
                         </div>
                     </div>

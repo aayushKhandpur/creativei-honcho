@@ -6,4 +6,9 @@ creativei_app.controller('CategoryController', function($scope,$http){
     .then(function(response){
         $scope.categories = response.data;
     });
+    
+    //availability check for category
+    $scope.isAvailable = function(category){
+       return category.isAvailable;
+    };
 });
