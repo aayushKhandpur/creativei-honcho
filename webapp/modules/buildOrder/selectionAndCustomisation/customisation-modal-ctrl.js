@@ -1,4 +1,4 @@
-creativei_app.controller('CustomisationModalController', function($scope,$uibModalInstance,CartService,menuItemId){
+creativei_app.controller('CustomisationModalController', function($scope,$uibModalInstance,CartService,menuItem){
     console.log("Inside customisation modal controller.");
 
     //quantity control
@@ -15,9 +15,11 @@ creativei_app.controller('CustomisationModalController', function($scope,$uibMod
     };
     //quantity control
 
-    $scope.menuItemId = menuItemId;                 //gets menu item id from the menu-item-ctrl
+    $scope.menuItem = menuItem;                 //gets menu item from the menu-item-ctrl
+    console.log(menuItem);
     console.log("Modal Opened at "+ new Date());
 
+    console.log("Modal Opened at "+ new Date());    
     $scope.ok = function () {
       //function called on add to cart button
       $uibModalInstance.close({

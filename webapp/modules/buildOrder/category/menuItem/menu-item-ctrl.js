@@ -19,12 +19,12 @@ creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stat
     $scope.isCollapsed = true;
 
     //selection and customisation modal js
-    $scope.customiseDish = function (menuItemId) {
+    $scope.customiseDish = function (menuItem) {
 
-      if(menuItemId == undefined || menuItemId === "")
+      if(menuItem == undefined || menuItem === "")
         return "Error";
 
-        $scope.selectedMenuItemId = menuItemId;
+        $scope.selectedMenuItem = menuItem;
         var modalInstance = $uibModal.open({
             //to set this true, you will need to add ngAnimate module
             animation: false,
@@ -33,9 +33,9 @@ creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stat
             controller: 'CustomisationModalController',
             size: 'md',
             resolve: {
-              menuItemId:function(){
-              var menuItemId =$scope.selectedMenuItemId;
-              return menuItemId;
+              menuItem:function(){
+              var menuItem =$scope.selectedMenuItem;
+              return menuItem;
             }}
         });
 
