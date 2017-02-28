@@ -3,13 +3,17 @@
         <!--Category Aside Starts Here-->
         <div class="col-md-3 categoryAsideContainer">
             <div class="panel">
-                <div ng-repeat="category in categories">
+                <div  ng-repeat="category in categories">
                     <div class="panel-heading asideCategory" ng-click="isCollapsed = !isCollapsed">
-                        <h3 class="panel-title">{{category.categoryName}}<span ng-if="category.subCategories != null" class="glyphicon pull-right" ng-class="{'glyphicon-chevron-right': isCollapsed, 'glyphicon-chevron-down': !isCollapsed}"></span></h3>
+                        <h3 class="panel-title"><a href="#{{category.categoryName}}" offset="30" du-smooth-scroll du-scrollspy>{{category.categoryName}}</a>
+                        <span ng-if="category.subCategories != null"
+                        class="glyphicon pull-right"
+                        ng-class="{'glyphicon-chevron-right': isCollapsed, 'glyphicon-chevron-down': !isCollapsed}">
+                      </span></h3>
                     </div>
-                    <div ng-if="category.subCategories != null" uib-collapse="isCollapsed">
+                    <div ng-if="category.subCategories != null" uib-collapse="!isCollapsed">
                         <div ng-repeat="subCategory in category.subCategories" class="panel-body">
-                            {{subCategory.categoryName}}
+                            <a href="#{{subCategory.categoryName}}" offset="30" du-smooth-scroll du-scrollspy>{{subCategory.categoryName}}</a>
                         </div>
                     </div>
             </div>
@@ -17,9 +21,9 @@
         </div>
         <!--Category Aside Ends Here-->
         <!--Menu Item Columns Start Here-->
-        <div class="col-md-9 pull-right menuItemContainer">
-            <div ng-repeat="category in categories">
-                <div ng-if="!category.subCategories" class="panel">
+        <div du-scroll-container  class="col-md-9 pull-right menuItemContainer">
+            <div   ng-repeat="category in categories">
+                <section id="{{category.categoryName}}" offset="30" du-smooth-scroll ng-if="!category.subCategories" class="panel">
                     <!--Category Name Starts Here-->
                     <div class="panel-heading categoryHeading">
                         <h3 class="panel-title">{{category.categoryName}}</h3>
@@ -41,8 +45,8 @@
                         </div>
                     </div>
                     <!--Menu Item List Starts Here-->
-                </div>
-                <div ng-if="category.subCategories" ng-repeat="subCategory in category.subCategories" class="panel">
+                </section>
+                <section id="{{subCategory.categoryName}}" offset="30" du-smooth-scroll ng-if="category.subCategories" ng-repeat="subCategory in category.subCategories" class="panel">
                     <!--Sub Category Name Starts Here-->
                     <div class="panel-heading categoryHeading">
                         <h3 class="panel-title">{{subCategory.categoryName}}</h3>
@@ -64,7 +68,7 @@
                         </div>
                     </div>
                     <!--Menu Item List Ends Here-->
-                </div>
+                </section>
             </div>
         </div>
         <!--Menu Item Columns End Here-->
