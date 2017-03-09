@@ -1,19 +1,23 @@
-creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stateParams,$http,CartService) {
+creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stateParams,$http, CartService, _) {
     console.log("Inside menu item controller.");
 
-    console.log($stateParams);
-
-    //fetch category and menu item data from the JSONs
-    $http.get('../../../../commons/JSONs/menuCategory.json')
-        .then(function(response){
+    // //fetch category and menu item data from the JSONs
+   $http.get('../../../../commons/JSONs/category.json')
+         .then(function(response){
         $scope.categories = response.data;
-        console.log(response.data);
+         console.log(response.data);
+     });
+     $http.get('../../../../commons/JSONs/menuItems.json')
+         .then(function(response){
+        $scope.menuItemList = response.data.menuItem;
+        angular.forEach($scope.categories, function(category, key){
+          var menuItems = _.where($scope.menuItemList, {categoryID: category.Id});
+          category.menuItems = menuItems;
+        });
+        console.log($scope.categories);
     });
-    $http.get('../../../../commons/JSONs/menuMenuItem.json')
-        .then(function(response){
-        $scope.menuItems = response.data;
-        console.log(response.data);
-    });
+
+    $scope.selectedMenuItem={};
 
     //condition for the category aside collapse
     $scope.isCollapsed = true;
@@ -50,5 +54,12 @@ creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stat
         }, function () {
             console.log('Modal dismissed at: ' + new Date());           //log when the modal is dismissed by clicking on the modal backdrop,set backdrop as true or false to enable
         });
+
+        var categoryArr = ["Drinks","Lunch", "Dinner"];
+        $scope.categoryFunct = function(){
+          var html = "<h1>Hello</h1>";
+          return $sce.trustAsHtml(html);
+
+        }
     };
 });

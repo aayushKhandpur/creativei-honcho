@@ -1,0 +1,73 @@
+[
+    {
+        "name": "soups",
+        "Id": "1",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "23:00",
+        "isAvailable": true,
+        "order": 1,
+        "subCategories": null
+    },
+    {
+        "name": "Appetizers",
+        "Id": "2",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "22:00",
+        "isAvailable": true,
+        "order": 2,
+        "subCategories": null
+    },
+    {
+        "name": "Indian snacks",
+        "Id": "3",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "22:00",
+        "isAvailable": true,
+        "order": 3,
+        "subCategories": null
+    },
+    {
+        "name": "Chaat",
+        "Id": "4",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "22:00",
+        "isAvailable": true,
+        "order": 4,
+        "subCategories": null
+    },
+    {
+        "name": "North Indian",
+        "Id": "6",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "22:00",
+        "isAvailable": true,
+        "order": 6,
+        "subCategories": null
+    },
+    {
+        "name": "Continental",
+        "Id": "5",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "22:00",
+        "isAvailable": true,
+        "order": 5,
+        "subCategories": null
+    },
+    {
+        "name": "South Indian",
+        "Id": "7",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "22:00",
+        "isAvailable": true,
+        "order": 7,
+        "subCategories": null
+    }
+
+]

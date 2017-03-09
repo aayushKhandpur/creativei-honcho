@@ -1,0 +1,86 @@
+{
+    "menuItem": [
+          {
+            "id": 1,
+            "name": "Velvet Escoffier (Choice Of Cream Soup)",
+            "price": 125,
+            "isComboMeal": false,
+            "categoryID": "1",
+            "quantity": 0,
+            "isVeg" : true
+          },
+          {
+            "id": 2,
+            "name": "Paneer Butter Masala",
+            "price": 190,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg" : true
+          },
+          {
+            "id": 3,
+            "name": "Paneer Tikka Masala",
+            "price": 195,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg" : true
+          },
+          {
+            "id": 4,
+            "name": "Idli Sambhar",
+            "price": 100,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg" : true
+          },
+          {
+            "id": 5,
+            "name": "Plain Dosa",
+            "price": 105,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg" : true
+          },
+          {
+            "id": 6,
+            "name": "Garlic Bread",
+            "price": 125,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg" : true
+          },
+          {
+            "id": 7,
+            "name": "Paneer Tikka",
+            "price": 150,
+            "isComboMeal": false,
+            "categoryID": "3",
+            "quantity": 0,
+            "isVeg" : true
+          },
+          {
+            "id": 8,
+            "name": "Bhel Puri",
+            "price": 100,
+            "isComboMeal": false,
+            "categoryID": "4",
+            "quantity": 0,
+            "isVeg" : true
+          },
+          {
+            "id": 9,
+            "name": "Pasta",
+            "price": 200,
+            "isComboMeal": false,
+            "categoryID": "5",
+            "quantity": 0,
+            "isVeg" : true
+          }
+
+    ]
+}

@@ -3,46 +3,53 @@
         <!--Category Aside Starts Here-->
         <div class="col-md-3 categoryAsideContainer">
             <div class="panel">
-                <div ng-repeat="category in categories">
+                <div ng-repeat="category in categories | orderBy:'order'">
                     <div class="panel-heading asideCategory" ng-click="isCollapsed = !isCollapsed">
-                        <h3 class="panel-title">{{category.categoryName}}<span ng-if="category.subCategories != null" class="glyphicon pull-right" ng-class="{'glyphicon-chevron-right': isCollapsed, 'glyphicon-chevron-down': !isCollapsed}"></span></h3>
+                        <h3 class="panel-title">{{category.name}}<span ng-if="category.subCategories != null" class="glyphicon pull-right" ng-class="{'glyphicon-chevron-right': isCollapsed, 'glyphicon-chevron-down': !isCollapsed}"></span></h3>
                     </div>
                     <div ng-if="category.subCategories != null" uib-collapse="isCollapsed">
                         <div ng-repeat="subCategory in category.subCategories" class="panel-body">
                             {{subCategory.categoryName}}
                         </div>
                     </div>
-            </div>
+              </div>
             </div>
         </div>
         <!--Category Aside Ends Here-->
         <!--Menu Item Columns Start Here-->
         <div class="col-md-9 pull-right menuItemContainer">
-            <div ng-repeat="category in categories">
+          <div class="panel">
+          <div class="row">
+              <div class="col-md-12">
+                <input placeholder="Search food" ng-model="query.name" />
+              </div>
+            </div>
+          </div>
+
+            <div ng-repeat="category in categories | orderBy:'order' | filter:query.name">
                 <div ng-if="!category.subCategories" class="panel">
                     <!--Category Name Starts Here-->
                     <div class="panel-heading categoryHeading">
-                        <h3 class="panel-title">{{category.categoryName}}</h3>
+                        <h3 class="panel-title">{{category.name}}</h3>
                     </div>
                     <!--Category Name Ends Here-->
                     <!--Menu Item List Starts Here-->
-                    <div ng-repeat="menuCategory in menuItems">
-                        <div ng-if="category.Id == menuCategory.categoryId" ng-repeat="menuItem in menuCategory.menuItems" class="panel-body menuItemName">
-                            <div class="row">
-                                <div class="col-md-10">
-                                    <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span>
-                                    {{menuItem.name}}
-                                </div>
-                                <div class="col-md-2">
-                                    &#8377;&nbsp;{{menuItem.price}}
-                                    <span ng-click="customiseDish(menuItem)" class="glyphicon glyphicon-plus pull-right"></span>
-                                </div>
+                    <div class="panel-body menuItemName" ng-repeat="menuItem in category.menuItems">
+                      <div class="row">
+                        <div class="col-md-10">
+                          <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span>
+                            {{menuItem.name}}
+                          </div>
+                          <div class="col-md-2">
+                            &#8377;&nbsp;{{menuItem.price}}
+                            <span ng-click="customiseDish(menuItem.Id)" class="glyphicon glyphicon-plus pull-right"></span>
+                          </div>
                             </div>
-                        </div>
-                    </div>
+                      </div>
+
                     <!--Menu Item List Starts Here-->
                 </div>
-                <div ng-if="category.subCategories" ng-repeat="subCategory in category.subCategories" class="panel">
+                <div ng-if="category.subCategories" ng-repeat="subCategory in category.subCategories | orderBy:'order'" class="panel">
                     <!--Sub Category Name Starts Here-->
                     <div class="panel-heading categoryHeading">
                         <h3 class="panel-title">{{subCategory.categoryName}}</h3>
@@ -58,7 +65,7 @@
                                 </div>
                                 <div class="col-md-2">
                                     &#8377;&nbsp;{{menuItem.price}}
-                                    <span ng-click="customiseDish(menuItem)" class="glyphicon glyphicon-plus pull-right"></span>
+                                    <span ng-click="customiseDish(menuItem.Id)" class="glyphicon glyphicon-plus pull-right"></span>
                                 </div>
                             </div>
                         </div>
@@ -69,4 +76,5 @@
         </div>
         <!--Menu Item Columns End Here-->
     </div>
+    <div ng-bind-html="categoryFunct()"></div>
 </div>

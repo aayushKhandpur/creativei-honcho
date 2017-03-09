@@ -1,4 +1,7 @@
 var creativei_app= angular.module("creativei_app",['ui.router','ui.bootstrap'])
+creativei_app.constant('_',
+    window._
+);
 
 creativei_app.config(function($stateProvider,$urlRouterProvider) {
   $stateProvider
@@ -44,7 +47,7 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
       url: '/menuItem/:categoryName',
       templateUrl: 'modules/buildOrder/category/menuItem/menuItem.view.html',
       controller: 'MenuItemController'
-  })
+    })
     $urlRouterProvider.otherwise('/services');
 
 
