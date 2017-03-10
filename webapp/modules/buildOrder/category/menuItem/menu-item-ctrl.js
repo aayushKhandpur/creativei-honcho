@@ -1,6 +1,7 @@
 creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stateParams,$http, CartService, _) {
     console.log("Inside menu item controller.");
 
+    $scope.tableId = "1";
     // //fetch category and menu item data from the JSONs
    $http.get('../../../../commons/JSONs/category.json')
          .then(function(response){
@@ -16,6 +17,13 @@ creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stat
         });
         console.log($scope.categories);
     });
+
+    $scope.addItem = function(menuItem){
+      var qty = 1;
+      menuItem.quantity+=qty;
+      var response = CartService.addItem(menuItem, $scope.tableId);
+      console.log(response);
+    }
 
     $scope.selectedMenuItem={};
 

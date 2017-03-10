@@ -38,7 +38,7 @@
                       <div class="row">
                         <div class="col-md-10">
                           <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span>
-                            {{menuItem.name}}
+                            <a ng-click="addItem(menuItem);">{{menuItem.name}}</a>
                           </div>
                           <div class="col-md-2">
                             &#8377;&nbsp;{{menuItem.price}}
