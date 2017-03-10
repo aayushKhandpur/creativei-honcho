@@ -1,30 +1,16 @@
 <div class="screenHeader2" ng-controller="MenuItemController" ng-cloak>
     <div class="row">
-        <!--Category Aside Starts Here-->
-        <div class="col-md-3 categoryAsideContainer">
+        <!--Menu Item Columns Start Here-->
+        <div class="col-md-9 menuItemContainer">
             <div class="panel">
-                <div ng-repeat="category in categories | orderBy:'order'">
-                    <div class="panel-heading asideCategory" ng-click="isCollapsed = !isCollapsed">
-                        <h3 class="panel-title">{{category.name}}<span ng-if="category.subCategories != null" class="glyphicon pull-right" ng-class="{'glyphicon-chevron-right': isCollapsed, 'glyphicon-chevron-down': !isCollapsed}"></span></h3>
-                    </div>
-                    <div ng-if="category.subCategories != null" uib-collapse="isCollapsed">
-                        <div ng-repeat="subCategory in category.subCategories" class="panel-body">
-                            {{subCategory.categoryName}}
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="wrap">
+                            <input id="search" name="search" type="text" placeholder="What're we looking for ?" ng-model="query.name"><input id="search_submit" value="Rechercher" type="reset">
                         </div>
                     </div>
-              </div>
+                </div>
             </div>
-        </div>
-        <!--Category Aside Ends Here-->
-        <!--Menu Item Columns Start Here-->
-        <div class="col-md-9 pull-right menuItemContainer">
-          <div class="panel">
-          <div class="row">
-              <div class="col-md-12">
-                <input placeholder="Search food" ng-model="query.name" />
-              </div>
-            </div>
-          </div>
 
             <div ng-repeat="category in categories | orderBy:'order' | filter:query.name">
                 <div ng-if="!category.subCategories" class="panel">
@@ -35,19 +21,17 @@
                     <!--Category Name Ends Here-->
                     <!--Menu Item List Starts Here-->
                     <div class="panel-body menuItemName" ng-repeat="menuItem in category.menuItems">
-                      <div class="row">
-                        <div class="col-md-10">
-                          <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span>
-                            {{menuItem.name}}
-                          </div>
-                          <div class="col-md-2">
-                            &#8377;&nbsp;{{menuItem.price}}
-                            <span ng-click="customiseDish(menuItem.Id)" class="glyphicon glyphicon-plus pull-right"></span>
-                          </div>
+                        <div class="row">
+                            <div class="col-md-10">
+                                <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span> {{menuItem.name}}
                             </div>
-                      </div>
-
-                    <!--Menu Item List Starts Here-->
+                            <div class="col-md-2">
+                                &#8377;&nbsp;{{menuItem.price}}
+                                <span ng-click="customiseDish(menuItem.Id)" class="glyphicon glyphicon-plus pull-right"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Menu Item List Ends Here-->
                 </div>
                 <div ng-if="category.subCategories" ng-repeat="subCategory in category.subCategories | orderBy:'order'" class="panel">
                     <!--Sub Category Name Starts Here-->
@@ -60,8 +44,7 @@
                         <div ng-if="subCategory.Id == menuCategory.categoryId" ng-repeat="menuItem in menuCategory.menuItems" class="panel-body menuItemName">
                             <div class="row">
                                 <div class="col-md-10">
-                                    <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span>
-                                    {{menuItem.name}}
+                                    <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span> {{menuItem.name}}
                                 </div>
                                 <div class="col-md-2">
                                     &#8377;&nbsp;{{menuItem.price}}
