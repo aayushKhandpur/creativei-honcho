@@ -190,9 +190,14 @@ body{
     margin-top: 1rem;
 }
 .menuItemContainer{
-    margin-top: 1rem;
+    margin-top: 8rem;
 }
     /*Menu search*/
+    .searchCategoryContainer{
+        margin-top: 1rem;
+        position: fixed;
+        z-index: 9999;
+    }
     #wrap {
         display: inline-block;
         position: relative;
@@ -235,7 +240,7 @@ body{
         cursor: text;
     }
     #search_submit {
-        height: 67px;
+        height: 60px;
         width: 63px;
         display: inline-block;
         color:red;
@@ -411,3 +416,98 @@ color: #f12f63;
     resize: none;
 }
 /*Customisation Modal Css Ends*/
+
+/*cart css starts*/
+.cartContainer{
+    position: fixed;
+    right: 0;
+}
+.cartSegment {
+    background: white;
+    min-height: 650px;
+    border-radius: 10px;
+}
+
+.yourOrder {
+    position: relative;
+    top: 15px;
+}
+
+.itemDetails {
+    display: inline-block;
+}
+
+.dishType {
+    position: relative;
+    top: 0px;
+}
+
+.dish-name {
+    font-family: open sans;
+    color: #02102b;
+    font-size: 1em;
+}
+
+.cartSummary {
+    border: 1px solid #d8d8d8;
+    border-right: none;
+    border-left: none;
+    margin-top: 2em;
+}
+
+.cartSummary {
+    padding: 10px 0px 12px;
+}
+
+.quantityField {
+    background: #01112a;
+    color: white;
+    width: 30px;
+    text-align: center;
+    font-family: open sans;
+    font-size: 14px;
+    border: 1px solid #01112a;
+    border-radius: 4px;
+}
+
+.button {
+    color: #01112a;
+    background: white;
+    border: 1px solid #01112a;
+    border-radius: 4px;
+}
+
+.side-bar-bottom {
+    position: fixed;
+    bottom: 40px;
+}
+
+.amount .subtotalAmt {
+    font-family: open sans;
+    color: #01112a;
+}
+
+.amount {
+    margin: 4em;
+    font-family: open sans;
+    color: #01112a;
+    font-weight: 500;
+}
+
+.textArea {
+    resize: none;
+}
+
+.confirmOrder {
+    font-family: open sans;
+    background: #1dab76;
+    color: white;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    margin: .8em;
+    bottom: 0em;
+    width: 100%;
+}
+/*cart css starts*/
