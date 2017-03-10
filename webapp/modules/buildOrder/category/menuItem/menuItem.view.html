@@ -4,7 +4,8 @@
         <div class="col-md-8 searchCategoryContainer">
             <div class="col-md-12 panel">
                 <div id="wrap">
-                    <input id="search" name="search" type="text" placeholder="What're we looking for ?" ng-model="query.name"><input id="search_submit" value="Rechercher" type="reset">
+                    <input id="search" name="search" type="text" placeholder="What're we looking for ?" ng-model="query.name">
+                    <input id="search_submit" value="Rechercher" type="reset">
                 </div>
             </div>
         </div>
@@ -22,23 +23,24 @@
 
                 <!-- Cart Dishes starts-->
                 <div class="row">
-                    <div class="col-xs-12 cartSummary">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10 cartSummary">
                         <div class="row order-items">
                             <div class="col-xs-1"></div>
-                            <div class="col-xs-11 dishName">
-                                <span><img src="../../../../assets/images/veg.png">Oven Baked Nachos</span>
+                            <div class="col-xs-10 col-md-11 marginCol">
+                                <span class="dishName"><img src="../../../../assets/images/veg.png">Oven Baked Nachos</span>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-1"></div>
-                            <div class="col-xs-5">
+                            <div class="col-lg-1"></div>
+                            <div class="col-xs-8 col-md-8">
                                 <button class="button left">-</button>
                                 <input class="quantityField" type="text" value="1" readonly/>
                                 <button class="button right">+</button>
-                                <span><span class="into">×</span> ₹400</span>
+                                <span class="priceOrignal"><span class="into">×</span> ₹400</span>
                             </div>
                             <div class="col-xs-3 pull-right">
-                                <span class="price">₹400.00</span>
+                                <span>₹400.00</span>
                             </div>
                         </div>
                     </div>

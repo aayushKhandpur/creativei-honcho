@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:100,300,400,700);
-body{
+body {
     background-color: whitesmoke;
 }
 
@@ -59,9 +59,11 @@ body{
 
 
 /*service screen css starts*/
-.serviceContainer{
+
+.serviceContainer {
     margin-top: 10rem;
 }
+
 .textElement h4 {
     font-family: "Open Sans";
     font-weight: 600;
@@ -86,9 +88,12 @@ body{
     font-family: "Open Sans";
     font-size: 24px;
 }
-.serviceCard{
+
+.serviceCard {
     box-shadow: 5px 5px 8px 1px rgba(0, 0, 0, 0.1);
 }
+
+
 /*service screen css ends*/
 
 
@@ -173,115 +178,137 @@ body{
 
 
 /*menu screen css starts*/
-.categoryHeading{
+
+.categoryHeading {
     background-color: gainsboro;
     color: #05132c;
 }
-.menuItemName{
+
+.menuItemName {
     border-bottom: 1px solid #05132c;
 }
-.asideCategory{
+
+.asideCategory {
     background-color: gainsboro;
     color: #05132c;
 }
-.categoryAsideContainer{
+
+.categoryAsideContainer {
     height: 100%;
     position: fixed;
     margin-top: 1rem;
 }
-.menuItemContainer{
+
+.menuItemContainer {
     margin-top: 8rem;
 }
-    /*Menu search*/
-    .searchCategoryContainer{
-        margin-top: 1rem;
-        position: fixed;
-        z-index: 9999;
-    }
-    #wrap {
-        display: inline-block;
-        position: relative;
-        height: 60px;
-        float: right;
-        padding: 0;
-        position: relative;
-    }
 
-    #search {
-        height: 60px;
-        font-size: 55px;
-        display: inline-block;
-        font-family: "Lato";
-        font-weight: 100;
-        border: none;
-        outline: none;
-        color: #555;
-        padding: 3px;
-        padding-right: 60px;
-        width: 0px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: none;
-        z-index: 3;
-        -webkit-transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
-        transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
-        cursor: pointer;
-    }
 
-    #search:focus:hover {
-        border-bottom: 1px solid #BBB;
-    }
+/*Menu search*/
 
-    #search:focus {
-        width: 700px;
-        z-index: 1;
-        border-bottom: 1px solid #BBB;
-        cursor: text;
-    }
-    #search_submit {
-        height: 60px;
-        width: 63px;
-        display: inline-block;
-        color:red;
-        float: right;
-        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
-        text-indent: -10000px;
-        border: none;
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 2;
-        cursor: pointer;
-        opacity: 0.4;
-        cursor: pointer;
-        -webkit-transition: opacity .4s ease;
-        transition: opacity .4s ease;
-    }
+.searchCategoryContainer {
+    margin-top: 1rem;
+    position: fixed;
+    z-index: 9999;
+}
 
-    #search_submit:hover {
-        opacity: 0.8;
-    }
-    /*Menu search*/
+#wrap {
+    display: inline-block;
+    position: relative;
+    height: 48px;
+    float: right;
+    padding: 0;
+    position: relative;
+}
+
+#search {
+    height: 48px;
+    font-size: 24px;
+    display: inline-block;
+    font-family: "open sans";
+    font-weight: 100;
+    border: none;
+    outline: none;
+    color: #555;
+    padding: 3px;
+    padding-right: 60px;
+    width: 0px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    z-index: 3;
+    -webkit-transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+    transition: width .4s cubic-bezier(0.000, 0.795, 0.000, 1.000);
+    cursor: pointer;
+}
+
+#search:focus:hover {
+    border-bottom: 1px solid #BBB;
+}
+
+#search:focus {
+    width: 700px;
+    z-index: 1;
+    border-bottom: 1px solid #BBB;
+    cursor: text;
+}
+
+#search_submit {
+    height: 60px;
+    width: 63px;
+    display: inline-block;
+    color: red;
+    float: right;
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAMAAABg3Am1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAADNQTFRFU1NT9fX1lJSUXl5e1dXVfn5+c3Nz6urqv7+/tLS0iYmJqampn5+fysrK39/faWlp////Vi4ZywAAABF0Uk5T/////////////////////wAlrZliAAABLklEQVR42rSWWRbDIAhFHeOUtN3/ags1zaA4cHrKZ8JFRHwoXkwTvwGP1Qo0bYObAPwiLmbNAHBWFBZlD9j0JxflDViIObNHG/Do8PRHTJk0TezAhv7qloK0JJEBh+F8+U/hopIELOWfiZUCDOZD1RADOQKA75oq4cvVkcT+OdHnqqpQCITWAjnWVgGQUWz12lJuGwGoaWgBKzRVBcCypgUkOAoWgBX/L0CmxN40u6xwcIJ1cOzWYDffp3axsQOyvdkXiH9FKRFwPRHYZUaXMgPLeiW7QhbDRciyLXJaKheCuLbiVoqx1DVRyH26yb0hsuoOFEPsoz+BVE0MRlZNjGZcRQyHYkmMp2hBTIzdkzCTc/pLqOnBrk7/yZdAOq/q5NPBH1f7x7fGP4C3AAMAQrhzX9zhcGsAAAAASUVORK5CYII=) center center no-repeat;
+    text-indent: -10000px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    cursor: pointer;
+    opacity: 0.4;
+    cursor: pointer;
+    -webkit-transition: opacity .4s ease;
+    transition: opacity .4s ease;
+}
+
+#search_submit:hover {
+    opacity: 0.8;
+}
+
+
+/*Menu search*/
+
 
 /*menu screen css ends*/
 
+
 /*header CSS starts*/
-.headerContainer{
+
+.headerContainer {
     position: fixed;
-    top:0;
+    top: 0;
     z-index: 1000;
     width: 100vw;
     margin: auto;
     background-color: white;
 }
-.screenHeader{
-    margin-top: 70px;     /*margin affects service screen and order state*/
+
+.screenHeader {
+    margin-top: 70px;
+    /*margin affects service screen and order state*/
 }
-.screenHeader2{
-    margin-top: 117px;    /*margin affects build order state*/
+
+.screenHeader2 {
+    margin-top: 117px;
+    /*margin affects build order state*/
 }
+
+
 /*header CSS ends*/
+
 
 /*Build Order State Header CSS Starts*/
 
@@ -354,7 +381,7 @@ color: #f12f63;
 }
 */
 
-.stage{
+.stage {
     color: #ffffff;
 }
 
@@ -386,7 +413,8 @@ color: #f12f63;
 
 
 /*Customisation Modal Css Starts*/
-#addButton{
+
+#addButton {
     background-color: #05132c !important;
     color: white;
     font-family: "Microsoft Sans Serif";
@@ -394,6 +422,7 @@ color: #f12f63;
     border: none;
     outline: none;
 }
+
 .priceAndQuantity {
     background-color: whitesmoke;
 }
@@ -406,22 +435,29 @@ color: #f12f63;
 .quantityWrapper {
     padding: 1rem;
 }
+
 .quantityValue {
     width: 4rem;
     text-align: center;
 }
+
 .customisationComment {
     width: 100%;
     height: 8rem;
     resize: none;
 }
+
+
 /*Customisation Modal Css Ends*/
 
+
 /*cart css starts*/
-.cartContainer{
+
+.cartContainer {
     position: fixed;
     right: 0;
 }
+
 .cartSegment {
     background: white;
     min-height: 650px;
@@ -442,10 +478,14 @@ color: #f12f63;
     top: 0px;
 }
 
-.dish-name {
+.marginCol {
+    margin-bottom: 1%;
+}
+
+.dishName {
     font-family: open sans;
+    font-size: larger;
     color: #02102b;
-    font-size: 1em;
 }
 
 .cartSummary {
@@ -453,20 +493,17 @@ color: #f12f63;
     border-right: none;
     border-left: none;
     margin-top: 2em;
-}
-
-.cartSummary {
-    padding: 10px 0px 12px;
+    padding: 14px 0px 14px;
 }
 
 .quantityField {
     background: #01112a;
     color: white;
-    width: 30px;
+    width: 20px;
     text-align: center;
     font-family: open sans;
     font-size: 14px;
-    border: 1px solid #01112a;
+    border: .5px solid #01112a;
     border-radius: 4px;
 }
 
@@ -475,6 +512,10 @@ color: #f12f63;
     background: white;
     border: 1px solid #01112a;
     border-radius: 4px;
+}
+
+.priceOrignal {
+    color: grey;
 }
 
 .side-bar-bottom {
@@ -510,4 +551,6 @@ color: #f12f63;
     bottom: 0em;
     width: 100%;
 }
-/*cart css starts*/
+
+
+/*cart css ends*/
