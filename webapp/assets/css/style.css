@@ -353,6 +353,8 @@ font-size: 1.8vw;
     height: 42px;
 }
 
+
+/*
 .header2 {
     background: #05132c;
     height: 47px;
@@ -373,6 +375,7 @@ font-size: 1.8vw;
 .topClass a {
     text-decoration: none;
 }
+*/
 
 
 /*
@@ -381,6 +384,7 @@ color: #f12f63;
 }
 */
 
+/*
 .stage {
     color: #ffffff;
 }
@@ -391,7 +395,7 @@ color: #f12f63;
 
 .arrows {
     top: 1.5rem;
-}
+}*/
 
 
 /*Build Order State Header CSS Ends*/
@@ -460,7 +464,8 @@ color: #f12f63;
 
 .cartSegment {
     background: white;
-    min-height: 650px;
+    height: 650px;
+    overflow: auto;
     border-radius: 10px;
 }
 
@@ -507,20 +512,26 @@ color: #f12f63;
     border-radius: 4px;
 }
 
-.button {
+.buttons {
     color: #01112a;
     background: white;
     border: 1px solid #01112a;
     border-radius: 4px;
+    width: 20px;
 }
 
 .priceOrignal {
     color: grey;
 }
 
+.subTotalAmt {
+    position: absolute;
+    margin-top: 55%;
+}
+
 .side-bar-bottom {
     position: fixed;
-    bottom: 40px;
+    bottom: 0;
 }
 
 .amount .subtotalAmt {
@@ -529,7 +540,6 @@ color: #f12f63;
 }
 
 .amount {
-    margin: 4em;
     font-family: open sans;
     color: #01112a;
     font-weight: 500;
@@ -537,6 +547,7 @@ color: #f12f63;
 
 .textArea {
     resize: none;
+    width: 270px;
 }
 
 .confirmOrder {
@@ -547,10 +558,37 @@ color: #f12f63;
     border-radius: 5px;
     outline: none;
     border: none;
-    margin: .8em;
+    margin-left: .8em;
     bottom: 0em;
     width: 100%;
 }
 
 
 /*cart css ends*/
+
+
+/*user info row starts*/
+
+.userInfo_header {
+    background: #e7e7e7;
+    width: 100%;
+    height: 50px;
+}
+
+.name {
+    font-family: open sans;
+    color: #0c6aa7;
+    line-height: 50px;
+    text-align: center;
+}
+
+.border {
+    border-style: solid;
+    border-width: 0.5px;
+    border-bottom: none;
+    border-top: none;
+    border-color: #b6b6b6;
+}
+
+
+/*user info row ends*/
