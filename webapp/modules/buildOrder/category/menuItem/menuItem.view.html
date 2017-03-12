@@ -3,9 +3,35 @@
     <div class="row">
         <div class="col-md-8 searchCategoryContainer">
             <div class="col-md-12 panel">
+
+                <div class="col-md-12 col-lg-12 wrapper">
+                    <div class="categoryNav">
+                        <a id="category_0">Recomended</a>
+                        <a id="category_1">Soups</a>
+                        <a id="category_2">Appetizers</a>
+                        <a id="category_3">Indian Snacks</a>
+                        <a id="category_4">Continental</a>
+                        <a id="category_5">North Indian</a>
+                        <a id="category_6">South Indian</a>
+                        <a id="category_7">Chinese</a>
+                        <a id="category_8">Combo Meal</a>
+                        <a id="category_9">Breads</a>
+                        <a id="category_10">Rice</a>
+                        <a id="category_11">Raita & Salad</a>
+                        <a id="category_12">Beverages</a>
+                        <a id="category_13">Ice Creams</a>
+                        <a id="category_14">Shakes</a>
+                        <a id="category_15">Mocktails</a>
+                        <a id="category_16">Dessert</a>
+                    </div>
+                    <div class="arrowLeft"><i class="fa fa-angle-left" style="font-size:36px;color:#f12f63;" aria-hidden="true"></i></div>
+                    <div class="arrowRight"><i class="fa fa-angle-right" style="font-size:36px;color:#f12f63;" aria-hidden="true"></i></div>
+                </div>
+
                 <div id="wrap">
                     <input id="search" name="search" type="text" placeholder="What're we looking for ?" ng-model="query.name">
-                    <input id="search_submit" value="Rechercher" type="reset">
+                    <!--                    <input id="search_submit" value="Rechercher" type="reset">-->
+                    <input id="search_submit" value="Rechercher"><i class='fa fa-search fa-2x' style=" color:grey; margin-top:2%;" aria-hidden='true'></i>
                 </div>
             </div>
         </div>
@@ -14,7 +40,7 @@
             <div class="cartSegment">
                 <!--your order header starts-->
                 <div class="row">
-                    <div class="col-xs-11 col-xs-offset-1 col-md-10 col-md-ofset-1 yourOrder">
+                    <div class="col-xs-11 col-xs-offset-1 col-md-11 col-md-ofset-1 yourOrder">
                         <h4>Your Order</h4>
                     </div>
                 </div>
@@ -22,22 +48,22 @@
 
                 <!-- Cart Dishes starts-->
                 <div class="row">
-                    <div class="col-xs-10 col-xs-offset-1 cartSummary">
+                    <div class="col-md-10 col-md-offset-1 cartSummary">
                         <div class="row order-items">
-                            <div class="col-xs-10 col-md-11 marginCol">
+                            <div class="col-md-11 marginCol">
                                 &nbsp;&nbsp;
                                 <span class="dishName"><img src="../../../../assets/images/veg.png">Oven Baked Nachos</span>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-8 col-md-8 col-lg-8">
+                            <div class="col-md-8 col-lg-8">
                                 &nbsp;&nbsp;
                                 <button class="buttons left">-</button>
                                 <input class="quantityField" type="text" value="1" readonly/>
                                 <button class="buttons right">+</button>
                                 <span class="priceOrignal"><span class="into">×</span> 400</span>
                             </div>
-                            <div class="col-xs-3 pull-right">
+                            <div class="col-md-3 pull-right">
                                 <span>400.00</span>
                             </div>
                         </div>
@@ -45,12 +71,12 @@
                 </div>
                 <!-- Cart Dishes starts-->
                 <div class="row">
-                    <div class="col-xs-11 subTotalAmt">
+                    <div class="col-md-11 subTotalAmt">
                         <div class="row">
-                            <div class="col-xs-4 col-md-4 col-md-offset-1">
+                            <div class="col-md-4 col-md-offset-1">
                                 <span class="subTotal">Subtotal</span>
                             </div>
-                            <div class="col-xs-3 col-md-6 text-right col-lg-4 pull-right">
+                            <div class="col-md-6 text-right col-lg-4 pull-right">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 <span class="amount">400.00</span>
                             </div>
@@ -58,14 +84,14 @@
                     </div>
                 </div>
                 <div class="row side-bar-bottom">
-                    <div class="col-xs-10 col-md-10 col-lg-10">
+                    <div class="col-md-10 col-lg-10">
                         <div class="row">
-                            <div class="col-xs-11 col-md-11 col-md-offset-1 col-lg-11 ">
+                            <div class="col-md-11 col-md-offset-1 col-lg-11 ">
                                 <textarea class="textArea" type="textarea" placeholder="Want to customize your Dish"></textarea>
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-xs-10 col-md-11 col-md-offset-2 col-lg-12 text-center">
+                            <div class="col-md-11 col-md-offset-2 col-lg-12 text-center">
                                 <button class="confirmOrder">CONFIRM ORDER</button>
                             </div>
                         </div>
