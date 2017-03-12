@@ -62,4 +62,14 @@ creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stat
 
         }
     };
+    $scope.quantity = 0;
+    $scope.increaseQuantity = function(){
+        return $scope.quantity++;
+    };
+    $scope.decreaseQuantity = function(){
+        if($scope.quantity === 0){
+            return $scope.quantity;
+        }
+        return $scope.quantity--;
+    };
 });

@@ -120,7 +120,12 @@
                             </div>
                             <div class="col-md-2">
                                 &#8377;&nbsp;{{menuItem.price}}
-                                <span ng-click="customiseDish(menuItem.Id)" class="glyphicon glyphicon-plus pull-right"></span>
+                                <span ng-show="quantity==0" ng-click="increaseQuantity()" class="glyphicon glyphicon-plus pull-right"></span>
+                                <span ng-hide="quantity==0">
+                                <button ng-click="decreaseQuantity()" class="buttons left">-</button>
+                                <input class="quantityField" type="text" value="{{quantity}}" readonly/>
+                                <button ng-click="increaseQuantity()" class="buttons right">+</button>
+                                </span>
                             </div>
                         </div>
                     </div>
@@ -141,7 +146,12 @@
                                 </div>
                                 <div class="col-md-2">
                                     &#8377;&nbsp;{{menuItem.price}}
-                                    <span ng-click="customiseDish(menuItem.Id)" class="glyphicon glyphicon-plus pull-right"></span>
+                                    <span ng-show="quantity==0" ng-click="increaseQuantity()" class="glyphicon glyphicon-plus pull-right"></span>
+                                    <span ng-hide="quantity==0">
+                                    <button ng-click="decreaseQuantity()" class="buttons left">-</button>
+                                    <input class="quantityField" type="text" value="{{quantity}}" readonly/>
+                                    <button ng-click="increaseQuantity()" class="buttons right">+</button>
+                                    </span>
                                 </div>
                             </div>
                         </div>
