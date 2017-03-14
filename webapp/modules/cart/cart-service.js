@@ -14,13 +14,12 @@ creativei_app.factory('CartService', function($http, $rootScope){
     if(!$rootScope.runningOrders.hasOwnProperty(tableId))
       $rootScope.runningOrders[tableId] = getOrderTemplate(tableId);
     var menuItemKey =menuItem.id;
-    if(!$rootScope.runningOrders[tableId].hasOwnProperty(menuItemKey)){
-      $rootScope.runningOrders[tableId].items.push(getOrderItemFromMenuItem(menuItem));
+    if(!$rootScope.runningOrders[tableId].items.hasOwnProperty(menuItemKey)){
+      $rootScope.runningOrders[tableId].items[menuItemKey] = getOrderItemFromMenuItem(menuItem);
     }else{
-      updateOrderItemQuantity();
+      updateOrderItemQuantity(menuItem, tableId);
     }
-
-    return {message: "Item added", item:$rootScope.runningOrders[tableId] };
+    return {message: "Item added", item:menuItem };
   };
 
   cart.removeItem = function (){
@@ -59,9 +58,12 @@ creativei_app.factory('CartService', function($http, $rootScope){
     return orderItem;
   }
   function updateOrderItemQuantity(menuItem,tableId){
-    $rootScope.runningOrders[tebleId][menuItem.id]["quantity"]= menuItem.quantity;
-    $rootScope.runningOrders[tebleId][menuItem.id]["rate"]= menuItem.price;
-    $rootScope.runningOrders[tebleId][menuItem.id]["price"]=menuItem.price*menuItem.quantity;
+    $rootScope.runningOrders[tableId].items[menuItem.id]["quantity"]= menuItem.quantity;
+    $rootScope.runningOrders[tableId].items[menuItem.id]["rate"]= menuItem.price;
+    $rootScope.runningOrders[tableId].items[menuItem.id]["price"]=menuItem.price*menuItem.quantity;
+    if($rootScope.runningOrders[tableId].items[menuItem.id]["quantity"] == 0){
+      $rootScope.runningOrders[tableId].items.splice(menuItem.id, 1);
+    }
   }
 
   return cart;

@@ -1,28 +1,48 @@
-creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stateParams,$http, CartService, _) {
+creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stateParams,$http, CartService, _, categories, menuItems) {
     console.log("Inside menu item controller.");
-
     $scope.tableId = "1";
-    // //fetch category and menu item data from the JSONs
-   $http.get('../../../../commons/JSONs/category.json')
-         .then(function(response){
-        $scope.categories = response.data;
-         console.log(response.data);
-     });
-     $http.get('../../../../commons/JSONs/menuItems.json')
-         .then(function(response){
-        $scope.menuItemList = response.data.menuItem;
-        angular.forEach($scope.categories, function(category, key){
-          var menuItems = _.where($scope.menuItemList, {categoryID: category.Id});
-          category.menuItems = menuItems;
-        });
-        console.log($scope.categories);
-    });
-
-    $scope.addItem = function(menuItem){
+    $scope.categories = categories;
+    $scope.menuItemList = [];
+    if(menuItems.menuItem !== undefined){
+      $scope.menuItemList = menuItems.menuItem;
+      angular.forEach($scope.categories, function(category, key){
+        var menuItems = _.where($scope.menuItemList, {categoryID: category.Id});
+        category.menuItems = menuItems;
+      });
+    }
+    $scope.cartItems = {};
+    $scope.subtotal = 0;
+    $scope.addItem = function(menuItem,type){
       var qty = 1;
-      menuItem.quantity+=qty;
+
+      switch (type) {
+        case "ADD":{
+          menuItem.quantity+=qty;
+        }
+        break;
+        case "REMOVE":{
+          menuItem.quantity-=qty;
+        }
+        break;
+        default:
+          return;
+      }
       var response = CartService.addItem(menuItem, $scope.tableId);
-      console.log(response);
+      if(response.item && response.item != ""){
+        if($scope.cartItems[response.item.id] === undefined || $scope.cartItems[response.item.id] == null){
+          $scope.cartItems[response.item.id] = menuItem;
+        }else{
+          $scope.cartItems[response.item.id].quantity = menuItem.quantity;
+          if($scope.cartItems[response.item.id].quantity == 0){
+            delete $scope.cartItems[response.item.id];
+          }
+        }
+        var subtotal = 0;
+        for (var item in $scope.cartItems) {
+          subtotal += ($scope.cartItems[item].quantity * $scope.cartItems[item].price);
+        }
+        $scope.subtotal = subtotal;
+      }
     }
 
     $scope.selectedMenuItem={};
@@ -69,15 +89,5 @@ creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stat
           return $sce.trustAsHtml(html);
 
         }
-    };
-    $scope.quantity = 0;
-    $scope.increaseQuantity = function(){
-        return $scope.quantity++;
-    };
-    $scope.decreaseQuantity = function(){
-        if($scope.quantity === 0){
-            return $scope.quantity;
-        }
-        return $scope.quantity--;
     };
 });

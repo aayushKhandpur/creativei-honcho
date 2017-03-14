@@ -1,4 +1,4 @@
-<div class="screenHeader2" ng-controller="MenuItemController" ng-cloak>
+<div class="screenHeader2" ng-cloak>
     <!--Category&Search&Cart-->
     <div class="row">
         <div class="col-md-8 searchCategoryContainer">
@@ -6,23 +6,7 @@
 
                 <div class="col-md-12 col-lg-12 wrapper">
                     <div class="categoryNav">
-                        <a id="category_0">Recomended</a>
-                        <a id="category_1">Soups</a>
-                        <a id="category_2">Appetizers</a>
-                        <a id="category_3">Indian Snacks</a>
-                        <a id="category_4">Continental</a>
-                        <a id="category_5">North Indian</a>
-                        <a id="category_6">South Indian</a>
-                        <a id="category_7">Chinese</a>
-                        <a id="category_8">Combo Meal</a>
-                        <a id="category_9">Breads</a>
-                        <a id="category_10">Rice</a>
-                        <a id="category_11">Raita & Salad</a>
-                        <a id="category_12">Beverages</a>
-                        <a id="category_13">Ice Creams</a>
-                        <a id="category_14">Shakes</a>
-                        <a id="category_15">Mocktails</a>
-                        <a id="category_16">Dessert</a>
+                      <a id="{{category.Id}}" ng-repeat="category in categories | orderBy:'order'">{{category.name}}</a>
                     </div>
                     <div class="arrowLeft"><i class="fa fa-angle-left" style="font-size:36px;color:#f12f63;" aria-hidden="true"></i></div>
                     <div class="arrowRight"><i class="fa fa-angle-right" style="font-size:36px;color:#f12f63;" aria-hidden="true"></i></div>
@@ -47,24 +31,24 @@
                 <!--your order header ends-->
 
                 <!-- Cart Dishes starts-->
-                <div class="row">
+                <div class="row" ng-repeat="(key, value) in cartItems" >
                     <div class="col-md-10 col-md-offset-1 cartSummary">
                         <div class="row order-items">
                             <div class="col-md-11 marginCol">
                                 &nbsp;&nbsp;
-                                <span class="dishName"><img src="../../../../assets/images/veg.png">Oven Baked Nachos</span>
+                                <span class="dishName"><img src="../../../../assets/images/veg.png">{{value.name}}</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="col-md-8 col-lg-8">
                                 &nbsp;&nbsp;
                                 <button class="buttons left">-</button>
-                                <input class="quantityField" type="text" value="1" readonly/>
+                                <input class="quantityField" type="text" value="{{value.quantity}}" readonly/>
                                 <button class="buttons right">+</button>
-                                <span class="priceOrignal"><span class="into">×</span> 400</span>
+                                <span class="priceOrignal"><span class="into">×</span> {{value.price}}</span>
                             </div>
                             <div class="col-md-3 pull-right">
-                                <span>400.00</span>
+                                <span>{{value.price * value.quantity}}</span>
                             </div>
                         </div>
                     </div>
@@ -78,7 +62,7 @@
                             </div>
                             <div class="col-md-6 text-right col-lg-4 pull-right">
                                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="amount">400.00</span>
+                                <span class="amount">{{subtotal}}</span>
                             </div>
                         </div>
                     </div>
@@ -120,11 +104,11 @@
                             </div>
                             <div class="col-md-2">
                                 &#8377;&nbsp;{{menuItem.price}}
-                                <span ng-show="quantity==0" ng-click="increaseQuantity()" class="glyphicon glyphicon-plus pull-right"></span>
-                                <span ng-hide="quantity==0">
-                                <button ng-click="decreaseQuantity()" class="buttons left">-</button>
-                                <input class="quantityField" type="text" value="{{quantity}}" readonly/>
-                                <button ng-click="increaseQuantity()" class="buttons right">+</button>
+                                <span ng-show="menuItem.quantity==0" ng-click="addItem(menuItem, 'ADD')" class="glyphicon glyphicon-plus pull-right"></span>
+                                <span ng-hide="menuItem.quantity==0">
+                                <button ng-click="addItem(menuItem, 'REMOVE')" class="buttons left">-</button>
+                                <input class="quantityField" type="text" value="{{menuItem.quantity}}" readonly/>
+                                <button ng-click="addItem(menuItem, 'ADD')" class="buttons right">+</button>
                                 </span>
                             </div>
                         </div>
@@ -162,5 +146,4 @@
         </div>
         <!--Menu Item Columns End Here-->
     </div>
-    <div ng-bind-html="categoryFunct()"></div>
 </div>

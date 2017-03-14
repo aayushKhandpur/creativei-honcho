@@ -46,8 +46,22 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
     .state('buildOrder.menuItem',{
       url: '/menuItem/:categoryName',
       templateUrl: 'modules/buildOrder/category/menuItem/menuItem.view.html',
-      controller: 'MenuItemController'
-    })
+      controller: 'MenuItemController',
+      resolve:{
+        categories :function($http){
+          return $http.get('commons/JSONs/category.json')
+                .then(function(response){
+                 return response.data;
+            });
+        },
+        menuItems : function($http){
+          return $http.get('commons/JSONs/menuItems.json')
+                .then(function(response){
+                 return response.data;
+            });
+        }
+      }
+    });
     $urlRouterProvider.otherwise('/services');
 
 
