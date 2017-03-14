@@ -17,7 +17,7 @@
         "name": "Main Course",
         "parentCategoryID": null,
         "restrauntID": 123,
-        "isAvailable": true,
+        "isAvailable": false,
         "isFullDay": true,
         "availableFromHr": null,
         "availableFromMin": null,
