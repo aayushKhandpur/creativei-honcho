@@ -340,7 +340,8 @@ body {
 .headerContainer {
     position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    z-index: 10000;
     width: 100vw;
     margin: auto;
     background-color: white;
@@ -364,7 +365,7 @@ body {
 
 .header {
     top: 0;
-    width: 99%;
+/*    width: 99%;*/
     height: 70px;
     background-color: white;
 }
@@ -594,7 +595,7 @@ color: #f12f63;
 /*user info row starts*/
 .userInfo_header {
     background: #e7e7e7;
-    width: 100%;
+/*    width: 100%;*/
     height: 50px;
 }
 .name {
