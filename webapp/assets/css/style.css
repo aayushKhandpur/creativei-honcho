@@ -319,7 +319,6 @@ body {
     z-index: 2;
     cursor: pointer;
     opacity: 0.4;
-    cursor: pointer;
     -webkit-transition: opacity .4s ease;
     transition: opacity .4s ease;
 }
@@ -541,7 +540,7 @@ color: #f12f63;
 
 .secondCartSection {
     overflow: auto;
-    height: 20rem;
+    height: 25rem;
 }
 .cartTitle .cartItemName {
     color: #02102b;
