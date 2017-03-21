@@ -1,0 +1,224 @@
+<div class="screenHeader2">
+    <div ng-controller="OrderTrackerController" ng-cloak>
+        <!--row starts here-->
+        <div class="row contentRow">
+            <!--column one starts here-->
+            <div class="col-md-5 col-sm-5 col-xs-12 Wrapper_Main">
+                <div class="Wrapper_inner">
+                    <div class="row yourOrderWrapper">
+                        <div class="col-md-10 col-sm-10 col-xs-10">
+                            <div class="cart_Title">Your Order</div>
+                        </div>
+                        <div class="col-md-2 col-sm-2 col-xs-2">
+                            <div id="wrap">
+                                <input id="search" name="search" type="text" placeholder="What're we looking for ?" ng-model="query.name">
+                                <input id="search_submit" value="Rechercher"><i class='fa fa-search fa-lg' style=" color:grey; margin-top:2%;" aria-hidden='true'></i>
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="hr">
+                    <div class="row secondCartSection">
+                        <div class="col-md-12">
+                            <div class="row secondCartSection">
+                                <div class="col-md-12">
+                                    <div class="row cartItem">
+                                        <div class="col-md-12">
+                                            <div class="row cartItemName">
+                                                <div class="col-md-12">Classic Oven Nachos</div>
+                                            </div>
+                                            <div class="row cartItemDetails">
+                                                <div class="col-md-4 cartItemQuantity">
+                                                    <button class="quantityButton">-</button>
+                                                    <input class="quantityIndicator" value="1" readonly/>
+                                                    <button class="quantityButton">+</button>
+                                                </div>
+                                                <div class="col-md-2 cartItemRate">x400</div>
+                                                <div class="col-md-2 pull-right cartItemAmount">₹400.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row secondCartSection">
+                                <div class="col-md-12">
+                                    <div class="row cartItem">
+                                        <div class="col-md-12">
+                                            <div class="row cartItemName">
+                                                <div class="col-md-12">Classic Oven Nachos</div>
+                                            </div>
+                                            <div class="row cartItemDetails">
+                                                <div class="col-md-4 cartItemQuantity">
+                                                    <button class="quantityButton">-</button>
+                                                    <input class="quantityIndicator" value="1" readonly/>
+                                                    <button class="quantityButton">+</button>
+                                                </div>
+                                                <div class="col-md-2 cartItemRate">x400</div>
+                                                <div class="col-md-2 pull-right cartItemAmount">₹400.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row secondCartSection">
+                                <div class="col-md-12">
+                                    <div class="row cartItem">
+                                        <div class="col-md-12">
+                                            <div class="row cartItemName">
+                                                <div class="col-md-12">Classic Oven Nachos</div>
+                                            </div>
+                                            <div class="row cartItemDetails">
+                                                <div class="col-md-4 cartItemQuantity">
+                                                    <button class="quantityButton">-</button>
+                                                    <input class="quantityIndicator" value="1" readonly/>
+                                                    <button class="quantityButton">+</button>
+                                                </div>
+                                                <div class="col-md-2 cartItemRate">x400</div>
+                                                <div class="col-md-2 pull-right cartItemAmount">₹400.00</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row cartFooter">
+                        <div class="col-md-12 col-sm-12 col-xs-12">
+                            <div class="row recommendedItems">
+                                <div class="row cartSubtotal">
+                                    <div class="col-md-3 col-sm-3 col-xs-3 subTotal">Subtotal</div>
+                                    <div class="col-md-2 col-sm-3 col-xs-3 pull-right">₹400.00</div>
+                                </div>
+                                <div class="row cartUpdate">
+                                    <div class="col-md-12 text-center innerPanel">
+                                        <button class="text-center updateCartButton">UPDATE ORDER</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 recommendedMenuItems">
+                                    <div class="row recommended1">
+                                        <div class="col-md-4 col-sm-4 col-xs-4 text-center">
+                                            <span class="badge green">+ Coke</span>
+                                        </div>
+                                        <div class="col-md-4 col-sm-8 col-xs-4">
+                                            <span class="badge green">+ Cheese French Fries</span>
+                                        </div>
+                                    </div>
+                                    <div class="row recommended2">
+                                        <div class="col-md-4 col-sm-4 col-xs-4 text-center">
+                                            <span class="badge green">+ Coke</span>
+                                        </div>
+                                        <div class="col-md-4 col-sm-8 col-xs-4">
+                                            <span class="badge red">+ Chicken Sandwich</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--column one ends here-->
+
+            <!--vertical line column start here-->
+            <div class="col-md-1 hihidden-sm hidden-xs col-xs-1">
+                <div class="row">
+                    <div class="col-md-12 col-md-offset-1">
+                        <p class="verticalLine"></p>
+                    </div>
+                </div>
+            </div>
+            <!--vertical line column ends here-->
+
+            <!--column two starts here-->
+            <div class="col-md-3 col-sm-5 col-sm-offset-1 col-md-offset-2 col-xs-10 col-xs-offset-1 mediaXsClass">
+                <!--Track order row starts here-->
+                <div class="row marginXsScreen">
+                    <div class="trackOrderWrapper">
+                        <div class="col-md-12">
+                            <div class="row center-block">
+                                <div class="row">
+                                    <div class="col-md-10 col-sm-8 trackOrder">
+                                        <div>Track Your Order</div>
+                                    </div>
+                                </div>
+                                <div class="row trackOrderIcon">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <img class="iconTrackOrder" src="images/orderPlaced.svg" alt="orderPlacedIcon">
+                                    </div>
+                                    <div class="col-md-8 orderPlaced">
+                                        <div class="orderPlacedWrapper">
+                                            <div class="orderPlacedWrapperInner">
+                                                Order Placed
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1 col-sm-1 col-xs-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 wrapVerticalLine">
+                                        <div class="">
+                                            <div class="verticalLineSteps"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <img class="iconTrackOrder" src="images/OrderPrepared.svg" alt="orderPlacedIcon">
+                                    </div>
+                                    <div class="col-md-8 orderPlaced">
+                                        <div class="orderPreparedWrapper">
+                                            <div class="orderPlacedWrapperInner">
+                                                Prepared
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1 col-sm-1 col-xs-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 wrapVerticalLine">
+                                        <div class="">
+                                            <div class="verticalLineSteps"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <img class="iconTrackOrder" src="images/servedIcon.svg" alt="orderPlacedIcon">
+                                    </div>
+                                    <div class="col-md-8 orderPlaced">
+                                        <div class="orderServedWrapper">
+                                            <div class="orderPlacedWrapperInner">
+                                                Served
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-1 col-sm-1 col-xs-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 wrapVerticalLine">
+                                        <div class="">
+                                            <div class="verticalLineSteps"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-4 col-sm-4 col-xs-4">
+                                        <img class="iconTrackOrder" src="images/completeOrder.svg" alt="orderPlacedIcon">
+                                    </div>
+                                    <div class="col-md-8 orderPlaced">
+                                        <div class="orderCompleteWrapper">
+                                            <div class="orderPlacedWrapperInner">
+                                                Complete Order
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Track order row starts here-->
+            </div>
+            <!--column two ends here-->
+        </div>
+        <!--row ends here-->
+    </div>
+</div>
