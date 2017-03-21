@@ -2,6 +2,8 @@ creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stat
     console.log("Inside menu item controller.");
     $scope.tableId = "1";
     $scope.categories = categories;
+    $scope.selectedCategory = $scope.categories[0];
+    console.log($scope.categories);
     $scope.menuItemList = [];
     if(menuItems.menuItem !== undefined){
       $scope.menuItemList = menuItems.menuItem;

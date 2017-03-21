@@ -514,14 +514,18 @@ color: #f12f63;
 .cartWrapper {
     font-family: "open sans";
     position: absolute;
+    height: 80vh;
     right: 0;
     margin-top: 1rem;
+/*    margin-bottom: 1rem;*/
 }
 
 .cartInnerWrapper {
+/*    position: relative;*/
     background-color: white;
     padding: 10px;
     border-radius: 10px;
+    height: 100%;
 }
 
 
@@ -532,6 +536,7 @@ color: #f12f63;
 */
 
 .cartItemSeperator {
+    margin: 0.5rem 0;
     border: 0;
     height: 1px;
     background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
@@ -540,7 +545,7 @@ color: #f12f63;
 
 .secondCartSection {
     overflow: auto;
-    height: 25rem;
+    height: 50%;
 }
 .cartTitle .cartItemName {
     color: #02102b;
@@ -570,11 +575,37 @@ color: #f12f63;
 .cartSubtotal {
     color: #01112a;
 }
-.additonalInstructions {
-    margin-top: 1rem;
+.cartFooter{
+    height: 30%;
+/*    position: absolute;*/
+/*    left: 1.5rem;*/
+/*    bottom: 10px;*/
+/*    width: 100%;*/
+}
+.cartFooterInnerWrapper{
+    position: relative;
+    height: 100%;
+}
+.cartSubtotal{
+    position: absolute;
+    top: 0;
     width: 100%;
-    height: 50px;
+}
+.cartInstructions{
+    position: absolute;
+    top: 3rem;
+    width: 100%;
+}
+.additonalInstructions {
+/*    margin-top: 1rem;*/
+    width: 100%;
+    height: 8rem;
     resize: none;
+}
+.cartConfirm{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
 .confirmCartButton {
     margin-top: 1rem;
