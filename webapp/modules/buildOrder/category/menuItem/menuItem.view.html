@@ -6,16 +6,16 @@
 
                 <div class="col-md-12 col-lg-12 wrapper">
                     <div class="categoryNav">
-                      <a id="{{category.Id}}" ng-repeat="category in categories | orderBy:'order'">{{category.name}}</a>
+                        <a id="{{category.Id}}" ng-repeat="category in categories | orderBy:'order'">{{category.name}}</a>
                     </div>
                     <div class="arrowLeft"><i class="fa fa-angle-left" style="font-size:36px;color:#f12f63;" aria-hidden="true"></i></div>
                     <div class="arrowRight"><i class="fa fa-angle-right" style="font-size:36px;color:#f12f63;" aria-hidden="true"></i></div>
                 </div>
 
                 <div id="wrap">
-                    <input id="search" name="search" type="text" placeholder="What're we looking for ?" ng-model="query.name">
+                    <input id="search" name="search" type="text" placeholder="Search for a dish..." ng-model="query.name">
                     <input id="search_submit" value="Rechercher" type="reset">
-<!--                    <input id="search_submit" value="Rechercher"><i class='fa fa-search fa-2x' style=" color:grey; margin-top:2%;" aria-hidden='true'></i>-->
+                    <!--                    <input id="search_submit" value="Rechercher"><i class='fa fa-search fa-2x' style=" color:grey; margin-top:2%;" aria-hidden='true'></i>-->
                 </div>
             </div>
         </div>
@@ -31,7 +31,7 @@
                 <!--your order header ends-->
 
                 <!-- Cart Dishes starts-->
-                <div class="row" ng-repeat="(key, value) in cartItems" >
+                <div class="row" ng-repeat="(key, value) in cartItems">
                     <div class="col-md-10 col-md-offset-1 cartSummary">
                         <div class="row order-items">
                             <div class="col-md-11 marginCol">
