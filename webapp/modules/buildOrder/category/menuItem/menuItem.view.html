@@ -1,12 +1,22 @@
 <div class="screenHeader2" ng-cloak>
     <!--Category&Search&Cart-->
-    <div class="container-fluid">
+    <div>
       <div class="row">
         <div class="col-sm-8">
           <div class="row">
             <div class="col-sm-8 searchCategoryContainer">
                 <div class="panel">
+                    <div class="input-group">
+                        <div class="input-group-btn">
+                            <select name="categorySelect" class="categorySelect" ng-model="selectedCategory" ng-options="category as category.name for category in categories track by category.Id"></select>
+                        </div>
+                        <input type="text" class="form-control">
+                        <div class="input-group-btn">
+                            <button>Search</button>
+                        </div>
+                    </div>
 
+<!--
                     <div class="wrapper">
                         <div class="categoryNav">
                             <a id="{{category.Id}}" ng-repeat="category in categories | orderBy:'order'">{{category.name}}</a>
@@ -18,8 +28,8 @@
                     <div id="wrap">
                         <input id="search" name="search" type="text" placeholder="Search for a dish..." ng-model="query.name">
                         <input id="search_submit" value="Rechercher" type="reset">
-    <!--                    <input id="search_submit" value="Rechercher"><i class='fa fa-search fa-2x' style=" color:grey; margin-top:2%;" aria-hidden='true'></i>-->
                     </div>
+-->
                 </div>
             </div>
           </div>
@@ -36,10 +46,10 @@
                           <!--Menu Item List Starts Here-->
                           <div class="panel-body menuItemName" ng-repeat="menuItem in category.menuItems">
                               <div class="row">
-                                  <div class="col-md-9">
+                                  <div class="col-md-9 col-sm-8">
                                       <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span> {{menuItem.name}}
                                   </div>
-                                  <div class="col-md-3">
+                                  <div class="col-md-3 col-sm-4">
                                       &#8377;&nbsp;{{menuItem.price}}
                                       <div class="quantityWrapper pull-right">
                                           <span ng-show="menuItem.quantity==0" ng-click="addItem(menuItem, 'ADD')" class="glyphicon glyphicon-plus pull-right"></span>
@@ -64,10 +74,10 @@
                           <div ng-repeat="menuCategory in menuItems">
                               <div ng-if="subCategory.Id == menuCategory.categoryId" ng-repeat="menuItem in menuCategory.menuItems" class="panel-body menuItemName">
                                   <div class="row">
-                                      <div class="col-md-9">
+                                      <div class="col-md-9 col-sm-8">
                                           <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span> {{menuItem.name}}
                                       </div>
-                                      <div class="col-md-3">
+                                      <div class="col-md-3 col-sm-4">
                                           &#8377;&nbsp;{{menuItem.price}}
                                           <div class="quantityWrapper pull-right">
                                               <span ng-show="quantity==0" ng-click="increaseQuantity()" class="glyphicon glyphicon-plus pull-right"></span>
@@ -96,8 +106,11 @@
               <div class="col-sm-12">
                   <div class="cartInnerWrapper">
                       <div class="row firstCartSection">
-                          <div class="col-md-12">
+                          <div class="col-md-6 col-sm-6">
                               <div class="cartTitle">Your Order</div>
+                          </div>
+                          <div class="col-md-6 col-sm-6">
+                            <div class="totalCartItems">{{_.size(cartItems)}}</div>
                           </div>
                       </div>
                       <hr>
@@ -112,13 +125,13 @@
                                                       <div class="col-md-12">{{value.name}}</div>
                                                   </div>
                                                   <div class="row cartItemDetails">
-                                                      <div class="col-md-4 cartItemQuantity">
-                                                          <button class="quantityButton">-</button>
+                                                      <div class="col-md-4 col-sm-5 cartItemQuantity">
+                                                          <button ng-click="updateOrderItemAndSync(value, 'REMOVE')" class="quantityButton">-</button>
                                                           <input class="quantityIndicator" value="{{value.quantity}}" readonly/>
-                                                          <button class="quantityButton">+</button>
+                                                          <button ng-click="updateOrderItemAndSync(value, 'ADD')" class="quantityButton">+</button>
                                                       </div>
-                                                      <div class="col-md-4 cartItemRate">x{{value.price}}</div>
-                                                      <div class="col-md-4 text-right cartItemAmount">{{value.price * value.quantity}}</div>
+                                                      <div class="col-md-4 col-sm-4 cartItemRate">x{{value.price}}</div>
+                                                      <div class="col-md-4 col-sm-3 text-right cartItemAmount">&#8377;{{value.price * value.quantity}}</div>
                                                   </div>
                                               </div>
                                           </div>
@@ -130,10 +143,10 @@
                       </div>
                       <hr>
                       <div class="row cartFooter">
-                          <div class="col-md-12">
+                          <div class="cartFooterInnerWrapper col-md-12">
                               <div class="row cartSubtotal">
-                                  <div class="col-md-6">Subtotal</div>
-                                  <div class="col-md-6 text-right">{{subtotal}}</div>
+                                  <div class="col-md-6 col-sm-6">Subtotal</div>
+                                  <div class="col-md-6 col-sm-6 text-right">&#8377;{{subtotal}}</div>
                               </div>
                               <div class="row cartInstructions">
                                   <div class="col-md-12">

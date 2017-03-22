@@ -12,16 +12,17 @@ creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stat
     }
     $scope.cartItems = {};
     $scope.subtotal = 0;
+    //add or update menu item and sync order item in cart.
     $scope.addItem = function(menuItem,type){
       var qty = 1;
 
       switch (type) {
         case "ADD":{
-          menuItem.quantity+=qty;
+          menuItem.quantity += qty;
         }
         break;
         case "REMOVE":{
-          menuItem.quantity-=qty;
+          menuItem.quantity -= qty;
         }
         break;
         default:
@@ -37,14 +38,47 @@ creativei_app.controller('MenuItemController', function ($scope, $uibModal,$stat
             delete $scope.cartItems[response.item.id];
           }
         }
-        var subtotal = 0;
-        for (var item in $scope.cartItems) {
-          subtotal += ($scope.cartItems[item].quantity * $scope.cartItems[item].price);
-        }
-        $scope.subtotal = subtotal;
+        updateSubTotal();
       }
-    }
+    };
+    //update order item in cart and sync menu item menuItemId
+    $scope.updateOrderItemAndSync = function(orderItem,type){
+      var qty = 1;
+      switch (type) {
+        case "ADD":{
+          orderItem.quantity += qty;
+        }
+        break;
+        case "REMOVE":{
+          orderItem.quantity -= qty;
+        }
+        break;
+        default:
+          return;
+      }
+      // update rootScope
+      CartService.updateItem(orderItem.id, orderItem.quantity, orderItem.price, $scope.tableId);
 
+      angular.forEach($scope.categories, function(category, key){
+        angular.forEach(category.menuItems, function(menuItem, key){
+          if(menuItem.id === orderItem.id){
+            menuItem.quantity = orderItem.quantity;
+          }
+        });
+      });
+      updateSubTotal();
+      if(orderItem.quantity == 0) delete $scope.cartItems[orderItem.id];
+    };
+    function updateSubTotal(){
+      var subtotal = 0;
+      for (var item in $scope.cartItems) {
+        subtotal += ($scope.cartItems[item].quantity * $scope.cartItems[item].price);
+      }
+      $scope.subtotal = subtotal;
+    }
+/*
+    **************************************Unused code***************************************************
+*/
     $scope.selectedMenuItem={};
 
     //condition for the category aside collapse
