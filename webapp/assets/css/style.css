@@ -200,7 +200,7 @@ body {
 }
 
 .menuItemContainer {
-    margin-top: 8rem;
+    margin-top: 7rem;
     height: 70vh;
     overflow: auto;
 }
@@ -528,6 +528,10 @@ color: #f12f63;
     height: 100%;
 }
 
+.cartHr{
+    margin-top: 0.7rem !important;
+    margin-bottom: 0.7rem !important;
+}
 
 /*
 .cartSeperator{
@@ -576,7 +580,7 @@ color: #f12f63;
     color: #01112a;
 }
 .cartFooter{
-    height: 30%;
+    height: 40%;
 /*    position: absolute;*/
 /*    left: 1.5rem;*/
 /*    bottom: 10px;*/
@@ -593,7 +597,7 @@ color: #f12f63;
 }
 .cartInstructions{
     position: absolute;
-    top: 3rem;
+    top: 5rem;
     width: 100%;
 }
 .additonalInstructions {
