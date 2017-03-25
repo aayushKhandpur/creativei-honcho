@@ -7,13 +7,13 @@
             <div class="col-sm-8 searchCategoryContainer">
                 <div class="panel">
                     <div class="input-group">
-                        <div class="input-group-btn">
-                            <select name="categorySelect" class="categorySelect" ng-model="selectedCategory" ng-options="category as category.name for category in categories track by category.Id"></select>
-                        </div>
-                        <input type="text" class="form-control">
-                        <div class="input-group-btn">
-                            <button>Search</button>
-                        </div>
+                        <span class="input-group-btn">
+                            <select name="categorySelect" class="categorySelect btn" ng-model="selectedCategory" ng-options="category as category.name for category in categories track by category.Id"></select>
+                        </span>
+                        <input type="text" class="form-control searchBox" ng-model="query.name">
+                        <span class="input-group-addon">
+                            Search
+                        </span>
                     </div>
 
 <!--
@@ -46,18 +46,20 @@
                           <!--Menu Item List Starts Here-->
                           <div class="panel-body menuItemName" ng-repeat="menuItem in category.menuItems">
                               <div class="row">
-                                  <div class="col-md-9 col-sm-8">
+                                  <div class="col-md-9 col-sm-8 col-xs-8">
                                       <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span> {{menuItem.name}}
                                   </div>
-                                  <div class="col-md-3 col-sm-4">
+                                  <div class="col-md-1 col-sm-1 col-xs-2">
                                       &#8377;&nbsp;{{menuItem.price}}
-                                      <div class="quantityWrapper pull-right">
-                                          <span ng-show="menuItem.quantity==0" ng-click="addItem(menuItem, 'ADD')" class="glyphicon glyphicon-plus pull-right"></span>
-                                          <span ng-hide="menuItem.quantity==0">
+                                  </div>
+                                  <div class="col-md-2 col-sm-3 col-xs-2">
+                                    <div class="quantityWrapper text-center">
+                                          <span ng-show="menuItem.quantity==0" ng-click="addItem(menuItem, 'ADD')" class="glyphicon glyphicon-plus"></span>
+                                          <div ng-hide="menuItem.quantity==0">
                                               <button ng-click="addItem(menuItem, 'REMOVE')" class="quantityButton">-</button>
                                               <input class="quantityIndicator" type="text" value="{{menuItem.quantity}}" readonly/>
                                               <button ng-click="addItem(menuItem, 'ADD')" class="quantityButton">+</button>
-                                          </span>
+                                          </div>
                                       </div>
                                   </div>
                               </div>
@@ -109,11 +111,11 @@
                           <div class="col-md-6 col-sm-6">
                               <div class="cartTitle">Your Order</div>
                           </div>
-                          <div class="col-md-6 col-sm-6">
-                            <div class="totalCartItems">{{_.size(cartItems)}}</div>
+                          <div class="col-md-6 col-sm-6 text-right">
+                            <span class="totalCartItems badge">2</span>
                           </div>
                       </div>
-                      <hr>
+                      <hr class="cartHr">
                       <div class="row secondCartSection">
                           <div class="col-md-12">
                               <div class="row">
@@ -141,7 +143,7 @@
                               </div>
                           </div>
                       </div>
-                      <hr>
+                      <hr class="cartHr">
                       <div class="row cartFooter">
                           <div class="cartFooterInnerWrapper col-md-12">
                               <div class="row cartSubtotal">
