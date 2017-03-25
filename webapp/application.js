@@ -66,12 +66,16 @@ creativei_app.config(function ($stateProvider, $urlRouterProvider) {
             url: '/orderTracker',
             templateUrl: 'modules/buildOrder/orderTracker/trackOrder.view.html',
             controller: 'OrderTrackerController'
+        })
+        .state('feedback', {
+            url: '/feedback',
+            templateUrl: 'modules/feedback/feedback.view.html',
+            controller: 'feedbackController'
         });
     $urlRouterProvider.otherwise('/services');
 
 
 });
-
 
 creativei_app.controller("MainController", function ($scope, $rootScope, $state, $location) {
     $rootScope.$on('$stateChangeStart',

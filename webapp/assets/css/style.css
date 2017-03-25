@@ -879,3 +879,132 @@ color: #f12f63;
 
 
 /*track order css ends*/
+
+
+/* feedback screen css starts here */
+
+.wrapperFeed {
+    margin-top: 5rem;
+}
+
+.feedQues {
+    margin-top: 3rem;
+}
+
+.feedback {
+    font-weight: lighter;
+    font-size: 36px;
+    color: #05132c;
+}
+
+.welcomeLine {
+    font-size: 24px;
+    color: #05132c;
+    font-weight: lighter;
+}
+
+.starRating {
+    height: 35px;
+}
+
+.questionWrapper {
+    background-color: white;
+    box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+
+/****** Style Star Rating Widget starts *****/
+
+.rating {
+    border: none;
+    float: left;
+}
+
+.rating > input {
+    display: none;
+}
+
+.rating > label:before {
+    margin: 5px;
+    font-size: 1.25em;
+    font-family: FontAwesome;
+    display: inline-block;
+    content: "\f005";
+}
+
+.rating > .half:before {
+    content: "\f089";
+    position: absolute;
+}
+
+.rating > label {
+    color: #ddd;
+    float: right;
+}
+
+
+/***** CSS Magic to Highlight Stars on Hover *****/
+
+.rating > input:checked ~ label,
+
+/* show gold star when clicked */
+
+.rating:not(:checked) > label:hover,
+
+/* hover current star */
+
+.rating:not(:checked) > label:hover ~ label {
+    color: #1dab76;
+}
+
+
+/* hover previous stars in list */
+
+.rating > input:checked + label:hover,
+
+/* hover current star when changing rating */
+
+.rating > input:checked ~ label:hover,
+.rating > label:hover ~ input:checked ~ label,
+
+/* lighten current selection */
+
+.rating > input:checked ~ label:hover ~ label {
+    color: #1dab76;
+}
+
+
+/****** Style Star Rating Widget ends *****/
+
+.questionNumOne,
+.questionNumTwo,
+.questionNumThree,
+.questionNumFour,
+.additionalComments,
+.submitButton {
+    margin-top: 2rem;
+}
+
+.additionalFeedback {
+    width: 100%;
+    resize: none;
+    height: 100px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: none;
+    overflow: auto;
+    border: 2px solid lightgrey;
+}
+
+.submitFeedbackButton {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background: #1dab76;
+}
+
+
+/* feedback screencss ends here    */
