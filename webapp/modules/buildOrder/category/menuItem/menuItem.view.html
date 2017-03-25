@@ -49,15 +49,17 @@
                                   <div class="col-md-9 col-sm-8">
                                       <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span> {{menuItem.name}}
                                   </div>
-                                  <div class="col-md-3 col-sm-4">
+                                  <div class="col-md-1 col-sm-1">
                                       &#8377;&nbsp;{{menuItem.price}}
-                                      <div class="quantityWrapper pull-right">
-                                          <span ng-show="menuItem.quantity==0" ng-click="addItem(menuItem, 'ADD')" class="glyphicon glyphicon-plus pull-right"></span>
-                                          <span ng-hide="menuItem.quantity==0">
+                                  </div>
+                                  <div class="col-md-2 col-sm-3">
+                                    <div class="quantityWrapper text-center">
+                                          <span ng-show="menuItem.quantity==0" ng-click="addItem(menuItem, 'ADD')" class="glyphicon glyphicon-plus"></span>
+                                          <div ng-hide="menuItem.quantity==0">
                                               <button ng-click="addItem(menuItem, 'REMOVE')" class="quantityButton">-</button>
                                               <input class="quantityIndicator" type="text" value="{{menuItem.quantity}}" readonly/>
                                               <button ng-click="addItem(menuItem, 'ADD')" class="quantityButton">+</button>
-                                          </span>
+                                          </div>
                                       </div>
                                   </div>
                               </div>
