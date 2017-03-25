@@ -4,78 +4,76 @@
         <div class="row contentRow">
             <!--column one starts here-->
             <div class="col-md-5 col-sm-5 col-xs-12 Wrapper_Main">
-                <div class="Wrapper_inner">
-                    <div class="row yourOrderWrapper">
-                        <div class="col-md-10 col-sm-10 col-xs-10">
-                            <div class="cart_Title">Your Order</div>
-                        </div>
-                        <div class="col-md-2 col-sm-2 col-xs-2">
-                            <div id="wrap">
-                                <input id="search" name="search" type="text" placeholder="Search for a dish..." ng-model="query.name">
-                                <input id="search_submit" value="Rechercher" type="reset">
+                <div class="row">
+                    <!-- cart starts -->
+                    <div class="col-sm-12">
+                        <div class="cartInnerWrapper">
+                            <div class="row firstCartSection">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="cartTitle">Your Order</div>
+                                </div>
+                                <div class="col-md-6 col-sm-6 text-right">
+                                    <div id="wrap">
+                                        <input id="search" name="search" type="text" placeholder="Search for a dish..." ng-model="query.name">
+                                        <input id="search_submit" value="Rechercher" type="reset">
+                                    </div>
+                                </div>
                             </div>
-                        </div>
-                    </div>
-                    <hr class="hr">
-                    <div class="row secondCartSection">
-                        <div class="col-md-12">
+                            <hr class="cartHr">
                             <div class="row secondCartSection">
                                 <div class="col-md-12">
-                                    <div class="row cartItem">
+                                    <div class="row">
                                         <div class="col-md-12">
-                                            <div class="row cartItemName">
-                                                <div class="col-md-12">Classic Oven Nachos</div>
-                                            </div>
-                                            <div class="row cartItemDetails">
-                                                <div class="col-md-4 cartItemQuantity">
-                                                    <button class="quantityButton">-</button>
-                                                    <input class="quantityIndicator" value="1" readonly/>
-                                                    <button class="quantityButton">+</button>
+                                            <div class="cartItemWrapper" ng-repeat="(key, value) in cartItems">
+                                                <div class="row cartItem">
+                                                    <div class="col-md-12">
+                                                        <div class="row cartItemName">
+                                                            <div class="col-md-12">{{value.name}}</div>
+                                                        </div>
+                                                        <div class="row cartItemDetails">
+                                                            <div class="col-md-4 col-sm-5 cartItemQuantity">
+                                                                <button class="quantityButton">-</button>
+                                                                <input class="quantityIndicator" value="{{value.quantity}}" readonly/>
+                                                                <button class="quantityButton">+</button>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-4 cartItemRate">x{{value.price}}</div>
+                                                            <div class="col-md-4 col-sm-3 text-right cartItemAmount">&#8377;{{value.price * value.quantity}}</div>
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                                <div class="col-md-2 cartItemRate">x400</div>
-                                                <div class="col-md-2 pull-right cartItemAmount">₹400.00</div>
+                                                <hr class="cartItemSeperator">
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="row secondCartSection">
-                                <div class="col-md-12">
-                                    <div class="row cartItem">
+                            <hr class="cartHr">
+                            <div class="row cartFooter">
+                                <div class="cartFooterInnerWrapper col-md-12">
+                                    <div class="row cartSubtotal">
+                                        <div class="col-md-6 col-sm-6">Subtotal</div>
+                                        <div class="col-md-6 col-sm-6 text-right">&#8377;{{subtotal}}</div>
+                                    </div>
+                                    <div class="row cartConfirm">
                                         <div class="col-md-12">
-                                            <div class="row cartItemName">
-                                                <div class="col-md-12">Classic Oven Nachos</div>
-                                            </div>
-                                            <div class="row cartItemDetails">
-                                                <div class="col-md-4 cartItemQuantity">
-                                                    <button class="quantityButton">-</button>
-                                                    <input class="quantityIndicator" value="1" readonly/>
-                                                    <button class="quantityButton">+</button>
-                                                </div>
-                                                <div class="col-md-2 cartItemRate">x400</div>
-                                                <div class="col-md-2 pull-right cartItemAmount">₹400.00</div>
-                                            </div>
+                                            <button class="text-center confirmCartButton">Confirm Order</button>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-
-                            <div class="row secondCartSection">
-                                <div class="col-md-12">
-                                    <div class="row cartItem">
-                                        <div class="col-md-12">
-                                            <div class="row cartItemName">
-                                                <div class="col-md-12">Classic Oven Nachos</div>
+                                    <div class="col-md-12 col-sm-12 col-xs-12 recommendedMenuItems">
+                                        <div class="row recommended1">
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <span class="badge green">+ Coke</span>
                                             </div>
-                                            <div class="row cartItemDetails">
-                                                <div class="col-md-4 cartItemQuantity">
-                                                    <button class="quantityButton">-</button>
-                                                    <input class="quantityIndicator" value="1" readonly/>
-                                                    <button class="quantityButton">+</button>
-                                                </div>
-                                                <div class="col-md-2 cartItemRate">x400</div>
-                                                <div class="col-md-2 pull-right cartItemAmount">₹400.00</div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <span class="badge green">+ Cheese French Fries</span>
+                                            </div>
+                                        </div>
+                                        <div class="row recommended2">
+                                            <div class="col-md-3 col-sm-3 col-xs-3">
+                                                <span class="badge green">+ Coke</span>
+                                            </div>
+                                            <div class="col-md-6 col-sm-6 col-xs-6">
+                                                <span class="badge red">+ Chicken Sandwich</span>
                                             </div>
                                         </div>
                                     </div>
@@ -83,39 +81,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row cartFooter">
-                        <div class="col-md-12 col-sm-12 col-xs-12">
-                            <div class="row recommendedItems">
-                                <div class="row cartSubtotal">
-                                    <div class="col-md-3 col-sm-3 col-xs-3 subTotal">Subtotal</div>
-                                    <div class="col-md-2 col-sm-3 col-xs-3 pull-right">₹400.00</div>
-                                </div>
-                                <div class="row cartUpdate">
-                                    <div class="col-md-12 text-center innerPanel">
-                                        <button class="text-center updateCartButton">UPDATE ORDER</button>
-                                    </div>
-                                </div>
-                                <div class="col-md-12 col-sm-12 col-xs-12 recommendedMenuItems">
-                                    <div class="row recommended1">
-                                        <div class="col-md-4 col-sm-4 col-xs-4 text-center">
-                                            <span class="badge green">+ Coke</span>
-                                        </div>
-                                        <div class="col-md-4 col-sm-8 col-xs-4">
-                                            <span class="badge green">+ Cheese French Fries</span>
-                                        </div>
-                                    </div>
-                                    <div class="row recommended2">
-                                        <div class="col-md-4 col-sm-4 col-xs-4 text-center">
-                                            <span class="badge green">+ Coke</span>
-                                        </div>
-                                        <div class="col-md-4 col-sm-8 col-xs-4">
-                                            <span class="badge red">+ Chicken Sandwich</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- cart ends -->
                 </div>
             </div>
             <!--column one ends here-->
