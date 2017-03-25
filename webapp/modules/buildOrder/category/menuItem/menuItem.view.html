@@ -1,149 +1,161 @@
 <div class="screenHeader2" ng-cloak>
     <!--Category&Search&Cart-->
-    <div class="row">
-        <div class="col-md-8 searchCategoryContainer">
-            <div class="col-md-12 panel">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-sm-8">
+          <div class="row">
+            <div class="col-sm-8 searchCategoryContainer">
+                <div class="panel">
 
-                <div class="col-md-12 col-lg-12 wrapper">
-                    <div class="categoryNav">
-                      <a id="{{category.Id}}" ng-repeat="category in categories | orderBy:'order'">{{category.name}}</a>
+                    <div class="wrapper">
+                        <div class="categoryNav">
+                            <a id="{{category.Id}}" ng-repeat="category in categories | orderBy:'order'">{{category.name}}</a>
+                        </div>
+                        <div class="arrowLeft"><i class="fa fa-angle-left" style="font-size:36px;color:#f12f63;" aria-hidden="true"></i></div>
+                        <div class="arrowRight"><i class="fa fa-angle-right" style="font-size:36px;color:#f12f63;" aria-hidden="true"></i></div>
                     </div>
-                    <div class="arrowLeft"><i class="fa fa-angle-left" style="font-size:36px;color:#f12f63;" aria-hidden="true"></i></div>
-                    <div class="arrowRight"><i class="fa fa-angle-right" style="font-size:36px;color:#f12f63;" aria-hidden="true"></i></div>
-                </div>
 
-                <div id="wrap">
-                    <input id="search" name="search" type="text" placeholder="What're we looking for ?" ng-model="query.name">
-                    <input id="search_submit" value="Rechercher" type="reset">
-<!--                    <input id="search_submit" value="Rechercher"><i class='fa fa-search fa-2x' style=" color:grey; margin-top:2%;" aria-hidden='true'></i>-->
-                </div>
-            </div>
-        </div>
-        <!-- cart starts -->
-        <div class="col-md-4 cartContainer">
-            <div class="cartSegment">
-                <!--your order header starts-->
-                <div class="row">
-                    <div class="col-xs-11 col-xs-offset-1 col-md-11 col-md-ofset-1 yourOrder">
-                        <h4>Your Order</h4>
-                    </div>
-                </div>
-                <!--your order header ends-->
-
-                <!-- Cart Dishes starts-->
-                <div class="row" ng-repeat="(key, value) in cartItems" >
-                    <div class="col-md-10 col-md-offset-1 cartSummary">
-                        <div class="row order-items">
-                            <div class="col-md-11 marginCol">
-                                &nbsp;&nbsp;
-                                <span class="dishName"><img src="../../../../assets/images/veg.png">{{value.name}}</span>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-8 col-lg-8">
-                                &nbsp;&nbsp;
-                                <button class="buttons left">-</button>
-                                <input class="quantityField" type="text" value="{{value.quantity}}" readonly/>
-                                <button class="buttons right">+</button>
-                                <span class="priceOrignal"><span class="into">×</span> {{value.price}}</span>
-                            </div>
-                            <div class="col-md-3 pull-right">
-                                <span>{{value.price * value.quantity}}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Cart Dishes starts-->
-                <div class="row">
-                    <div class="col-md-11 subTotalAmt">
-                        <div class="row">
-                            <div class="col-md-4 col-md-offset-1">
-                                <span class="subTotal">Subtotal</span>
-                            </div>
-                            <div class="col-md-6 text-right col-lg-4 pull-right">
-                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                <span class="amount">{{subtotal}}</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row side-bar-bottom">
-                    <div class="col-md-10 col-lg-10">
-                        <div class="row">
-                            <div class="col-md-11 col-md-offset-1 col-lg-11 ">
-                                <textarea class="textArea" type="textarea" placeholder="Want to customize your Dish"></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-11 col-md-offset-2 col-lg-12 text-center">
-                                <button class="confirmOrder">CONFIRM ORDER</button>
-                            </div>
-                        </div>
+                    <div id="wrap">
+                        <input id="search" name="search" type="text" placeholder="Search for a dish..." ng-model="query.name">
+                        <input id="search_submit" value="Rechercher" type="reset">
+    <!--                    <input id="search_submit" value="Rechercher"><i class='fa fa-search fa-2x' style=" color:grey; margin-top:2%;" aria-hidden='true'></i>-->
                     </div>
                 </div>
             </div>
+          </div>
+          <div class="row">
+              <!--Menu Item Columns Start Here-->
+              <div class="col-sm-12 menuItemContainer">
+                  <div ng-repeat="category in categories | orderBy:'order' | filter:query.name">
+                      <div ng-if="!category.subCategories" class="panel">
+                          <!--Category Name Starts Here-->
+                          <div class="panel-heading categoryHeading">
+                              <h3 class="panel-title">{{category.name}}</h3>
+                          </div>
+                          <!--Category Name Ends Here-->
+                          <!--Menu Item List Starts Here-->
+                          <div class="panel-body menuItemName" ng-repeat="menuItem in category.menuItems">
+                              <div class="row">
+                                  <div class="col-md-9">
+                                      <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span> {{menuItem.name}}
+                                  </div>
+                                  <div class="col-md-3">
+                                      &#8377;&nbsp;{{menuItem.price}}
+                                      <div class="quantityWrapper pull-right">
+                                          <span ng-show="menuItem.quantity==0" ng-click="addItem(menuItem, 'ADD')" class="glyphicon glyphicon-plus pull-right"></span>
+                                          <span ng-hide="menuItem.quantity==0">
+                                              <button ng-click="addItem(menuItem, 'REMOVE')" class="quantityButton">-</button>
+                                              <input class="quantityIndicator" type="text" value="{{menuItem.quantity}}" readonly/>
+                                              <button ng-click="addItem(menuItem, 'ADD')" class="quantityButton">+</button>
+                                          </span>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--Menu Item List Ends Here-->
+                      </div>
+                      <div ng-if="category.subCategories" ng-repeat="subCategory in category.subCategories | orderBy:'order'" class="panel">
+                          <!--Sub Category Name Starts Here-->
+                          <div class="panel-heading categoryHeading">
+                              <h3 class="panel-title">{{subCategory.categoryName}}</h3>
+                          </div>
+                          <!--Sub Category Name Ends Here-->
+                          <!--Menu Item List Starts Here-->
+                          <div ng-repeat="menuCategory in menuItems">
+                              <div ng-if="subCategory.Id == menuCategory.categoryId" ng-repeat="menuItem in menuCategory.menuItems" class="panel-body menuItemName">
+                                  <div class="row">
+                                      <div class="col-md-9">
+                                          <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span> {{menuItem.name}}
+                                      </div>
+                                      <div class="col-md-3">
+                                          &#8377;&nbsp;{{menuItem.price}}
+                                          <div class="quantityWrapper pull-right">
+                                              <span ng-show="quantity==0" ng-click="increaseQuantity()" class="glyphicon glyphicon-plus pull-right"></span>
+                                              <span ng-hide="quantity==0">
+                                              <button ng-click="decreaseQuantity()" class="quantityButton">-</button>
+                                              <input class="quantityIndicator" type="text" value="{{quantity}}" readonly/>
+                                              <button ng-click="increaseQuantity()" class="quantityButton">+</button>
+                                              </span>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <!--Menu Item List Ends Here-->
+                      </div>
+                  </div>
+              </div>
+              <!--Menu Item Columns End Here-->
+          </div>
+
         </div>
-        <!-- cart ends -->
+        <div class="col-sm-4  hidden-xs cartWrapper">
+          <div class="row">
+
+              <!-- cart starts -->
+              <div class="col-sm-12">
+                  <div class="cartInnerWrapper">
+                      <div class="row firstCartSection">
+                          <div class="col-md-12">
+                              <div class="cartTitle">Your Order</div>
+                          </div>
+                      </div>
+                      <hr>
+                      <div class="row secondCartSection">
+                          <div class="col-md-12">
+                              <div class="row">
+                                  <div class="col-md-12">
+                                      <div class="cartItemWrapper" ng-repeat="(key, value) in cartItems">
+                                          <div class="row cartItem">
+                                              <div class="col-md-12">
+                                                  <div class="row cartItemName">
+                                                      <div class="col-md-12">{{value.name}}</div>
+                                                  </div>
+                                                  <div class="row cartItemDetails">
+                                                      <div class="col-md-4 cartItemQuantity">
+                                                          <button class="quantityButton">-</button>
+                                                          <input class="quantityIndicator" value="{{value.quantity}}" readonly/>
+                                                          <button class="quantityButton">+</button>
+                                                      </div>
+                                                      <div class="col-md-4 cartItemRate">x{{value.price}}</div>
+                                                      <div class="col-md-4 text-right cartItemAmount">{{value.price * value.quantity}}</div>
+                                                  </div>
+                                              </div>
+                                          </div>
+                                          <hr class="cartItemSeperator">
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <hr>
+                      <div class="row cartFooter">
+                          <div class="col-md-12">
+                              <div class="row cartSubtotal">
+                                  <div class="col-md-6">Subtotal</div>
+                                  <div class="col-md-6 text-right">{{subtotal}}</div>
+                              </div>
+                              <div class="row cartInstructions">
+                                  <div class="col-md-12">
+                                      <span class="instructionIcon"></span><textarea class="additonalInstructions" placeholder="Would you like to add some additional instruction?"></textarea>
+                                  </div>
+                              </div>
+                              <div class="row cartConfirm">
+                                  <div class="col-md-12">
+                                      <button class="text-center confirmCartButton">Confirm Order</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!-- cart ends -->
+          </div>
+        </div>
+      </div>
+
     </div>
+
     <!--Category&Search&Cart-->
-    <div class="row">
-        <!--Menu Item Columns Start Here-->
-        <div class="col-md-8 menuItemContainer">
-            <div ng-repeat="category in categories | orderBy:'order' | filter:query.name">
-                <div ng-if="!category.subCategories" class="panel">
-                    <!--Category Name Starts Here-->
-                    <div class="panel-heading categoryHeading">
-                        <h3 class="panel-title">{{category.name}}</h3>
-                    </div>
-                    <!--Category Name Ends Here-->
-                    <!--Menu Item List Starts Here-->
-                    <div class="panel-body menuItemName" ng-repeat="menuItem in category.menuItems">
-                        <div class="row">
-                            <div class="col-md-10">
-                                <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span> {{menuItem.name}}
-                            </div>
-                            <div class="col-md-2">
-                                &#8377;&nbsp;{{menuItem.price}}
-                                <span ng-show="menuItem.quantity==0" ng-click="addItem(menuItem, 'ADD')" class="glyphicon glyphicon-plus pull-right"></span>
-                                <span ng-hide="menuItem.quantity==0">
-                                <button ng-click="addItem(menuItem, 'REMOVE')" class="buttons left">-</button>
-                                <input class="quantityField" type="text" value="{{menuItem.quantity}}" readonly/>
-                                <button ng-click="addItem(menuItem, 'ADD')" class="buttons right">+</button>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Menu Item List Ends Here-->
-                </div>
-                <div ng-if="category.subCategories" ng-repeat="subCategory in category.subCategories | orderBy:'order'" class="panel">
-                    <!--Sub Category Name Starts Here-->
-                    <div class="panel-heading categoryHeading">
-                        <h3 class="panel-title">{{subCategory.categoryName}}</h3>
-                    </div>
-                    <!--Sub Category Name Ends Here-->
-                    <!--Menu Item List Starts Here-->
-                    <div ng-repeat="menuCategory in menuItems">
-                        <div ng-if="subCategory.Id == menuCategory.categoryId" ng-repeat="menuItem in menuCategory.menuItems" class="panel-body menuItemName">
-                            <div class="row">
-                                <div class="col-md-10">
-                                    <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span> {{menuItem.name}}
-                                </div>
-                                <div class="col-md-2">
-                                    &#8377;&nbsp;{{menuItem.price}}
-                                    <span ng-show="quantity==0" ng-click="increaseQuantity()" class="glyphicon glyphicon-plus pull-right"></span>
-                                    <span ng-hide="quantity==0">
-                                    <button ng-click="decreaseQuantity()" class="buttons left">-</button>
-                                    <input class="quantityField" type="text" value="{{quantity}}" readonly/>
-                                    <button ng-click="increaseQuantity()" class="buttons right">+</button>
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Menu Item List Ends Here-->
-                </div>
-            </div>
-        </div>
-        <!--Menu Item Columns End Here-->
-    </div>
+
 </div>
