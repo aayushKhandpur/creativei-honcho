@@ -1,11 +1,12 @@
 [
+
     {
-        "name": "soups",
+        "name": "Soups",
         "Id": "1",
         "parentId": null,
         "availableFrom": "10:00",
         "availableTo": "23:00",
-        "isAvailable": true,
+        "isAvailable": "true",
         "order": 1,
         "subCategories": null
     },
@@ -14,17 +15,17 @@
         "Id": "2",
         "parentId": null,
         "availableFrom": "10:00",
-        "availableTo": "22:00",
+        "availableTo": "23:00",
         "isAvailable": true,
         "order": 2,
         "subCategories": null
     },
     {
-        "name": "Indian snacks",
+        "name": "Indian Snacks",
         "Id": "3",
         "parentId": null,
         "availableFrom": "10:00",
-        "availableTo": "22:00",
+        "availableTo": "23:00",
         "isAvailable": true,
         "order": 3,
         "subCategories": null
@@ -34,7 +35,7 @@
         "Id": "4",
         "parentId": null,
         "availableFrom": "10:00",
-        "availableTo": "22:00",
+        "availableTo": "23:00",
         "isAvailable": true,
         "order": 4,
         "subCategories": null
@@ -44,19 +45,9 @@
         "Id": "6",
         "parentId": null,
         "availableFrom": "10:00",
-        "availableTo": "22:00",
+        "availableTo": "23:00",
         "isAvailable": true,
         "order": 6,
-        "subCategories": null
-    },
-    {
-        "name": "Continental",
-        "Id": "5",
-        "parentId": null,
-        "availableFrom": "10:00",
-        "availableTo": "22:00",
-        "isAvailable": true,
-        "order": 5,
         "subCategories": null
     },
     {
@@ -64,9 +55,109 @@
         "Id": "7",
         "parentId": null,
         "availableFrom": "10:00",
-        "availableTo": "22:00",
+        "availableTo": "23:00",
         "isAvailable": true,
         "order": 7,
+        "subCategories": null
+    },
+    {
+        "name": "Chinese",
+        "Id": "8",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "23:00",
+        "isAvailable": true,
+        "order": 8,
+        "subCategories": null
+    },
+    {
+        "name": "Combi Meals",
+        "Id": "9",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "23:00",
+        "isAvailable": true,
+        "order": 9,
+        "subCategories": null
+    },
+    {
+        "name": "Breads",
+        "Id": "10",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "23:00",
+        "isAvailable": true,
+        "order": 10,
+        "subCategories": null
+    },
+    {
+        "name": "Rice",
+        "Id": "11",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "23:00",
+        "isAvailable": true,
+        "order": 11,
+        "subCategories": null
+    },
+    {
+        "name": "Raita & Salad",
+        "Id": "12",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "23:00",
+        "isAvailable": true,
+        "order": 12,
+        "subCategories": null
+    },
+    {
+        "name": "Beverages",
+        "Id": "13",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "23:00",
+        "isAvailable": true,
+        "order": 13,
+        "subCategories": null
+    },
+    {
+        "name": "Ice Cream (2 Scoops)",
+        "Id": "14",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "23:00",
+        "isAvailable": true,
+        "order": 14,
+        "subCategories": null
+    },
+    {
+        "name": "Shakes",
+        "Id": "15",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "23:00",
+        "isAvailable": true,
+        "order": 15,
+        "subCategories": null
+    },
+    {
+        "name": "Mocktails",
+        "Id": "16",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "23:00",
+        "isAvailable": true,
+        "order": 16,
+        "subCategories": null
+    },
+    {
+        "name": "Dessert",
+        "Id": "17",
+        "parentId": null,
+        "availableFrom": "10:00",
+        "availableTo": "23:00",
+        "isAvailable": true,
+        "order": 17,
         "subCategories": null
     }
 

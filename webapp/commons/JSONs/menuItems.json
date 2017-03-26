@@ -1,86 +1,1518 @@
 {
     "menuItem": [
-          {
+        {
             "id": 1,
-            "name": "Velvet Escoffier (Choice Of Cream Soup)",
-            "price": 125,
+            "name": "Tomato Soup",
+            "price": 90,
             "isComboMeal": false,
             "categoryID": "1",
             "quantity": 0,
-            "isVeg" : true
+            "isVeg": true
           },
-          {
+        {
             "id": 2,
+            "name": "Tomato Soup (Half)",
+            "price": 55,
+            "isComboMeal": false,
+            "categoryID": "1",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 3,
+            "name": "Veg Hot 'N' Sour Soup",
+            "price": 100,
+            "isComboMeal": false,
+            "categoryID": "1",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 4,
+            "name": "Veg Hot 'N' Sour Soup (Half)",
+            "price": 60,
+            "isComboMeal": false,
+            "categoryID": "1",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 5,
+            "name": "Tomato Dhania Shorba",
+            "price": 90,
+            "isComboMeal": false,
+            "categoryID": "1",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 6,
+            "name": "Tomato Dhania Shorba (Half)",
+            "price": 55,
+            "isComboMeal": false,
+            "categoryID": "1",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 7,
+            "name": "Minestrone (Italian Soup)",
+            "price": 100,
+            "isComboMeal": false,
+            "categoryID": "1",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 8,
+            "name": "Minestrone (Italian Soup)(Half)",
+            "price": 60,
+            "isComboMeal": false,
+            "categoryID": "1",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 9,
+            "name": "Paneer Tikka",
+            "price": 180,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 10,
+            "name": "Veg. Spring Roll(6 Pcs.)",
+            "price": 110,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 11,
+            "name": "Chinese Samosa (8 Pcs.)",
+            "price": 90,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 12,
+            "name": "French Fries",
+            "price": 70,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 13,
+            "name": "Chilly Crispy Potatoes",
+            "price": 125,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 14,
+            "name": "Garlic Bread(4 Pcs.)",
+            "price": 70,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 15,
+            "name": "Garlic Bread(With Cheese)(4 Pcs.)",
+            "price": 80,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 16,
+            "name": "Haryali Kabab(8 Pcs.)",
+            "price": 110,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": false
+          },
+        {
+            "id": 17,
+            "name": "Mushroom Tikka",
+            "price": 185,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 18,
+            "name": "Puddina Paneer Tikka",
+            "price": 180,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 19,
+            "name": "Zaffrani Paneer Tikka",
+            "price": 180,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 20,
+            "name": "Aloo Nazakat",
+            "price": 125,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 21,
+            "name": "Aloo Peshwari",
+            "price": 125,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 22,
+            "name": "Tandoori Plater",
+            "price": 230,
+            "isComboMeal": false,
+            "categoryID": "2",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 23,
+            "name": "Vada Pao",
+            "price": 70,
+            "isComboMeal": false,
+            "categoryID": "3",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 24,
+            "name": "Mix Veg Pakoda",
+            "price": 90,
+            "isComboMeal": false,
+            "categoryID": "3",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 25,
+            "name": "Paneer Pakoda",
+            "price": 130,
+            "isComboMeal": false,
+            "categoryID": "3",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 26,
+            "name": "Chole Bhature",
+            "price": 110,
+            "isComboMeal": false,
+            "categoryID": "3",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 27,
+            "name": "Extra Bhatura",
+            "price": 50,
+            "isComboMeal": false,
+            "categoryID": "3",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 28,
+            "name": "Pao Bhaji",
+            "price": 90,
+            "isComboMeal": false,
+            "categoryID": "3",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 29,
+            "name": "Extra Pao",
+            "price": 30,
+            "isComboMeal": false,
+            "categoryID": "3",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 30,
+            "name": "Amritsari Chole Kulcha",
+            "price": 105,
+            "isComboMeal": false,
+            "categoryID": "3",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 31,
+            "name": "Pani Patashi(6 Pcs.)",
+            "price": 40,
+            "isComboMeal": false,
+            "categoryID": "4",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 32,
+            "name": "Papri Chaat",
+            "price": 80,
+            "isComboMeal": false,
+            "categoryID": "4",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 33,
+            "name": "Bistro Spe. Dahi Bhalla",
+            "price": 85,
+            "isComboMeal": false,
+            "categoryID": "4",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 34,
+            "name": "Aloo Chaat",
+            "price": 70,
+            "isComboMeal": false,
+            "categoryID": "4",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 35,
+            "name": "Bombay Bhel",
+            "price": 70,
+            "isComboMeal": false,
+            "categoryID": "4",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 36,
+            "name": "Sev Puri",
+            "price": 65,
+            "isComboMeal": false,
+            "categoryID": "4",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 66,
             "name": "Paneer Butter Masala",
-            "price": 190,
+            "price": 195,
             "isComboMeal": false,
             "categoryID": "6",
             "quantity": 0,
-            "isVeg" : true
+            "isVeg": true
           },
-          {
-            "id": 3,
+        {
+            "id": 67,
             "name": "Paneer Tikka Masala",
             "price": 195,
             "isComboMeal": false,
             "categoryID": "6",
             "quantity": 0,
-            "isVeg" : true
+            "isVeg": true
           },
-          {
-            "id": 4,
+        {
+            "id": 68,
+            "name": "Paneer Lababdar",
+            "price": 195,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 69,
+            "name": "Paneer Taka Tak",
+            "price": 195,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 70,
+            "name": "Khoya Matar Paneer",
+            "price": 185,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 71,
+            "name": "Paneer Tikka Lajawab",
+            "price": 195,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 72,
+            "name": "Paneer Pasanda",
+            "price": 195,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 73,
+            "name": "Paneer Bhurji",
+            "price": 190,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 74,
+            "name": "Kadai Paneer",
+            "price": 185,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 75,
+            "name": "Shahi Paneer",
+            "price": 185,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 76,
+            "name": "Paneer Khurchan",
+            "price": 185,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 77,
+            "name": "Matar Paneer",
+            "price": 185,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 78,
+            "name": "Lahori Dhaba Paneer",
+            "price": 195,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 79,
+            "name": "Palak Paneer",
+            "price": 170,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 80,
+            "name": "Dum Aloo Banarasi",
+            "price": 140,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 81,
+            "name": "Achari Aloo",
+            "price": 140,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 82,
+            "name": "Malai Kofta",
+            "price": 175,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 83,
+            "name": "Dilkhush Kofta",
+            "price": 175,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 84,
+            "name": "Makai Methi Malai(seasonal)",
+            "price": 175,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 85,
+            "name": "Matar Mushroom",
+            "price": 175,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 86,
+            "name": "Veg. Do Pyazaa",
+            "price": 150,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 87,
+            "name": "Zeera Aloo",
+            "price": 140,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 88,
+            "name": "Navratan Korma",
+            "price": 165,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 89,
+            "name": "Stuff Dum Aloo",
+            "price": 140,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 90,
+            "name": "Gatta Masala",
+            "price": 140,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 91,
+            "name": "Aloo Pyaz",
+            "price": 140,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 92,
+            "name": "Sabji Laziz",
+            "price": 140,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 93,
+            "name": "Seasonal Mix Veg",
+            "price": 140,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 94,
+            "name": "Kaju Curry",
+            "price": 250,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 95,
+            "name": "Haryali Kofta",
+            "price": 175,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 96,
+            "name": "Chana Masala",
+            "price": 125,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 97,
+            "name": "Dal Makhani",
+            "price": 155,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 98,
+            "name": "Lahori Dhaba Dal",
+            "price": 155,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 99,
+            "name": "Langar Dal",
+            "price": 135,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 100,
+            "name": "Chilly Couliflower",
+            "price": 150,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 101,
+            "name": "Slice Potato in Schezwan Sauce",
+            "price": 150,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 102,
+            "name": "Chinese Special Veg. Sizzler",
+            "price": 220,
+            "isComboMeal": false,
+            "categoryID": "6",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 103,
             "name": "Idli Sambhar",
             "price": 100,
             "isComboMeal": false,
             "categoryID": "7",
             "quantity": 0,
-            "isVeg" : true
+            "isVeg": true
           },
-          {
-            "id": 5,
+        {
+            "id": 104,
+            "name": "Vada Sambhar",
+            "price": 100,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 105,
             "name": "Plain Dosa",
             "price": 105,
             "isComboMeal": false,
             "categoryID": "7",
             "quantity": 0,
-            "isVeg" : true
+            "isVeg": true
           },
-          {
-            "id": 6,
-            "name": "Garlic Bread",
+        {
+            "id": 106,
+            "name": "Masala Dosa",
+            "price": 115,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 107,
+            "name": "Rawa Masala Dosa",
             "price": 125,
             "isComboMeal": false,
-            "categoryID": "2",
+            "categoryID": "7",
             "quantity": 0,
-            "isVeg" : true
+            "isVeg": true
           },
-          {
-            "id": 7,
-            "name": "Paneer Tikka",
+        {
+            "id": 108,
+            "name": "Rawa Plain Dosa",
+            "price": 105,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 109,
+            "name": "Mysore Masala Dosa",
+            "price": 125,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 110,
+            "name": "Crispy Paneer Dosa(Sherwan Base)",
+            "price": 135,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 111,
+            "name": "Mexican Dosa(Salsa Base)",
+            "price": 135,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 112,
+            "name": "Roasted Salad Dosa",
+            "price": 135,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 113,
+            "name": "Veg. Pongal(Khichdi)(Full)",
+            "price": 250,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 114,
+            "name": "Veg. Pongal(Khichdi)(Half)",
             "price": 150,
             "isComboMeal": false,
-            "categoryID": "3",
+            "categoryID": "7",
             "quantity": 0,
-            "isVeg" : true
+            "isVeg": true
           },
-          {
-            "id": 8,
-            "name": "Bhel Puri",
+        {
+            "id": 115,
+            "name": "Khara Pongal(Khichdi)(Full)",
+            "price": 250,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 116,
+            "name": "Khara Pongal(Khichdi)(Half)",
+            "price": 150,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 117,
+            "name": "Mix. Veg. Uttapam",
+            "price": 125,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 118,
+            "name": "Onion Uttapam",
+            "price": 125,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 119,
+            "name": "Bistro Sp. Family Dosa",
+            "price": 160,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 120,
+            "name": "South Indian Platter",
+            "price": 155,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 121,
+            "name": "Fried Idli",
+            "price": 120,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 122,
+            "name": "Lemon Rice(server with sambhar)",
+            "price": 115,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 123,
+            "name": "Dal Tadka/Dal Fry",
+            "price": 140,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 124,
+            "name": "Sarson Ka Saag, Makki Roti",
+            "price": 180,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 125,
+            "name": "Bistro Thali(Economic)",
+            "price": 155,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 126,
+            "name": "Bistro Special Thali",
+            "price": 190,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 127,
+            "name": "Punjabi Special Thali",
+            "price": 215,
+            "isComboMeal": false,
+            "categoryID": "7",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 128,
+            "name": "Chilly Paneer(dry or with gravy)",
+            "price": 190,
+            "isComboMeal": false,
+            "categoryID": "8",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 129,
+            "name": "Crispy Paneer(Hunan sauce)",
+            "price": 190,
+            "isComboMeal": false,
+            "categoryID": "8",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 130,
+            "name": "Veg Manchurian(dry or with gravy)",
+            "price": 150,
+            "isComboMeal": false,
+            "categoryID": "8",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 131,
+            "name": "Veg. Fried Rice",
+            "price": 140,
+            "isComboMeal": false,
+            "categoryID": "8",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 132,
+            "name": "Ginger Capsicum Rice",
+            "price": 110,
+            "isComboMeal": false,
+            "categoryID": "8",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 133,
+            "name": "Veg. Noodles",
+            "price": 140,
+            "isComboMeal": false,
+            "categoryID": "8",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 134,
+            "name": "Chilly Garlic Noodles",
+            "price": 150,
+            "isComboMeal": false,
+            "categoryID": "8",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 135,
+            "name": "Sanghai Noodles",
+            "price": 155,
+            "isComboMeal": false,
+            "categoryID": "8",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 136,
+            "name": "Veg. Chopsy",
+            "price": 145,
+            "isComboMeal": false,
+            "categoryID": "8",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 137,
+            "name": "Veg. Schezwan Style",
+            "price": 160,
+            "isComboMeal": false,
+            "categoryID": "8",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 138,
+            "name": "Paneer Butter Masala(with butter naan)",
+            "price": 150,
+            "isComboMeal": true,
+            "categoryID": "9",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 139,
+            "name": "Daal Makhani(with laccha parantha)",
+            "price": 140,
+            "isComboMeal": true,
+            "categoryID": "9",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 140,
+            "name": "Veg Manchurian+Fried Rice",
+            "price": 160,
+            "isComboMeal": true,
+            "categoryID": "9",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 141,
+            "name": "Veg Manchurian+Noodles",
+            "price": 160,
+            "isComboMeal": true,
+            "categoryID": "9",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 142,
+            "name": "Tandoori Roti",
+            "price": 18,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 143,
+            "name": "Tandoori Roti with Butter",
+            "price": 22,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 144,
+            "name": "Plain Roti(Tawa)",
+            "price": 18,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 145,
+            "name": "Butter Roti(Tawa)",
+            "price": 22,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 146,
+            "name": "Naan",
+            "price": 40,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 147,
+            "name": "Butter Naan",
+            "price": 45,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 148,
+            "name": "Stuffed Naan",
+            "price": 55,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 149,
+            "name": "Garlic Naan",
+            "price": 55,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 150,
+            "name": "Cheese Naan",
+            "price": 70,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 151,
+            "name": "Garlic Cheese Naan",
+            "price": 75,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 152,
+            "name": "Laccha Parantha",
+            "price": 40,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 153,
+            "name": "Stuffed Parantha/Kulcha",
+            "price": 55,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 154,
+            "name": "Missi Roti",
+            "price": 35,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 155,
+            "name": "Roaasted Papad",
+            "price": 20,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 156,
+            "name": "Masala Papad",
+            "price": 45,
+            "isComboMeal": false,
+            "categoryID": "10",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 157,
+            "name": "Steam Rice",
+            "price": 90,
+            "isComboMeal": false,
+            "categoryID": "11",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 158,
+            "name": "Jeera Rice",
+            "price": 95,
+            "isComboMeal": false,
+            "categoryID": "11",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 159,
+            "name": "Peas Pulao",
             "price": 100,
             "isComboMeal": false,
-            "categoryID": "4",
+            "categoryID": "11",
             "quantity": 0,
-            "isVeg" : true
+            "isVeg": true
           },
-          {
-            "id": 9,
-            "name": "Pasta",
-            "price": 200,
+        {
+            "id": 160,
+            "name": "Veg. Pulao",
+            "price": 110,
             "isComboMeal": false,
-            "categoryID": "5",
+            "categoryID": "11",
             "quantity": 0,
-            "isVeg" : true
+            "isVeg": true
+          },
+        {
+            "id": 161,
+            "name": "Gatta Pulao",
+            "price": 130,
+            "isComboMeal": false,
+            "categoryID": "11",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 162,
+            "name": "Kashmiri Pulao",
+            "price": 130,
+            "isComboMeal": false,
+            "categoryID": "11",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 163,
+            "name": "Veg. Biryani",
+            "price": 160,
+            "isComboMeal": false,
+            "categoryID": "11",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 164,
+            "name": "Fresh Garden Salad",
+            "price": 70,
+            "isComboMeal": false,
+            "categoryID": "12",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 165,
+            "name": "Veg. Raita",
+            "price": 85,
+            "isComboMeal": false,
+            "categoryID": "12",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 166,
+            "name": "Boondi Raita",
+            "price": 85,
+            "isComboMeal": false,
+            "categoryID": "12",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 167,
+            "name": "Pineapple Raita",
+            "price": 100,
+            "isComboMeal": false,
+            "categoryID": "12",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 168,
+            "name": "Onion Raita",
+            "price": 70,
+            "isComboMeal": false,
+            "categoryID": "12",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 169,
+            "name": "Russian Salad",
+            "price": 110,
+            "isComboMeal": false,
+            "categoryID": "12",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 170,
+            "name": "Mexican Salad",
+            "price": 110,
+            "isComboMeal": false,
+            "categoryID": "12",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 171,
+            "name": "Hot Coffee",
+            "price": 65,
+            "isComboMeal": false,
+            "categoryID": "13",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 172,
+            "name": "Cold Coffee",
+            "price": 75,
+            "isComboMeal": false,
+            "categoryID": "13",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 173,
+            "name": "Jeera Chhach",
+            "price": 55,
+            "isComboMeal": false,
+            "categoryID": "13",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 174,
+            "name": "Lassi",
+            "price": 75,
+            "isComboMeal": false,
+            "categoryID": "13",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 175,
+            "name": "Soft Drink",
+            "price": 45,
+            "isComboMeal": false,
+            "categoryID": "13",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 176,
+            "name": "Mineral Water",
+            "price": 35,
+            "isComboMeal": false,
+            "categoryID": "13",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 177,
+            "name": "Lemon Soda",
+            "price": 55,
+            "isComboMeal": false,
+            "categoryID": "13",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 178,
+            "name": "Lemon Mint Fuzz",
+            "price": 65,
+            "isComboMeal": false,
+            "categoryID": "13",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 179,
+            "name": "Lemon Mint Ice Tea",
+            "price": 55,
+            "isComboMeal": false,
+            "categoryID": "13",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 180,
+            "name": "Vanilla",
+            "price": 55,
+            "isComboMeal": false,
+            "categoryID": "14",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 181,
+            "name": "Strawberry",
+            "price": 55,
+            "isComboMeal": false,
+            "categoryID": "14",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 182,
+            "name": "Chocolate",
+            "price": 60,
+            "isComboMeal": false,
+            "categoryID": "14",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 183,
+            "name": "Butter Scotch",
+            "price": 60,
+            "isComboMeal": false,
+            "categoryID": "14",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 184,
+            "name": "Kesar Pista",
+            "price": 60,
+            "isComboMeal": false,
+            "categoryID": "14",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 185,
+            "name": "Ice Cream Cone(1 Scoop)",
+            "price": 40,
+            "isComboMeal": false,
+            "categoryID": "14",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 186,
+            "name": "Sundae",
+            "price": 95,
+            "isComboMeal": false,
+            "categoryID": "14",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 187,
+            "name": "Vanilla",
+            "price": 80,
+            "isComboMeal": false,
+            "categoryID": "15",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 188,
+            "name": "Strawberry",
+            "price": 85,
+            "isComboMeal": false,
+            "categoryID": "15",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 189,
+            "name": "Chocolate",
+            "price": 85,
+            "isComboMeal": false,
+            "categoryID": "15",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 190,
+            "name": "Butter Scotch",
+            "price": 85,
+            "isComboMeal": false,
+            "categoryID": "15",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 191,
+            "name": "Grappo Shake",
+            "price": 90,
+            "isComboMeal": false,
+            "categoryID": "15",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 192,
+            "name": "Kiwi Shake",
+            "price": 90,
+            "isComboMeal": false,
+            "categoryID": "15",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 193,
+            "name": "Oreo Shake",
+            "price": 90,
+            "isComboMeal": false,
+            "categoryID": "15",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 194,
+            "name": "Ruby Soho Strawberry",
+            "price": 90,
+            "isComboMeal": false,
+            "categoryID": "16",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 195,
+            "name": "Virgin Mojito",
+            "price": 90,
+            "isComboMeal": false,
+            "categoryID": "16",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 196,
+            "name": "Positively Kiwi",
+            "price": 90,
+            "isComboMeal": false,
+            "categoryID": "16",
+            "quantity": 0,
+            "isVeg": true
+          },
+        {
+            "id": 197,
+            "name": "Gulab Jamun(2 Pcs.)",
+            "price": 60,
+            "isComboMeal": false,
+            "categoryID": "17",
+            "quantity": 0,
+            "isVeg": true
           }
+
 
     ]
 }
