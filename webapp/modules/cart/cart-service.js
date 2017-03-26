@@ -14,16 +14,17 @@ creativei_app.factory('CartService', function($http, $rootScope){
     if(!$rootScope.runningOrders.hasOwnProperty(tableId))
       $rootScope.runningOrders[tableId] = getOrderTemplate(tableId);
     var menuItemKey =menuItem.id;
-    if(!$rootScope.runningOrders[tableId].items.hasOwnProperty(menuItemKey)){
-      $rootScope.runningOrders[tableId].items[menuItemKey] = getOrderItemFromMenuItem(menuItem);
+    var itemIdex = findItemIndex(menuItemKey, tableId);
+    if(itemIdex == -1){
+      $rootScope.runningOrders[tableId].items.push(getOrderItemFromMenuItem(menuItem));
     }else{
-      updateOrderItemQuantity(menuItem.id, menuItem.quantity, menuItem.price, tableId);
+      updateOrderItemQuantity(itemIdex, menuItem.quantity, menuItem.price, tableId);
     }
     return {message: "Item added", item:menuItem };
   };
 
-  cart.updateItem = function(id, quantity, price, tableId){
-    updateOrderItemQuantity(id, quantity, price, tableId);
+  cart.updateItem = function(menuItemKey, quantity, price, tableId){
+    updateOrderItemQuantity(findItemIndex(menuItemKey, tableId), quantity, price, tableId);
   }
 
   cart.removeItem = function (){
@@ -36,6 +37,15 @@ creativei_app.factory('CartService', function($http, $rootScope){
 
     return {};
   };
+
+  function findItemIndex(menuItemKey, tableId){
+    for(var itemId in $rootScope.runningOrders[tableId].items){
+      if($rootScope.runningOrders[tableId].items[itemId].menuItemId == menuItemKey){
+        return itemId;
+      }
+    }
+    return -1;
+  }
   function getOrderTemplate(tableId){
     var order = {
       table : tableId,
@@ -60,14 +70,13 @@ creativei_app.factory('CartService', function($http, $rootScope){
     };
     return orderItem;
   }
-  function updateOrderItemQuantity(id, quantity, price, tableId){
-    $rootScope.runningOrders[tableId].items[id]["quantity"]= quantity;
-    $rootScope.runningOrders[tableId].items[id]["rate"]= price;
-    $rootScope.runningOrders[tableId].items[id]["price"]=price * quantity;
-    if($rootScope.runningOrders[tableId].items[id]["quantity"] == 0){
-      $rootScope.runningOrders[tableId].items.splice(id, 1);
-    }
+  function updateOrderItemQuantity(itemId, quantity, price, tableId){
+        $rootScope.runningOrders[tableId].items[itemId]["quantity"]= quantity;
+        $rootScope.runningOrders[tableId].items[itemId]["rate"]= price;
+        $rootScope.runningOrders[tableId].items[itemId]["price"]=price * quantity;
+        if($rootScope.runningOrders[tableId].items[itemId]["quantity"] == 0){
+          $rootScope.runningOrders[tableId].items.splice(itemId,1);
+        }
   }
-
   return cart;
 });

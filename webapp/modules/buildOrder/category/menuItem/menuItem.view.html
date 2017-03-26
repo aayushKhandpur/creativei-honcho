@@ -112,7 +112,7 @@
                               <div class="cartTitle">Your Order</div>
                           </div>
                           <div class="col-md-6 col-sm-6 text-right">
-                            <span class="totalCartItems badge">2</span>
+                            <span class="totalCartItems badge">{{cartItems.length}}</span>
                           </div>
                       </div>
 <!--                      <hr class="cartHr">-->
@@ -120,7 +120,7 @@
                           <div class="col-md-12">
                               <div class="row">
                                   <div class="col-md-12">
-                                      <div class="cartItemWrapper" ng-repeat="(key, value) in cartItems">
+                                      <div class="cartItemWrapper" ng-repeat="value in cartItems">
                                           <div class="row cartItem">
                                               <div class="col-md-12">
                                                   <div class="row cartItemName">
@@ -129,9 +129,9 @@
                                                   </div>
                                                   <div class="row cartItemDetails">
                                                       <div class="col-md-4 col-sm-5 cartItemQuantity">
-                                                          <button ng-click="updateOrderItemAndSync(value, 'REMOVE')" class="quantityButton">-</button>
-                                                          <input class="quantityIndicator" value="{{value.quantity}}" readonly/>
-                                                          <button ng-click="updateOrderItemAndSync(value, 'ADD')" class="quantityButton">+</button>
+                                                        <button ng-click="updateOrderItemAndSync(value, 'REMOVE')" class="quantityButton">-</button>
+                                                        <input class="quantityIndicator" value="{{value.quantity}}" readonly/>
+                                                        <button ng-click="updateOrderItemAndSync(value, 'ADD')" class="quantityButton">+</button>
                                                       </div>
                                                       <div class="col-md-4 col-sm-4 cartItemRate">x{{value.price}}</div>
                                                       <div class="col-md-4 col-sm-3 text-right cartItemAmount">&#8377;{{value.price * value.quantity}}</div>
