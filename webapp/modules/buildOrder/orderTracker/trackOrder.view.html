@@ -7,24 +7,24 @@
                 <div class="row">
                     <!-- cart starts -->
                     <div class="col-sm-12">
-                        <div class="cartInnerWrapper">
-                            <div class="row firstCartSection">
+                        <div class="updateCartInnerWrapper">
+                            <div class="row firstUpdateCartSection">
                                 <div class="col-md-6 col-sm-6 ">
-                                    <div class="cartTitle">Your Order</div>
+                                    <div class="updateCartTitle">Your Order</div>
                                 </div>
                                 <div class="col-md-6 col-sm-6 text-right">
                                     <input class="search" placeholder="Search Menu">
                                 </div>
                             </div>                       
-                            <hr class="cartHr">
-                            <div class="row secondCartSection">
+                            <hr class="updateCartHr">
+                            <div class="row secondUpdateCartSection">
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-12">
                                             <div class="cartItemWrapper" ng-repeat="(key, value) in cartItems">
                                                 <div class="row cartItem">
                                                     <div class="col-md-12">
-                                                        <div class="row cartItemName">
+                                                        <div class="row updateCartItemName">
                                                             <div class="col-md-12">{{value.name}}</div>
                                                         </div>
                                                         <div class="row cartItemDetails">
@@ -38,7 +38,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <hr class="cartItemSeperator">
+                                                <hr class="updateCartItemSeperator">
                                             </div>
                                         </div>
                                     </div>
@@ -46,14 +46,14 @@
                             </div>
                             <hr class="cartHr">
                             <div class="row cartFooter">
-                                <div class="cartFooterInnerWrapper col-md-12">
+                                <div class="updateCartFooterInnerWrapper col-md-12">
                                     <div class="row cartSubtotal">
                                         <div class="col-md-6 col-sm-6">Subtotal</div>
                                         <div class="col-md-6 col-sm-6 text-right">&#8377;{{subtotal}}</div>
                                     </div>
                                     <div class="row cartConfirm">
                                         <div class="col-md-12">
-                                            <button class="text-center confirmCartButton">UPDATE CART</button>
+                                            <button class="text-center updateCartButton">UPDATE CART</button>
                                         </div>
                                     </div>
                                 </div>

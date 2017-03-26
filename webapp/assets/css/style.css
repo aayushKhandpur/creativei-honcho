@@ -666,16 +666,8 @@ color: #f12f63;
 .WrapperMain, .verticalPartition, .trackOrderStages{
     margin-top: 2rem;
 }
-.cartWrapper {
-    font-family: "open sans";
-    position: absolute;
-    height: 80vh;
-    right: 0;
-    margin-top: 1rem;
-/*    margin-bottom: 1rem;*/
-}
 
-.cartInnerWrapper {
+.updateCartInnerWrapper {
 /*    position: relative;*/
     background-color: white;
     padding: 10px;
@@ -683,21 +675,21 @@ color: #f12f63;
     height: 100%;
 }
 
-.firstCartSection {
+.firstUpdateCartSection {
     height: 35px;
     line-height: 35px;
 }
 
-.cartTitle{
+.updateCartTitle{
     font-weight: 500;
 }
-.cartHr{
+.updateCartHr{
     margin-top: 0.7rem !important;
     margin-bottom: 0.7rem !important;
 }
 
 
-.cartItemSeperator {
+.updateCartItemSeperator {
     margin: 0.5rem 0;
     border: 0;
     height: 1px;
@@ -705,11 +697,11 @@ color: #f12f63;
     background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
 }
 
-.secondCartSection {
+.secondUpdateCartSection {
     overflow: auto;
     height: 50%;
 }
-.cartTitle .cartItemName {
+.updateCartTitle .updateCartItemName {
     color: #02102b;
 }
 .quantityButton {
@@ -740,7 +732,7 @@ color: #f12f63;
 .cartFooter{
     height: 40%;
 }
-.cartFooterInnerWrapper{
+.updateCartFooterInnerWrapper{
     position: relative;
     height: 30%;
 }
@@ -757,7 +749,7 @@ color: #f12f63;
     bottom: 0;
     width: 100%;
 }
-.confirmCartButton {
+.updateCartButton {
     margin-top: 1rem;
     height: 30px;
     border-radius: 5px;
