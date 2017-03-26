@@ -62,7 +62,7 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
           return;
       }
       // update rootScope
-      CartService.updateItem(orderItem.menuItemId, orderItem.quantity, orderItem.price, $scope.tableId);
+      CartService.updateItem(orderItem.menuItemId, orderItem.quantity, orderItem.rate, $scope.tableId);
 
       angular.forEach($scope.categories, function(category, key){
         angular.forEach(category.menuItems, function(menuItem, key){
@@ -79,7 +79,7 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
     function updateSubTotal(){
       var subtotal = 0;
       for (var item in $scope.cartItems) {
-        subtotal += ($scope.cartItems[item].quantity * $scope.cartItems[item].price);
+        subtotal += ($scope.cartItems[item].quantity * $scope.cartItems[item].rate);
       }
       $scope.subtotal = subtotal;
     }

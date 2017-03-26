@@ -7,11 +7,11 @@
             <div class="col-sm-8 searchCategoryContainer">
                 <div class="panel">
                     <div class="input-group">
-                        <span class="input-group-addon categoryContainer noBorderRadius">
+                        <span class="input-group-btn">
                             <select name="categorySelect" class="categorySelect btn" ng-model="selectedCategory" ng-options="category as category.name for category in categories track by category.Id"></select>
                         </span>
                         <input type="text" class="form-control searchBox" ng-model="query.name">
-                        <span class="input-group-addon noBorderRadius">
+                        <span class="input-group-addon">
                             Search
                         </span>
                     </div>
@@ -101,7 +101,7 @@
           </div>
 
         </div>
-        <div class="col-sm-4 hidden-xs cartWrapper">
+        <div class="col-sm-4  hidden-xs cartWrapper">
           <div class="row">
 
               <!-- cart starts -->
@@ -115,7 +115,7 @@
                             <span class="totalCartItems badge">{{cartItems.length}}</span>
                           </div>
                       </div>
-<!--                      <hr class="cartHr">-->
+                      <hr class="cartHr">
                       <div class="row secondCartSection">
                           <div class="col-md-12">
                               <div class="row">
@@ -124,8 +124,7 @@
                                           <div class="row cartItem">
                                               <div class="col-md-12">
                                                   <div class="row cartItemName">
-                                                      <div class="col-md-9 wordWrap">{{value.name}}</div>
-                                                      <div class="col-md-3 EMPTY-DIV-FOR-ADDON"></div>
+                                                      <div class="col-md-12">{{value.name}}</div>
                                                   </div>
                                                   <div class="row cartItemDetails">
                                                       <div class="col-md-4 col-sm-5 cartItemQuantity">
@@ -133,8 +132,8 @@
                                                         <input class="quantityIndicator" value="{{value.quantity}}" readonly/>
                                                         <button ng-click="updateOrderItemAndSync(value, 'ADD')" class="quantityButton">+</button>
                                                       </div>
-                                                      <div class="col-md-4 col-sm-4 cartItemRate">x{{value.price}}</div>
-                                                      <div class="col-md-4 col-sm-3 text-right cartItemAmount">&#8377;{{value.price * value.quantity}}</div>
+                                                      <div class="col-md-4 col-sm-4 cartItemRate">x{{value.rate}}</div>
+                                                      <div class="col-md-4 col-sm-3 text-right cartItemAmount">&#8377;{{value.rate * value.quantity}}</div>
                                                   </div>
                                               </div>
                                           </div>
