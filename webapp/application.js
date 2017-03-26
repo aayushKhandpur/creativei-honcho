@@ -67,9 +67,9 @@ creativei_app.config(function ($stateProvider, $urlRouterProvider) {
             templateUrl: 'modules/buildOrder/orderTracker/trackOrder.view.html',
             controller: 'OrderTrackerController'
         })
-        .state('feedback', {
+        .state('buildOrder.feedback', {
             url: '/feedback',
-            templateUrl: 'modules/feedback/feedback.view.html',
+            templateUrl: 'modules/buildOrder/feedback/feedback.view.html',
             controller: 'feedbackController'
         });
     $urlRouterProvider.otherwise('/services');
