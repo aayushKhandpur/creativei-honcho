@@ -3,22 +3,19 @@
         <!--row starts here-->
         <div class="row contentRow">
             <!--column one starts here-->
-            <div class="col-md-5 col-sm-5 col-xs-12 Wrapper_Main">
+            <div class="col-md-5 col-sm-5 col-xs-12 WrapperMain">
                 <div class="row">
                     <!-- cart starts -->
                     <div class="col-sm-12">
                         <div class="cartInnerWrapper">
                             <div class="row firstCartSection">
-                                <div class="col-md-6 col-sm-6">
+                                <div class="col-md-6 col-sm-6 ">
                                     <div class="cartTitle">Your Order</div>
                                 </div>
                                 <div class="col-md-6 col-sm-6 text-right">
-                                    <div id="wrap">
-                                        <input id="search" name="search" type="text" placeholder="Search for a dish..." ng-model="query.name">
-                                        <input id="search_submit" value="Rechercher" type="reset">
-                                    </div>
+                                    <input class="search" placeholder="Search Menu">
                                 </div>
-                            </div>
+                            </div>                       
                             <hr class="cartHr">
                             <div class="row secondCartSection">
                                 <div class="col-md-12">
@@ -56,10 +53,16 @@
                                     </div>
                                     <div class="row cartConfirm">
                                         <div class="col-md-12">
-                                            <button class="text-center confirmCartButton">Confirm Order</button>
+                                            <button class="text-center confirmCartButton">UPDATE CART</button>
                                         </div>
                                     </div>
-                                    <div class="col-md-12 col-sm-12 col-xs-12 recommendedMenuItems">
+                                </div>
+                                <div class="col-md-12 col-sm-12 col-xs-12 recommendedMenuItems">
+                                        <div class="row">
+                                            <div class="col-md-12 itemsRecommended">
+                                                Recommended Items
+                                            </div>
+                                        </div>
                                         <div class="row recommended1">
                                             <div class="col-md-3 col-sm-3 col-xs-3">
                                                 <span class="badge green">+ Coke</span>
@@ -77,7 +80,6 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -87,7 +89,7 @@
             <!--column one ends here-->
 
             <!--vertical line column start here-->
-            <div class="col-md-1 hihidden-sm hidden-xs col-xs-1">
+            <div class="col-md-1 col-md-offset-1  hidden-xs col-xs-1 verticalPartition">
                 <div class="row">
                     <div class="col-md-12 col-md-offset-1">
                         <p class="verticalLine"></p>
@@ -97,20 +99,15 @@
             <!--vertical line column ends here-->
 
             <!--column two starts here-->
-            <div class="col-md-3 col-sm-5 col-sm-offset-1 col-md-offset-2 col-xs-10 col-xs-offset-1 mediaXsClass">
+            <div class="col-md-3 col-sm-5 col-sm-offset-1 col-md-offset-1 col-xs-10 col-xs-offset-1 mediaXsClass trackOrderStages">
                 <!--Track order row starts here-->
                 <div class="row marginXsScreen">
                     <div class="trackOrderWrapper">
                         <div class="col-md-12">
                             <div class="row center-block">
-                                <div class="row">
-                                    <div class="col-md-10 col-sm-8 trackOrder">
-                                        <div>Track Your Order</div>
-                                    </div>
-                                </div>
                                 <div class="row trackOrderIcon">
                                     <div class="col-md-4 col-sm-4 col-xs-4">
-                                        <img class="iconTrackOrder" src="../../../assets/images/orderPlaced.svg" alt="orderPlacedIcon">
+                                        <div class="iconPlaced iconOrderPlaced"></div>
                                     </div>
                                     <div class="col-md-8 orderPlaced">
                                         <div class="orderPlacedWrapper">
@@ -129,7 +126,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-4 col-xs-4">
-                                        <img class="iconTrackOrder" src="../../../assets/images/OrderPrepared.svg" alt="orderPlacedIcon">
+                                        <div class="iconPrepared iconOrderPrepared"></div>
                                     </div>
                                     <div class="col-md-8 orderPlaced">
                                         <div class="orderPreparedWrapper">
@@ -148,7 +145,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-4 col-xs-4">
-                                        <img class="iconTrackOrder" src="../../../assets/images/servedIcon.svg" alt="orderPlacedIcon">
+                                        <div class="iconServed iconOrderServed"></div>
                                     </div>
                                     <div class="col-md-8 orderPlaced">
                                         <div class="orderServedWrapper">
@@ -167,7 +164,7 @@
                                 </div>
                                 <div class="row">
                                     <div class="col-md-4 col-sm-4 col-xs-4">
-                                        <img class="iconTrackOrder" src="../../../assets/images/completeOrder.svg" alt="orderPlacedIcon">
+                                        <div class="iconCompleteOrder iconOrderComplete"></div>
                                     </div>
                                     <div class="col-md-8 orderPlaced">
                                         <div class="orderCompleteWrapper">
