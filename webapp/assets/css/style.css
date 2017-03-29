@@ -915,45 +915,35 @@ input.cartSearch {
 }
 
 .iconPrepared{
-/*
      -webkit-mask: url(../images/OrderPrepared.svg);
     mask: url(../images/OrderPrepared.svg);
-*/
     width: 60px;
 }
 .iconOrderPrepared {
     height: 60px;
-    background-image:url(../images/OrderPrepared.svg);
-    background-repeat: no-repeat;
-/*    background-color: #c1c1c1;*/
+    background-color: #c2c1c1;
 }
 
 .iconServed{
-/*
      -webkit-mask: url(../images/servedIcon.svg);
     mask: url(../images/servedIcon.svg);
-*/
     width: 60px;
 }
 .iconOrderServed {
     height: 60px;
-    background-image:url(../images/servedIcon.svg);
     background-repeat: no-repeat;
-/*    background-color: #c1c1c1;*/
+    background-color: #c2c1c1;
 }
 
 .iconCompleteOrder{
-/*
      -webkit-mask: url(../images/completeOrder.svg);
     mask: url(../images/completeOrder.svg);
-*/
     width: 60px;
 }
 .iconOrderComplete {
     height: 60px;
-    background-image: url(../images/completeOrder.svg);
     background-repeat: no-repeat;
-/*    background-color: #c1c1c1;*/
+    background-color: #c2c1c1;
 }
 .trackOrderWrapper {
     margin-top: 1rem;
