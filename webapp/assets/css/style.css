@@ -622,3 +622,344 @@ color: #f12f63;
 }
 
 /*user info row ends*/
+
+
+
+/*track order css starts*/
+
+.orderCartwrapperMain, .verticalPartition, .trackOrderStages{
+    margin-top: 2rem;
+}
+
+.orderCartWrapperInner {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    height: 100%;
+}
+
+.orderCartSection {
+    height: 35px;
+    line-height: 35px;
+}
+
+.orderCartTitle{
+    font-weight: 500;
+}
+.orderCartHr{
+    margin-top: 0.7rem !important;
+    margin-bottom: 0.7rem !important;
+}
+
+
+.orderCartItemSeperator {
+    margin: 0.5rem 0;
+    border: 0;
+    height: 1px;
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+}
+
+.secondOrderCartSection {
+    overflow: auto;
+    height: 50%;
+}
+.orderCartItemName {
+    color: #02102b;
+}
+.orderQuantityButton {
+    text-align: center;
+    padding: 0 5px;
+    width: 20px;
+    color: #01112a;
+    background: white;
+    border: 1px solid #01112a;
+    border-radius: 4px;
+}
+.quantityIndicator {
+    background: #01112a;
+    color: white;
+    width: 20px;
+    text-align: center;
+    font-size: 14px;
+    border: .5px solid #01112a;
+    border-radius: 4px;
+}
+.cartItemRate {
+    color: grey;
+}
+.cartItemAmount,
+.cartSubtotal {
+    color: #01112a;
+}
+.cartFooter{
+    height: 40%;
+}
+.orderCartFooterInnerWrapper{
+    position: relative;
+    height: 30%;
+}
+.cartSubtotal{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.recommendedMenuItems{
+    margin-top: 2rem;
+}
+.cartConfirm{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.orderCartButton {
+    margin-top: 1rem;
+    height: 30px;
+    border-radius: 5px;
+    background-color: #94cab5;
+    outline: none;
+    border: none;
+    color: white;
+    font-family: open sans;
+    text-align: center;
+    width: 100%;
+}
+
+.contentRow {
+    margin-top: 12rem;
+    background-color: white;
+}
+
+/*search borderd box for cart starts here*/
+
+
+input.search:hover {
+    background-position: right center;
+    -webkit-transition: 1s all;
+    transition: 1s all;
+}
+
+
+input.cartSearch {
+    outline:none;  
+    border-radius:10px;
+    border: none;
+    height: 30px;
+    margin-top: .2rem;
+    -webkit-transition: 1s 1s all;
+    transition: 1s 1s all;
+    padding: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: gainsboro;
+    background-position: left+5px center;
+    background-size: auto 40%;
+    background-repeat: no-repeat;
+    background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTYuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgd2lkdGg9IjE2cHgiIGhlaWdodD0iMTZweCIgdmlld0JveD0iMCAwIDMwLjIzOSAzMC4yMzkiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDMwLjIzOSAzMC4yMzk7IiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPGc+Cgk8cGF0aCBkPSJNMjAuMTk0LDMuNDZjLTQuNjEzLTQuNjEzLTEyLjEyMS00LjYxMy0xNi43MzQsMGMtNC42MTIsNC42MTQtNC42MTIsMTIuMTIxLDAsMTYuNzM1ICAgYzQuMTA4LDQuMTA3LDEwLjUwNiw0LjU0NywxNS4xMTYsMS4zNGMwLjA5NywwLjQ1OSwwLjMxOSwwLjg5NywwLjY3NiwxLjI1NGw2LjcxOCw2LjcxOGMwLjk3OSwwLjk3NywyLjU2MSwwLjk3NywzLjUzNSwwICAgYzAuOTc4LTAuOTc4LDAuOTc4LTIuNTYsMC0zLjUzNWwtNi43MTgtNi43MmMtMC4zNTUtMC4zNTQtMC43OTQtMC41NzctMS4yNTMtMC42NzRDMjQuNzQzLDEzLjk2NywyNC4zMDMsNy41NywyMC4xOTQsMy40NnogICAgTTE4LjA3MywxOC4wNzRjLTMuNDQ0LDMuNDQ0LTkuMDQ5LDMuNDQ0LTEyLjQ5MiwwYy0zLjQ0Mi0zLjQ0NC0zLjQ0Mi05LjA0OCwwLTEyLjQ5MmMzLjQ0My0zLjQ0Myw5LjA0OC0zLjQ0MywxMi40OTIsMCAgIEMyMS41MTcsOS4wMjYsMjEuNTE3LDE0LjYzLDE4LjA3MywxOC4wNzR6IiBmaWxsPSIjMDAwMDAwIi8+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPGc+CjwvZz4KPC9zdmc+Cg==);
+}
+
+
+
+/*search bordered box for cart ends here*/
+
+
+/*.hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}*/
+
+.orderQuantityButton {
+    text-align: center;
+    padding: 0 5px;
+    width: 25px;
+    color: #01112a;
+    background: white;
+    border: 1px solid #01112a;
+    border-radius: 4px;
+}
+
+.orderQuantityIndicator {
+    background: #01112a;
+    color: white;
+    width: 20px;
+    text-align: center;
+    font-size: 14px;
+    border: .5px solid #01112a;
+    border-radius: 4px;
+}
+
+.secondCartSection {
+    overflow: auto;
+}
+
+.cartItemRate {
+    color: grey;
+}
+
+.cartItemAmount,
+.cartSubtotal {
+    color: #01112a;
+}
+
+.subTotal {
+    margin-left: 1.5rem;
+}
+
+.innerPanel {
+    margin-left: 1rem;
+}
+
+.orderCartButton {
+    height: 30px;
+    margin-top: 1rem;
+    border-radius: 5px;
+    background-color: #1dab76;
+    outline: none;
+    border: none;
+    color: white;
+    font-family: open sans;
+    text-align: center;
+    width: 100%;
+}
+
+.recommendedItems {
+    margin-top: 2rem;
+}
+
+/*
+.recommendedMenuItems {
+    margin-top: 2rem;
+}
+*/
+
+.recommended2, .recommended1 {
+    margin-top: 1rem;
+}
+
+.badgeStyle {
+    background: white;
+}
+
+.verticalLine {
+    height: 420px;
+    border-right: 1px solid #cfcfcf;
+    width: 30px;
+    margin-top: 8rem;
+}
+
+.verticalLineSteps {
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+
+
+/**/
+
+@media screen and (max-width: 767px) {
+    .mediaXsClass {
+        margin-top: 2rem;
+        border-top: 2px solid #c1c1c1;
+    }
+    .marginXsScreen {
+        margin-top: 2rem;
+    }
+}
+
+
+/**/
+
+.trackYourOrder {
+	background-color: gainsboro;
+    height: 35px;
+    line-height: 6px;
+}
+.track {
+	margin-top: 1.5rem;
+}
+.trackOrder, .itemsRecommended {
+    font-weight: 500;
+}
+
+.trackOrderIcon {
+    margin-top: 1.5em;
+}
+
+.iconPlaced{
+     -webkit-mask: url(../images/orderPlaced.svg);
+    mask: url(../images/orderPlaced.svg);
+    width: 60px;
+}
+.iconOrderPlaced {
+    height: 60px;
+    background-repeat: no-repeat;
+    background-color: #1dab76;
+}
+
+.iconPrepared{
+/*
+     -webkit-mask: url(../images/OrderPrepared.svg);
+    mask: url(../images/OrderPrepared.svg);
+*/
+    width: 60px;
+}
+.iconOrderPrepared {
+    height: 60px;
+    background-image:url(../images/OrderPrepared.svg);
+    background-repeat: no-repeat;
+/*    background-color: #c1c1c1;*/
+}
+
+.iconServed{
+/*
+     -webkit-mask: url(../images/servedIcon.svg);
+    mask: url(../images/servedIcon.svg);
+*/
+    width: 60px;
+}
+.iconOrderServed {
+    height: 60px;
+    background-image:url(../images/servedIcon.svg);
+    background-repeat: no-repeat;
+/*    background-color: #c1c1c1;*/
+}
+
+.iconCompleteOrder{
+/*
+     -webkit-mask: url(../images/completeOrder.svg);
+    mask: url(../images/completeOrder.svg);
+*/
+    width: 60px;
+}
+.iconOrderComplete {
+    height: 60px;
+    background-image: url(../images/completeOrder.svg);
+    background-repeat: no-repeat;
+/*    background-color: #c1c1c1;*/
+}
+.trackOrderWrapper {
+    margin-top: 1rem;
+}
+
+.wrapVerticalLine {
+    margin-left: 29px;
+}
+
+.verticalLineSteps {
+    width: 2px;
+    height: 75px;
+    background: #c2c1c1;
+}
+
+.orderPlaced {
+    height: 60px;
+}
+
+.orderPlacedWrapper,
+.orderPreparedWrapper,
+.orderServedWrapper,
+.orderCompleteWrapper {
+    line-height: 60px;
+}
+
+
+/*track order css ends*/

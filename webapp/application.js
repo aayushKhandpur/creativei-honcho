@@ -61,6 +61,11 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
             });
         }
       }
+    })
+    .state('buildOrder.trackOrder',{
+      url: '/trackOrder',
+      templateUrl: 'modules/buildOrder/trackOrder.view.html',
+      controller: 'trackOrderController'
     });
     $urlRouterProvider.otherwise('/services');
 
