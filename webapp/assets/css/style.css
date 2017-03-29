@@ -471,7 +471,7 @@ color: #f12f63;
     border: 1px solid transparent;
     background-color: white;
     /* padding-top: 15px; */
-    /* padding-bottom: 15px; */
+    padding-bottom: 15px; 
     margin-right: 0.5rem;
 /*    margin-bottom: 1rem;*/
 }
@@ -555,7 +555,7 @@ color: #f12f63;
 }
 .cartFooterInnerWrapper{
     position: relative;
-    height: 100%;
+    height: 30%;
 }
 .cartSubtotal{
     position: absolute;
@@ -622,3 +622,64 @@ color: #f12f63;
 }
 
 /*user info row ends*/
+
+/*state animation start*/
+@-webkit-keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes slideInRight {
+  from {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.uiViewContainer[ui-view]{
+    height: 65px; 
+    -webkit-transition: all 0.5s linear; 
+    transition: all 0.5s linear;
+}
+
+.uiViewWrapper {
+  position: relative;
+}
+
+[ui-view].ng-enter {
+  opacity: 0;
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+}
+/*state animation end*/
