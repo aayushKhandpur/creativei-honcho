@@ -943,9 +943,6 @@ input.cartSearch {
     background-repeat: no-repeat;
     background-color: #c2c1c1;
 }
-.trackOrderWrapper {
-    margin-top: 1rem;
-}
 
 .wrapVerticalLine {
     margin-left: 29px;
@@ -953,7 +950,7 @@ input.cartSearch {
 
 .verticalLineSteps {
     width: 2px;
-    height: 75px;
+    height: 70px;
     background: #c2c1c1;
 }
 
@@ -973,6 +970,9 @@ input.cartSearch {
 
 /* feedback screen css starts here */
 
+.feedbackContent {
+	margin-top: 14rem;
+}
 .feedQues {
     margin-top: 3rem;
 }
