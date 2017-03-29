@@ -2,6 +2,24 @@ body {
     background-color: whitesmoke;
 }
 
+
+/*color css panel starts here*/
+
+.green {
+    background: #1dab76;
+    border: 1px solid #1dab76;
+    color: #1dab76;
+}
+
+.red {
+    background: #cb202d;
+    border: 1px solid #cb202d;
+    color: #cb202d;
+}
+
+
+/*color css panel ends here*/
+
 .login-parent {
     width: 100%;
     height: 100%;
@@ -705,7 +723,7 @@ color: #f12f63;
     width: 100%;
 }
 .recommendedMenuItems{
-    margin-top: 2rem;
+    margin-top: -10rem;
 }
 .cartConfirm{
     position: absolute;
@@ -837,7 +855,8 @@ input.cartSearch {
 }
 
 .badgeStyle {
-    background: white;
+    background: white !important ;
+    
 }
 
 .verticalLine {
