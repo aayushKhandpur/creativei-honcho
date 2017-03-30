@@ -1,4 +1,4 @@
-creativei_app.controller('MenuItemController', function ($scope, $rootScope, $uibModal,$stateParams,$http, CartService, _, categories, menuItems) {
+creativei_app.controller('MenuItemController', function ($scope, $rootScope, $filter, $uibModal,$stateParams,$http, CartService, _, categories, menuItems) {
     console.log("Inside menu item controller.");
     $scope.tableId = "1";
     $scope.categories = categories;
@@ -6,14 +6,33 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
     $scope.cartSize = 0;
     console.log($scope.categories);
     $scope.menuItemList = [];
+    $scope.cartItems =[];
     if(menuItems.menuItem !== undefined){
       $scope.menuItemList = menuItems.menuItem;
       angular.forEach($scope.categories, function(category, key){
         var menuItems = _.where($scope.menuItemList, {categoryID: category.Id});
         category.menuItems = menuItems;
       });
+      //sync cart and menu in case there is already an order
+      if($rootScope.runningOrders
+        && $rootScope.runningOrders[$scope.tableId]
+        && $rootScope.runningOrders[$scope.tableId].items){
+        syncMenuItemAndCartWithRoot();
+      }
     }
-    $scope.cartItems = [];
+
+    $scope.$watch('query.name', function(newValue, oldValue) {
+      angular.forEach($scope.categories, function(category, key){
+        var filteredMenu = $filter('filter')(category.menuItems, $scope.query);
+        if(filteredMenu.length==0){
+          category.visible = false;
+        }else{
+          category.visible = true;
+        }
+      });
+    });
+
+
     $scope.subtotal = 0;
     //add or update menu item and sync order item in cart.
     $scope.addItem = function(menuItem,type){
@@ -63,7 +82,6 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
       }
       // update rootScope
       CartService.updateItem(orderItem.menuItemId, orderItem.quantity, orderItem.rate, $scope.tableId);
-
       angular.forEach($scope.categories, function(category, key){
         angular.forEach(category.menuItems, function(menuItem, key){
           if(menuItem.id === orderItem.menuItemId){
@@ -73,8 +91,24 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
       });
       updateSubTotal();
       $scope.cartItems = $rootScope.runningOrders[$scope.tableId].items;
-      //if(orderItem.quantity == 0) delete $scope.cartItems[orderItem.id];
+    //if(orderItem.quantity == 0) delete $scope.cartItems[orderItem.id];
     };
+
+    function syncMenuItemAndCartWithRoot(){
+      var items = $rootScope.runningOrders[$scope.tableId].items;
+      for(index in items){
+        var orderItem = items[index];
+        angular.forEach($scope.categories, function(category, key){
+          angular.forEach(category.menuItems, function(menuItem, key){
+            if(menuItem.id === orderItem.menuItemId){
+              menuItem.quantity = orderItem.quantity;
+            }
+          });
+        });
+      }
+      $scope.cartItems = $rootScope.runningOrders[$scope.tableId].items;
+      updateSubTotal();
+    }
 
     function updateSubTotal(){
       var subtotal = 0;
