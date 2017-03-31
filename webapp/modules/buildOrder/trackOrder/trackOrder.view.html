@@ -20,7 +20,7 @@
                                 <div class="col-md-12">
                                     <div class="row">
                                         <div class="col-md-12">
-                                            <div class="updateCartItemWrapper" ng-repeat="(key, value) in cartItems">
+                                            <div class="updateCartItemWrapper" ng-repeat="value in cartItems | orderBy:'name'">
                                                 <div class="row updateCartItem">
                                                     <div class="col-md-12">
                                                         <div class="row orderCartItemName">
@@ -32,8 +32,8 @@
                                                                 <input class="orderQuantityIndicator" value="{{value.quantity}}" readonly/>
                                                                 <button class="orderQuantityButton">+</button>
                                                             </div>
-                                                            <div class="col-md-4 col-sm-4 updateCartItemRate">x{{value.price}}</div>
-                                                            <div class="col-md-4 col-sm-3 text-right updateCartItemAmount">&#8377;{{value.price * value.quantity}}</div>
+                                                            <div class="col-md-4 col-sm-4 updateCartItemRate">x{{value.rate}}</div>
+                                                            <div class="col-md-4 col-sm-3 text-right updateCartItemAmount">&#8377;{{value.rate * value.quantity}}</div>
                                                         </div>
                                                     </div>
                                                 </div>

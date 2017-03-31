@@ -37,7 +37,20 @@ creativei_app.factory('CartService', function($http, $rootScope){
 
     return {};
   };
-
+  cart.updateSubTotal = function(cartItems){
+    var subtotal = 0;
+    for (var item in cartItems) {
+      subtotal += (cartItems[item].quantity * cartItems[item].rate);
+    }
+    return subtotal;
+  }
+  function updateSubTotal(){
+    var subtotal = 0;
+    for (var item in $scope.cartItems) {
+      subtotal += ($scope.cartItems[item].quantity * $scope.cartItems[item].rate);
+    }
+    $scope.subtotal = subtotal;
+  }
   function findItemIndex(menuItemKey, tableId){
     for(var itemId in $rootScope.runningOrders[tableId].items){
       if($rootScope.runningOrders[tableId].items[itemId].menuItemId == menuItemKey){

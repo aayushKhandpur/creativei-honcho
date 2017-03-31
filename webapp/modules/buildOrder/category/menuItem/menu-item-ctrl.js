@@ -7,6 +7,7 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $fi
     console.log($scope.categories);
     $scope.menuItemList = [];
     $scope.cartItems =[];
+    //$scope.subtotal = CartService.updateSubTotal($scope.cartItems);
     if(menuItems.menuItem !== undefined){
       $scope.menuItemList = menuItems.menuItem;
       angular.forEach($scope.categories, function(category, key){
@@ -33,7 +34,7 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $fi
     });
 
 
-    $scope.subtotal = 0;
+
     //add or update menu item and sync order item in cart.
     $scope.addItem = function(menuItem,type){
       var qty = 1;
@@ -61,7 +62,7 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $fi
         //   }
         // }
         $scope.cartItems = $rootScope.runningOrders[$scope.tableId].items;
-        updateSubTotal();
+        $scope.subtotal = CartService.updateSubTotal($scope.cartItems);
       }
     };
 
@@ -89,8 +90,8 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $fi
           }
         });
       });
-      updateSubTotal();
       $scope.cartItems = $rootScope.runningOrders[$scope.tableId].items;
+      $scope.subtotal = CartService.updateSubTotal($scope.cartItems);
     //if(orderItem.quantity == 0) delete $scope.cartItems[orderItem.id];
     };
 
@@ -107,16 +108,9 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $fi
         });
       }
       $scope.cartItems = $rootScope.runningOrders[$scope.tableId].items;
-      updateSubTotal();
+      $scope.subtotal = CartService.updateSubTotal($scope.cartItems);
     }
 
-    function updateSubTotal(){
-      var subtotal = 0;
-      for (var item in $scope.cartItems) {
-        subtotal += ($scope.cartItems[item].quantity * $scope.cartItems[item].rate);
-      }
-      $scope.subtotal = subtotal;
-    }
 /*
     **************************************Unused code***************************************************
 */
