@@ -1,4 +1,5 @@
-creativei_app.controller('MenuItemController', function ($scope, $rootScope, $filter, $uibModal,$stateParams,$http, CartService, _, categories, menuItems) {
+creativei_app.controller('MenuItemController', function ($scope, $rootScope, $filter, $uibModal,
+  $http, $state, $localStorage, CartService, _, categories, menuItems) {
     console.log("Inside menu item controller.");
     $scope.tableId = "1";
     $scope.categories = categories;
@@ -111,52 +112,9 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $fi
       $scope.subtotal = CartService.updateSubTotal($scope.cartItems);
     }
 
-/*
-    **************************************Unused code***************************************************
-*/
-    $scope.selectedMenuItem={};
-
-    //condition for the category aside collapse
-    $scope.isCollapsed = true;
-
-    //selection and customisation modal js
-    $scope.customiseDish = function (menuItem) {
-
-      if(menuItem == undefined || menuItem === "")
-        return "Error";
-
-        $scope.selectedMenuItem = menuItem;
-        var modalInstance = $uibModal.open({
-            //to set this true, you will need to add ngAnimate module
-            animation: false,
-            backdrop: 'static',                                         //disables dismissing modal by clicking on backdrop
-            templateUrl: 'modules/buildOrder/selectionAndCustomisation/customisationModal.view.html',
-            controller: 'CustomisationModalController',
-            size: 'md',
-            resolve: {
-              menuItem:function(){
-              var menuItem =$scope.selectedMenuItem;
-              return menuItem;
-            }}
-        });
-
-        modalInstance.result.then(function (data) {
-            console.log(data);
-            CartService.addItem();
-            // if(status){
-            //     console.log('You clicked on add to cart');              //log when the modal is dismissed with add to cart button
-            // }else{
-            //     console.log('You clicked on close button');             //log when the modal is dismissed with close button
-            // }
-        }, function () {
-            console.log('Modal dismissed at: ' + new Date());           //log when the modal is dismissed by clicking on the modal backdrop,set backdrop as true or false to enable
-        });
-
-        var categoryArr = ["Drinks","Lunch", "Dinner"];
-        $scope.categoryFunct = function(){
-          var html = "<h1>Hello</h1>";
-          return $sce.trustAsHtml(html);
-
-        }
-    };
+    $scope.confirmOrder = function(){
+        //sync localStorage
+        $localStorage.runningOrders = $rootScope.runningOrders
+        $state.go('buildOrder.trackOrder');
+    }
 });

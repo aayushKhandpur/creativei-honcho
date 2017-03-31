@@ -1,6 +1,5 @@
-creativei_app.factory('CartService', function($http, $rootScope){
+creativei_app.factory('CartService', function($http, $rootScope, $localStorage){
   var cart = {};
-
   cart.initializeOrder = function (){
     if($rootScope.runningOrders === undefined )
       $rootScope.runningOrders = {};
@@ -51,6 +50,7 @@ creativei_app.factory('CartService', function($http, $rootScope){
     }
     $scope.subtotal = subtotal;
   }
+
   function findItemIndex(menuItemKey, tableId){
     for(var itemId in $rootScope.runningOrders[tableId].items){
       if($rootScope.runningOrders[tableId].items[itemId].menuItemId == menuItemKey){

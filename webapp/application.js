@@ -1,4 +1,4 @@
-var creativei_app= angular.module("creativei_app",['ui.router','ui.bootstrap','ngAnimate'])
+var creativei_app= angular.module("creativei_app",['ui.router','ngStorage','ui.bootstrap','ngAnimate'])
 creativei_app.constant('_',
     window._
 );
@@ -71,6 +71,11 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
         url: '/feedback',
         templateUrl: 'modules/buildOrder/feedback/feedback.view.html',
         controller: 'feedbackController'
+    })
+    .state('logout', {
+        url: '/logout',
+        template: '<h1>Hello</h1>',
+        controller: 'MainController'
     });
     $urlRouterProvider.otherwise('/services');
 
@@ -78,13 +83,41 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
 });
 
 
-creativei_app.controller("MainController",function($scope, $rootScope, $state, $location){
+creativei_app.controller("MainController",function($scope, $rootScope, $state, $location, $localStorage){
+  $scope.$storage = $localStorage;
+  //sync running orders with rootScope
+  if($localStorage.runningOrders){
+    if($rootScope.runningOrders === undefined || $rootScope.runningOrders === {}){
+      $rootScope.runningOrders = $localStorage.runningOrders;
+    }
+  }else{
+    $localStorage.runningOrders = {};
+  }
+
   $rootScope.$on('$stateChangeStart',
   function(event, toState, toParams, fromState, fromParams, options){
-    if(toState.name === "login")
+    if(toState.name == "logout"){
+      delete $rootScope.isAuthenticated;
+      delete $scope.$storage.isAuthenticated;
+      delete $rootScope.runningOrders;
+      delete $scope.$storage.runningOrders;
+      $state.go('login');
       return;
+    }
+    if(toState.name === "login"){
+      if($scope.$storage.isAuthenticated){
+        $rootScope.isAuthenticated = $scope.$storage.isAuthenticated;
+        $location.path("/services");
+        return;
+      }
+    }
+
     if($rootScope.isAuthenticated)
       return;
+    if($scope.$storage.isAuthenticated){
+      $rootScope.isAuthenticated = $scope.$storage.isAuthenticated;
+      return;
+    }
     $location.path("/login");
   });
 
