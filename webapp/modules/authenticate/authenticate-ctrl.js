@@ -12,7 +12,7 @@ creativei_app.controller('AuthController', function($scope, $rootScope, AuthServ
     }else{
       $scope.restaurant= AuthService.get().then(function(response){
         if(response.data){
-          if($scope.user.userId === response.data.userId
+          if($scope.user.userId.toLowerCase() === response.data.userId
           && $scope.user.password === response.data.password){
             $rootScope.isAuthenticated = true;
             $rootScope.restaurant=response.data;
