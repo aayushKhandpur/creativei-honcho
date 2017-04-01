@@ -22,7 +22,7 @@
                         <!--row second inside wrapperFeed ends here-->
                         <!--row third feedback question inside wrapperFeed starts here-->
                         <div class="row feedbackQuestions">
-                            <div class="col-md-6 col-md-offset-3">
+                            <div class="col-md-8 col-md-offset-2">
                                 <div class="row">
                                     <div class="col-md-6 col-sm-6 col-xs-12" ng-repeat="feedbackQuestion in feedbackQuestions">
                                         <div class="feedbackQuestionWrapper">
@@ -30,7 +30,7 @@
                                                 <div class="media-body">
                                                     <h5>{{feedbackQuestion.criteria}}</h5>
                                                     <div class="rating">
-                                                        <span uib-rating state-on="'fa fa-star rated'" state-off="'fa fa-star-o'" ng-model="feedbackQuestion.Id" max="maxRating" titles="titles"></span>
+                                                        <span uib-rating state-on="'fa fa-star rated'" state-off="'fa fa-star-o'" ng-model="feedbackRatings[feedbackQuestion.Id]" max="maxRating" titles="titles"></span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -46,7 +46,7 @@
                                         </div>
                                         <div class="row submitButton">
                                             <div class="col-md-12 col-sm-12 col-xs-12">
-                                                <button class="submitFeedbackButton text-center">SUBMIT</button>
+                                                <button class="submitFeedbackButton text-center" ng-click="submitFeedback();">SUBMIT</button>
                                             </div>
                                         </div>
                                     </div>

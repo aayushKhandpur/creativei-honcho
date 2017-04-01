@@ -5,11 +5,16 @@ creativei_app.controller('feedbackController', function ($scope, $http) {
     .then(function(response) {
         $scope.feedbackQuestions = response.data;
     });
-    $scope.criteria1 = 0;
-    $scope.criteria2 = 0;
-    $scope.criteria3 = 0;
-    $scope.criteria4 = 0;
+//    $scope.criteria1 = 5;
+//    $scope.criteria2 = 4;
+//    $scope.criteria3 = 3;
+//    $scope.criteria4 = 2;
     $scope.additonalComment = "";
-    $scope.titles = ['Bad', 'Meh', 'Okay', 'Good', 'Excellent']
+    $scope.titles = ['Bad', 'Meh', 'Okay', 'Good', 'Excellent'];
     $scope.maxRating = 5;
+    $scope.feedbackRatings = [];
+    $scope.submitFeedback = function(){
+        console.log($scope.feedbackQuestions);
+        console.log($scope.feedbackRatings);
+    };
 });
