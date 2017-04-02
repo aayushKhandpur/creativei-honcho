@@ -355,7 +355,7 @@ font-size: 1.8vw;
 */
 
 .lazyLogo {
-    background-image: url(../images/logo_lazy_210.png);
+    background-image: url(../images/bistro-logo158.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -489,7 +489,7 @@ color: #f12f63;
     border: 1px solid transparent;
     background-color: white;
     /* padding-top: 15px; */
-    padding-bottom: 15px; 
+    padding-bottom: 15px;
     margin-right: 0.5rem;
 /*    margin-bottom: 1rem;*/
 }
@@ -757,7 +757,7 @@ input.search:hover {
 
 
 input.cartSearch {
-    outline:none;  
+    outline:none;
     border-radius:10px;
     border: none;
     height: 30px;
@@ -854,7 +854,7 @@ input.cartSearch {
 
 .badgeStyle {
     background: white !important ;
-    
+
 }
 
 .verticalLine {
@@ -1117,8 +1117,8 @@ input.cartSearch {
 }
 
 .uiViewContainer[ui-view]{
-    height: 65px; 
-    -webkit-transition: all 0.5s linear; 
+    height: 65px;
+    -webkit-transition: all 0.5s linear;
     transition: all 0.5s linear;
 }
 
