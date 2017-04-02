@@ -177,6 +177,7 @@ body {
 
 /*category screen css starts*/
 
+/*
 .categoryContainer {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -189,6 +190,7 @@ body {
 .unavailableCategoryCaption {
     color: #a2a2a2;
 }
+*/
 
 
 /*category screen css ends*/
@@ -228,53 +230,70 @@ body {
 
 /*category header starts*/
 
+/*
 .wrapper {
     width: 90%;
     height: 48px;
     display: inline-block;
     position: relative;
-    /*    background: lightgrey;*/
+        background: lightgrey;
     overflow: hidden;
 }
+*/
 
+/*
 .categoryNav {
     width: 1470px;
     height: auto;
 }
+*/
 
+/*
 .categoryNav a {
     line-height: 32px;
-    /*    background: green;*/
+        background: green;
     margin: .5em;
     display: inline-block;
 }
+*/
 
+/*
 .categoryNav #category_1: hover {
     -webkit-transform: translateX(-20px);
     transform: translateX(-20px);
 }
+*/
 
+/*
 .arrowRight {
     position: absolute;
     right: 0;
     margin-right: .2em;
     top: 10%;
 }
+*/
 
+/*
 .arrowLeft {
     position: absolute;
     left: 0;
     margin-left: .2em;
     top: 10%;
 }
+*/
 
 
 /*category header ends*/
 
 .searchCategoryContainer {
+    height: 4.1rem;
     margin-top: 1rem;
     position: fixed;
     z-index: 9999;
+}
+
+.searchCategoryWrapper{
+    height: 100%;
 }
 
 .categoryContainer{
@@ -288,6 +307,7 @@ body {
 }
 
 .searchBox {
+ height: 100%;
  -webkit-appearance: searchfield !important;
 }
 

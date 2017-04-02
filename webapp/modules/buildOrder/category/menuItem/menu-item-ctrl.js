@@ -1,4 +1,4 @@
-creativei_app.controller('MenuItemController', function ($scope, $rootScope, $uibModal,$stateParams,$http, CartService, _, categories, menuItems) {
+creativei_app.controller('MenuItemController', function ($scope, $rootScope, $uibModal,$stateParams,$http,$anchorScroll,$location, CartService, _, categories, menuItems) {
     console.log("Inside menu item controller.");
     $scope.tableId = "1";
     $scope.categories = categories;
@@ -83,6 +83,27 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
       }
       $scope.subtotal = subtotal;
     }
+    
+    //scroll function for the category dropdown
+    $scope.gotoAnchor = function(x) {
+        var newHash = 'anchor' + x;
+        if ($location.hash() !== newHash) {
+            // set the $location.hash to `newHash` and
+            // $anchorScroll will automatically scroll to it
+            $location.hash('anchor' + x);
+        } else {
+            // call $anchorScroll() explicitly,
+            // since $location.hash hasn't changed
+            $anchorScroll();
+        }
+    };
+    
+    $scope.$watch('selectedCategory',function(newValue,oldValue){
+        console.log(newValue);
+        $scope.gotoAnchor(newValue.Id);
+        
+    });
+    
 /*
     **************************************Unused code***************************************************
 */

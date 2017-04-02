@@ -6,7 +6,7 @@
                 <div class="row">
                     <div class="col-sm-8 searchCategoryContainer">
                         <div class="">
-                            <div class="input-group">
+                            <div class="input-group searchCategoryWrapper">
                                 <span class="input-group-addon categoryContainer noBorderRadius">
                                     <select name="categorySelect" class="categorySelect btn" ng-model="selectedCategory" ng-options="category as category.name for category in categories track by category.Id"></select>
                                 </span>
@@ -41,7 +41,7 @@
                         <div ng-repeat="category in categories | orderBy:'order' | filter:query.name">
                             <div ng-if="!category.subCategories" class="panel">
                                 <!--Category Name Starts Here-->
-                                <div class="panel-heading categoryHeading">
+                                <div id="{{'anchor'+category.Id}}" class="panel-heading categoryHeading">
                                     <h3 class="panel-title">{{category.name}}</h3>
                                 </div>
                                 <!--Category Name Ends Here-->
@@ -70,7 +70,7 @@
                             </div>
                             <div ng-if="category.subCategories" ng-repeat="subCategory in category.subCategories | orderBy:'order'" class="panel">
                                 <!--Sub Category Name Starts Here-->
-                                <div class="panel-heading categoryHeading">
+                                <div id="{{'anchor'+category.Id}}" class="panel-heading categoryHeading">
                                     <h3 class="panel-title">{{subCategory.categoryName}}</h3>
                                 </div>
                                 <!--Sub Category Name Ends Here-->
