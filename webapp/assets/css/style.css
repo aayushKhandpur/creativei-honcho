@@ -2,6 +2,25 @@ body {
     background-color: whitesmoke;
 }
 
+/*dish type indicator panel starts*/
+
+.vegDishIcon{
+    width: 12px;
+    background-image: url(../images/veg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nonVegDishIcon{
+    width: 12px;
+    background-image: url(../images/non-veg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*dish type indicator panel ends*/
+
+
 /*color css panel starts here*/
 
 .greenColor{
