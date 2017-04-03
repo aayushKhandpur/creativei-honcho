@@ -8,12 +8,26 @@
                     <div class="col-sm-12">
                         <div class="orderCartWrapperInner">
                             <div class="row orderCartSection">
-                                <div class="col-md-6 col-sm-6 ">
-                                    <div class="orderCartTitle">Your Order</div>
+                                <div class="col-md-12 col-sm-12 ">
+<!--                                    <div class="orderCartTitle">Your Order</div>-->
+                                    <div angucomplete-alt id="trackCartSearch"
+                                         placeholder="Search menu"
+                                         pause="100"
+                                         selected-object="countrySelected"
+                                         local-data="countries"
+                                         search-fields="name"
+                                         title-field="name"
+                                         minlength="1"
+                                         input-class="form-control form-control-small"
+                                         match-class="highlight"
+                                         clear-selected="true">
+                                    </div>
                                 </div>
+<!--
                                 <div class="col-md-6 col-sm-6 text-right">
                                     <input class="cartSearch" placeholder="Search Menu">
                                 </div>
+-->
                             </div>
                             <hr class="cartHr">
                             <div class="row secondOrderCartSection">

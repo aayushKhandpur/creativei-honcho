@@ -1,4 +1,4 @@
-var creativei_app= angular.module("creativei_app",['ui.router','ui.bootstrap','ngAnimate'])
+var creativei_app= angular.module("creativei_app",['ui.router','ui.bootstrap','ngAnimate','angucomplete-alt'])
 creativei_app.constant('_',
     window._
 );
