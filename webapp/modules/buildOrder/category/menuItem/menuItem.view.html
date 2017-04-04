@@ -38,7 +38,7 @@
                 <div class="row">
                     <!--Menu Item Columns Start Here-->
                     <div class="col-sm-12 menuItemContainer">
-                        <div ng-repeat="category in categories | orderBy:'order' | filter:query.name">
+                        <div ng-show="category.visible" ng-repeat="category in categories | orderBy:'order'">
                             <div ng-if="!category.subCategories" class="panel">
                                 <!--Category Name Starts Here-->
                                 <div id="{{'anchor'+category.Id}}" class="panel-heading categoryHeading">
@@ -46,7 +46,7 @@
                                 </div>
                                 <!--Category Name Ends Here-->
                                 <!--Menu Item List Starts Here-->
-                                <div class="panel-body menuItemName" ng-repeat="menuItem in category.menuItems">
+                                <div class="panel-body menuItemName" ng-repeat="menuItem in category.menuItems | filter:query.name">
                                     <div class="row">
                                         <div class="col-md-9 col-sm-8 col-xs-8">
                                             <span><img ng-src = "{{menuItem.isVeg && '../../../../assets/images/veg.png' || '../../../../assets/images/non-veg.png'}}"/></span> {{menuItem.name}}
@@ -160,7 +160,7 @@
                                     </div>
                                     <div class="row cartConfirm">
                                         <div class="col-md-12">
-                                            <button class="text-center confirmCartButton" ui-sref="buildOrder.trackOrder">Confirm Order</button>
+                                            <button class="text-center confirmCartButton" ng-click= "confirmOrder();">Confirm Order</button>
                                         </div>
                                     </div>
                                 </div>

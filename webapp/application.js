@@ -1,4 +1,4 @@
-var creativei_app= angular.module("creativei_app",['ui.router','ui.bootstrap','ngAnimate','angucomplete-alt'])
+var creativei_app= angular.module("creativei_app",['ui.router','ngStorage','ui.bootstrap','ngAnimate', 'angucomplete-alt'])
 creativei_app.constant('_',
     window._
 );
@@ -71,6 +71,11 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
         url: '/feedback',
         templateUrl: 'modules/buildOrder/feedback/feedback.view.html',
         controller: 'feedbackController'
+    })
+    .state('logout', {
+        url: '/logout',
+        template: '<h1>Hello</h1>',
+        controller: 'MainController'
     });
     $urlRouterProvider.otherwise('/services');
 
@@ -78,45 +83,42 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
 });
 
 
-creativei_app.controller("MainController",function($scope, $rootScope, $state, $location){
+creativei_app.controller("MainController",function($scope, $rootScope, $state, $location, $localStorage){
+  $scope.$storage = $localStorage;
+  //sync running orders with rootScope
+  if($localStorage.runningOrders){
+    if($rootScope.runningOrders === undefined || $rootScope.runningOrders === {}){
+      $rootScope.runningOrders = $localStorage.runningOrders;
+    }
+  }else{
+    $localStorage.runningOrders = {};
+  }
+
   $rootScope.$on('$stateChangeStart',
   function(event, toState, toParams, fromState, fromParams, options){
-    if(toState.name === "login")
+    if(toState.name == "logout"){
+      delete $rootScope.isAuthenticated;
+      delete $scope.$storage.isAuthenticated;
+      delete $rootScope.runningOrders;
+      delete $scope.$storage.runningOrders;
+      $state.go('login');
       return;
+    }
+    if(toState.name === "login"){
+      if($scope.$storage.isAuthenticated){
+        $rootScope.isAuthenticated = $scope.$storage.isAuthenticated;
+        $location.path("/services");
+        return;
+      }
+    }
+
     if($rootScope.isAuthenticated)
       return;
+    if($scope.$storage.isAuthenticated){
+      $rootScope.isAuthenticated = $scope.$storage.isAuthenticated;
+      return;
+    }
     $location.path("/login");
   });
 
-  // var modalInstance = $uibModal.open({
-  //     templateUrl: 'myModalContent.html',
-  //     controller: 'ModalInstanceCtrl',
-  //     size: 100,
-  //     resolve: {
-  //       items: function () {
-  //         return $scope.items;
-  //       }
-  //     }
-  //   });
-  //   modalInstance.result.then(function (selectedItem) {
-  //     $scope.selected = selectedItem;
-  //   }, function () {
-  //     $log.info('Modal dismissed at: ' + new Date());
-  //   });
 });
-
-// creativei_app.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance, items) {
-//
-//   $scope.items = [1,2,3];
-//   $scope.selected = {
-//     item: $scope.items[0]
-//   };
-//
-//   $scope.ok = function () {
-//     $uibModalInstance.close($scope.selected.item);
-//   };
-//
-//   $scope.cancel = function () {
-//     $uibModalInstance.dismiss('cancel');
-//   };
-// });

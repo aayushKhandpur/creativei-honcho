@@ -1,3 +1,5 @@
+creativei_app.controller('MenuItemController', function ($scope, $rootScope, $filter, $uibModal,
+  $http, $state, $localStorage, CartService, _, categories, menuItems) {
 creativei_app.controller('MenuItemController', function ($scope, $rootScope, $uibModal,$stateParams,$http,$anchorScroll,$location, CartService, _, categories, menuItems) {
     console.log("Inside menu item controller.");
     $scope.tableId = "1";
@@ -6,15 +8,35 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
     $scope.cartSize = 0;
     console.log($scope.categories);
     $scope.menuItemList = [];
+    $scope.cartItems =[];
+    //$scope.subtotal = CartService.updateSubTotal($scope.cartItems);
     if(menuItems.menuItem !== undefined){
       $scope.menuItemList = menuItems.menuItem;
       angular.forEach($scope.categories, function(category, key){
         var menuItems = _.where($scope.menuItemList, {categoryID: category.Id});
         category.menuItems = menuItems;
       });
+      //sync cart and menu in case there is already an order
+      if($rootScope.runningOrders
+        && $rootScope.runningOrders[$scope.tableId]
+        && $rootScope.runningOrders[$scope.tableId].items){
+        syncMenuItemAndCartWithRoot();
+      }
     }
-    $scope.cartItems = [];
-    $scope.subtotal = 0;
+
+    $scope.$watch('query.name', function(newValue, oldValue) {
+      angular.forEach($scope.categories, function(category, key){
+        var filteredMenu = $filter('filter')(category.menuItems, $scope.query);
+        if(filteredMenu.length==0){
+          category.visible = false;
+        }else{
+          category.visible = true;
+        }
+      });
+    });
+
+
+
     //add or update menu item and sync order item in cart.
     $scope.addItem = function(menuItem,type){
       var qty = 1;
@@ -42,7 +64,7 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
         //   }
         // }
         $scope.cartItems = $rootScope.runningOrders[$scope.tableId].items;
-        updateSubTotal();
+        $scope.subtotal = CartService.updateSubTotal($scope.cartItems);
       }
     };
 
@@ -63,7 +85,6 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
       }
       // update rootScope
       CartService.updateItem(orderItem.menuItemId, orderItem.quantity, orderItem.rate, $scope.tableId);
-
       angular.forEach($scope.categories, function(category, key){
         angular.forEach(category.menuItems, function(menuItem, key){
           if(menuItem.id === orderItem.menuItemId){
@@ -71,19 +92,27 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
           }
         });
       });
-      updateSubTotal();
       $scope.cartItems = $rootScope.runningOrders[$scope.tableId].items;
-      //if(orderItem.quantity == 0) delete $scope.cartItems[orderItem.id];
+      $scope.subtotal = CartService.updateSubTotal($scope.cartItems);
+    //if(orderItem.quantity == 0) delete $scope.cartItems[orderItem.id];
     };
 
-    function updateSubTotal(){
-      var subtotal = 0;
-      for (var item in $scope.cartItems) {
-        subtotal += ($scope.cartItems[item].quantity * $scope.cartItems[item].rate);
+    function syncMenuItemAndCartWithRoot(){
+      var items = $rootScope.runningOrders[$scope.tableId].items;
+      for(index in items){
+        var orderItem = items[index];
+        angular.forEach($scope.categories, function(category, key){
+          angular.forEach(category.menuItems, function(menuItem, key){
+            if(menuItem.id === orderItem.menuItemId){
+              menuItem.quantity = orderItem.quantity;
+            }
+          });
+        });
       }
-      $scope.subtotal = subtotal;
+      $scope.cartItems = $rootScope.runningOrders[$scope.tableId].items;
+      $scope.subtotal = CartService.updateSubTotal($scope.cartItems);
     }
-    
+
     //scroll function for the category dropdown
     $scope.gotoAnchor = function(x) {
         var newHash = 'anchor' + x;
@@ -97,59 +126,16 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
             $anchorScroll();
         }
     };
-    
+
     $scope.$watch('selectedCategory',function(newValue,oldValue){
         console.log(newValue);
         $scope.gotoAnchor(newValue.Id);
-        
+
     });
-    
-/*
-    **************************************Unused code***************************************************
-*/
-    $scope.selectedMenuItem={};
 
-    //condition for the category aside collapse
-    $scope.isCollapsed = true;
-
-    //selection and customisation modal js
-    $scope.customiseDish = function (menuItem) {
-
-      if(menuItem == undefined || menuItem === "")
-        return "Error";
-
-        $scope.selectedMenuItem = menuItem;
-        var modalInstance = $uibModal.open({
-            //to set this true, you will need to add ngAnimate module
-            animation: false,
-            backdrop: 'static',                                         //disables dismissing modal by clicking on backdrop
-            templateUrl: 'modules/buildOrder/selectionAndCustomisation/customisationModal.view.html',
-            controller: 'CustomisationModalController',
-            size: 'md',
-            resolve: {
-              menuItem:function(){
-              var menuItem =$scope.selectedMenuItem;
-              return menuItem;
-            }}
-        });
-
-        modalInstance.result.then(function (data) {
-            console.log(data);
-            CartService.addItem();
-            // if(status){
-            //     console.log('You clicked on add to cart');              //log when the modal is dismissed with add to cart button
-            // }else{
-            //     console.log('You clicked on close button');             //log when the modal is dismissed with close button
-            // }
-        }, function () {
-            console.log('Modal dismissed at: ' + new Date());           //log when the modal is dismissed by clicking on the modal backdrop,set backdrop as true or false to enable
-        });
-
-        var categoryArr = ["Drinks","Lunch", "Dinner"];
-        $scope.categoryFunct = function(){
-          var html = "<h1>Hello</h1>";
-          return $sce.trustAsHtml(html);
-
-        }
-    };
+$scope.confirmOrder = function(){
+        //sync localStorage
+        $localStorage.runningOrders = $rootScope.runningOrders
+        $state.go('buildOrder.trackOrder');
+    }
 });
