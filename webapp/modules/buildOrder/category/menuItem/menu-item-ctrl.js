@@ -1,6 +1,5 @@
 creativei_app.controller('MenuItemController', function ($scope, $rootScope, $filter, $uibModal,
-  $http, $state, $localStorage, CartService, _, categories, menuItems) {
-creativei_app.controller('MenuItemController', function ($scope, $rootScope, $uibModal,$stateParams,$http,$anchorScroll,$location, CartService, _, categories, menuItems) {
+  $http, $state, $localStorage, $anchorScroll, $location, CartService, _, categories, menuItems) {
     console.log("Inside menu item controller.");
     $scope.tableId = "1";
     $scope.categories = categories;
