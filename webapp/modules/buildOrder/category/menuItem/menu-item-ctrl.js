@@ -85,7 +85,7 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
     }
     
     //scroll function for the category dropdown
-    $scope.gotoAnchor = function(x) {
+    /*$scope.gotoAnchor = function(x) {
         var newHash = 'anchor' + x;
         if ($location.hash() !== newHash) {
             // set the $location.hash to `newHash` and
@@ -96,11 +96,18 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $ui
             // since $location.hash hasn't changed
             $anchorScroll();
         }
-    };
+    };*/
+    
+    //scroll using angular scroll
+    var container = angular.element(document.getElementById('menuItemContainer'));
+    $scope.scrollToCategory = function(categoryId){
+        var category = angular.element(document.getElementById('anchor'+categoryId));
+        container.scrollTo(category, 0, 1000);
+    }
     
     $scope.$watch('selectedCategory',function(newValue,oldValue){
         console.log(newValue);
-        $scope.gotoAnchor(newValue.Id);
+        $scope.scrollToCategory(newValue.Id);
         
     });
     
