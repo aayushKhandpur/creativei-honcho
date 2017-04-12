@@ -352,6 +352,53 @@ blueColor{
 
 /*header CSS ends*/
 
+/*side menu css starts*/
+
+/*
+.sideNav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #1f1d20;
+    overflow-x: hidden;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sideNav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.sideNav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sideNav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    -webkit-transition: margin-left .5s;
+    transition: margin-left .5s;
+    padding: 16px;
+}
+*/
+
+/*side menu css ends*/
 
 /*Build Order State Header CSS Starts*/
 
@@ -365,6 +412,7 @@ blueColor{
 .menuTab {
     top: 3rem;
     height: 17px;
+    cursor: pointer;
     background-image: url(../images/menu_tabIcon.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -1174,3 +1222,36 @@ input.cartSearch {
   animation-duration: 1s;
 }
 /*state animation end*/
+
+/*thankyou screen css starts*/
+.thankyouScreenRow {
+    margin-top: 16em;
+}
+.thankyouIcon {
+    height: 9em;
+    opacity: 0.6;
+	background-image: url(../images/thankyou%20icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.greetingRow {
+	margin-top: 1em;
+}
+.greetingLine {
+    font-size: 2em;
+    color: #808080;
+    font-family: open sans;
+    font-weight: lighter;
+}
+.finishButton {
+    width: 100%;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+}
+.finishButtonRow {
+	margin-top: 3em;
+}
+/*thankyou screen css ends*/
+

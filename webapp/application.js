@@ -72,6 +72,11 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
         templateUrl: 'modules/buildOrder/feedback/feedback.view.html',
         controller: 'feedbackController'
     })
+    .state('buildOrder.thankyou', {
+        url: '/thankyou',
+        templateUrl: 'modules/buildOrder/thankyou/thankyou.view.html',
+        controller: 'thankyouController'
+    })
     .state('logout', {
         url: '/logout',
         template: '<h1>Hello</h1>',
