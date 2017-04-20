@@ -681,7 +681,7 @@ color: #f12f63;
 
 .orderCartSection {
     height: 35px;
-    line-height: 35px;
+/*    line-height: 35px;*/
 }
 
 .orderCartTitle{
@@ -1117,6 +1117,20 @@ input.cartSearch {
 
 
 /*angucomplete directive css starts*/
+#trackCartSearch{
+    width: 77%;
+}
+#trackCartSearch_value{
+    -webkit-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;
+    width: 32%;
+    float: right;
+}
+.trackCartSearchFull{
+    -webkit-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;
+    width: 100% !important;
+}
 .angucomplete-holder {
     position: relative;
 }
@@ -1134,7 +1148,7 @@ input.cartSearch {
     /*top: 32px;
     left: 0px;
     */
-    margin-top: -6px;
+    margin-top: 3rem;
     background-color: #ffffff;
 }
 
@@ -1167,12 +1181,15 @@ input.cartSearch {
 }
 
 .angucomplete-image {
+/*
     height: 34px;
     width: 34px;
     border-radius: 50%;
     border-color: #ececec;
     border-style: solid;
     border-width: 1px;
+*/
+    padding-bottom: 34px;
 }
 
 .angucomplete-image-default {
@@ -1190,6 +1207,7 @@ input.cartSearch {
 }
 
 .angucomplete-dropdown {
+    width: 100%;
     overflow-y: auto;
     max-height: 50vh;
 }

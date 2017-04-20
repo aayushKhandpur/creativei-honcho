@@ -22,7 +22,9 @@ creativei_app.controller('MenuItemController', function ($scope, $rootScope, $fi
         syncMenuItemAndCartWithRoot();
       }
     }
-
+    
+    $localStorage.menuItemList = $scope.menuItemList;
+    
     $scope.$watch('query.name', function(newValue, oldValue) {
       angular.forEach($scope.categories, function(category, key){
         var filteredMenu = $filter('filter')(category.menuItems, $scope.query);

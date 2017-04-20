@@ -10,17 +10,23 @@
                             <div class="row orderCartSection">
                                 <div class="col-md-12 col-sm-12 ">
 <!--                                    <div class="orderCartTitle">Your Order</div>-->
-                                    <div angucomplete-alt id="trackCartSearch"
+                                    <div class="btn btn-default backToMenu" ui-sref="buildOrder.menuItem">Back To Menu</div>
+                                    <div class="pull-right"
+                                         angucomplete-alt id="trackCartSearch"
                                          placeholder="Search menu"
                                          pause="100"
                                          selected-object="countrySelected"
-                                         local-data="countries"
+                                         local-data="menuItems"
                                          search-fields="name"
                                          title-field="name"
+                                         description-field="price"
+                                         image-field="isVeg"
                                          minlength="1"
                                          input-class="form-control form-control-small"
                                          match-class="highlight"
-                                         clear-selected="true">
+                                         clear-selected="true"
+                                         focus-in="focusIn()"
+                                         focus-out="focusOut()">
                                     </div>
                                 </div>
 <!--
