@@ -361,18 +361,18 @@ blueColor{
             z-index: 1;
             top: 0;
             left: 0;
-            background-color: #1f1d20;
+            background-color: #272233;
+            opacity: 0.9;
             overflow-x: hidden;
             -webkit-transition: 0.5s;
             transition: 0.5s;
             padding-top: 60px;
         }
-        
         .sidenav a {
             padding: 8px 8px 8px 32px;
             text-decoration: none;
             font-size: 18px;
-            color: #818181;
+            color: white;
             display: block;
             -webkit-transition: 0.3s;
             transition: 0.3s;
@@ -390,6 +390,10 @@ blueColor{
             font-size: 36px;
             margin-left: 50px;
         }
+
+.sideMenuOrderIcon, .sideMenuWaitingIcon {
+	width: 20px;
+}
         
         #main {
             -webkit-transition: margin-left .5s;
@@ -1243,7 +1247,7 @@ input.cartSearch {
 }
 .thankyouIcon {
     height: 9em;
-    opacity: 0.6;
+    opacity: 1;
 	background-image: url(../images/thankyou%20icon.svg);
     background-repeat: no-repeat;
     background-position: center;

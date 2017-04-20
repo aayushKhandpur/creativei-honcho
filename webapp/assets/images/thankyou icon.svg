@@ -3,8 +3,8 @@
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 369.3 370.7" style="enable-background:new 0 0 369.3 370.7;" xml:space="preserve">
 <style type="text/css">
-	.st0{opacity:0.4;}
-	.st1{opacity:0.4;fill:none;stroke:#000000;stroke-width:22;stroke-linecap:round;stroke-miterlimit:10;}
+	.st0{fill:#1BAB76;}
+	.st1{fill:none;stroke:#1BAB76;stroke-width:22;stroke-linecap:round;stroke-miterlimit:10;}
 </style>
 <image style="display:none;overflow:visible;" width="1024" height="1024" id="XMLID_1_" xlink:href="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEBLAEsAAD/7SQQUGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAoccAVoAAxsl
 RxwCAAACAAQcAngAaFNtaWxlIGljb24uIEhhcHB5IGZhY2UgY2hhdCBzeW1ib2wuIENpcmNsZSBh
@@ -2197,10 +2197,12 @@ BAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBBOSgbxQN5A3kDf8Cgb3
 gUDI8UDI8UDe8Cgb3ggbyBvIG8UEZKAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
 ICAgICAgICAgICAgICAgICAgICAgICD/2Q==" transform="matrix(0.712 0 0 0.712 -179.3277 -106.4985)">
 </image>
-<path id="XMLID_9_" class="st0" d="M184.7,0C82.7,0,0,83,0,185.3s82.7,185.3,184.7,185.3s184.7-83,184.7-185.3S286.7,0,184.7,0z
-	 M184.7,355.3c-93.6,0-169.4-76.1-169.4-170s75.8-170,169.4-170s169.4,76.1,169.4,170S278.2,355.3,184.7,355.3z"/>
-<ellipse id="XMLID_2_" class="st0" cx="132.5" cy="129.4" rx="26.5" ry="28.1"/>
-<path id="XMLID_3_" class="st0" d="M265,129.4c0,15.5-11.9,28.1-26.5,28.1c-14.7,0-27.3-12.6-27.3-28.1s12.6-28.1,27.3-28.1
-	C253.1,101.3,265,113.9,265,129.4z"/>
-<path id="XMLID_6_" class="st1" d="M105.9,224.6c0,0,17.5,52,83.6,52c55.8,0,74.5-51.7,74.5-51.7"/>
+<g id="XMLID_4_">
+	<path id="XMLID_9_" class="st0" d="M184.7,0C82.7,0,0,83,0,185.3s82.7,185.3,184.7,185.3s184.7-83,184.7-185.3S286.7,0,184.7,0z
+		 M184.7,355.3c-93.6,0-169.4-76.1-169.4-170s75.8-170,169.4-170s169.4,76.1,169.4,170S278.2,355.3,184.7,355.3z"/>
+	<path id="XMLID_6_" class="st1" d="M105.9,224.6c0,0,17.5,52,83.6,52c55.8,0,74.5-51.7,74.5-51.7"/>
+	<ellipse id="XMLID_2_" class="st0" cx="132.5" cy="129.4" rx="26.5" ry="28.1"/>
+	<path id="XMLID_3_" class="st0" d="M265,129.4c0,15.5-11.9,28.1-26.5,28.1c-14.7,0-27.3-12.6-27.3-28.1s12.6-28.1,27.3-28.1
+		C253.1,101.3,265,113.9,265,129.4z"/>
+</g>
 </svg>
