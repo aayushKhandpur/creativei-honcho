@@ -79,8 +79,8 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
     })
     .state('logout', {
         url: '/logout',
-        template: '<h1>Hello</h1>',
-        controller: 'MainController'
+        templateUrl: 'modules/logout/logout.view.html',
+        controller: 'logoutController'
     });
     $urlRouterProvider.otherwise('/services');
 
