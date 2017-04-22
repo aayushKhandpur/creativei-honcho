@@ -106,7 +106,6 @@ creativei_app.controller("MainController",function($scope, $rootScope, $state, $
       delete $scope.$storage.isAuthenticated;
       delete $rootScope.runningOrders;
       delete $scope.$storage.runningOrders;
-      $state.go('login');
       return;
     }
     if(toState.name === "login"){
