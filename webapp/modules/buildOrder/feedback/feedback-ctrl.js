@@ -1,4 +1,4 @@
-creativei_app.controller('feedbackController', function ($scope, $http) {
+creativei_app.controller('feedbackController', function ($scope, $http, $state) {
     console.log("Inside feedback controller.");
     //dummy json for feedback criteria
     $http.get("../../../commons/JSONs/feedback.json")
@@ -16,5 +16,6 @@ creativei_app.controller('feedbackController', function ($scope, $http) {
     $scope.submitFeedback = function(){
         console.log($scope.feedbackQuestions);
         console.log($scope.feedbackRatings);
+        $state.go('services');
     };
 });
