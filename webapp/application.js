@@ -72,10 +72,15 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
         templateUrl: 'modules/buildOrder/feedback/feedback.view.html',
         controller: 'feedbackController'
     })
+    .state('buildOrder.thankyou', {
+        url: '/thankyou',
+        templateUrl: 'modules/buildOrder/thankyou/thankyou.view.html',
+        controller: 'thankyouController'
+    })
     .state('logout', {
         url: '/logout',
-        template: '<h1>Hello</h1>',
-        controller: 'MainController'
+        templateUrl: 'modules/logout/logout.view.html',
+        controller: 'logoutController'
     });
     $urlRouterProvider.otherwise('/services');
 
@@ -101,7 +106,6 @@ creativei_app.controller("MainController",function($scope, $rootScope, $state, $
       delete $scope.$storage.isAuthenticated;
       delete $rootScope.runningOrders;
       delete $scope.$storage.runningOrders;
-      $state.go('login');
       return;
     }
     if(toState.name === "login"){
