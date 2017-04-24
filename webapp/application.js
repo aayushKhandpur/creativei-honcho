@@ -1,4 +1,4 @@
-var creativei_app= angular.module("creativei_app",['ui.router','ngStorage','ui.bootstrap','ngAnimate'])
+var creativei_app= angular.module("creativei_app",['ui.router','ngStorage','ui.bootstrap','ngAnimate', 'angucomplete-alt'])
 creativei_app.constant('_',
     window._
 );
@@ -20,7 +20,18 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
     .state('order.current', {
       url: '/current',
       templateUrl: 'modules/order/current/currentOrders.view.html',
-      controller: 'CurrentOrdersController'
+      controller: 'CurrentOrdersController',
+      resolve:{
+        RestaurantTables :function($http){
+          return $http.get('commons/JSONs/tableStatus.json')
+                .then(function(response){
+                 return response.data;
+            },function(e){
+                console.log(e);
+                return [];
+          });
+        }
+      }
     })
     .state('login', {
       url: '/login',
@@ -72,10 +83,15 @@ creativei_app.config(function($stateProvider,$urlRouterProvider) {
         templateUrl: 'modules/buildOrder/feedback/feedback.view.html',
         controller: 'feedbackController'
     })
+    .state('buildOrder.thankyou', {
+        url: '/thankyou',
+        templateUrl: 'modules/buildOrder/thankyou/thankyou.view.html',
+        controller: 'thankyouController'
+    })
     .state('logout', {
         url: '/logout',
-        template: '<h1>Hello</h1>',
-        controller: 'MainController'
+        templateUrl: 'modules/logout/logout.view.html',
+        controller: 'logoutController'
     });
     $urlRouterProvider.otherwise('/services');
 
@@ -101,7 +117,6 @@ creativei_app.controller("MainController",function($scope, $rootScope, $state, $
       delete $scope.$storage.isAuthenticated;
       delete $rootScope.runningOrders;
       delete $scope.$storage.runningOrders;
-      $state.go('login');
       return;
     }
     if(toState.name === "login"){

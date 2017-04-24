@@ -1415,7 +1415,7 @@
           },
         {
             "id": 187,
-            "name": "Vanilla",
+            "name": "Vanilla Shake",
             "price": 80,
             "isComboMeal": false,
             "categoryID": "15",
@@ -1424,7 +1424,7 @@
           },
         {
             "id": 188,
-            "name": "Strawberry",
+            "name": "Strawberry Shake",
             "price": 85,
             "isComboMeal": false,
             "categoryID": "15",
@@ -1433,7 +1433,7 @@
           },
         {
             "id": 189,
-            "name": "Chocolate",
+            "name": "Chocolate Shake",
             "price": 85,
             "isComboMeal": false,
             "categoryID": "15",
@@ -1442,7 +1442,7 @@
           },
         {
             "id": 190,
-            "name": "Butter Scotch",
+            "name": "Butter Scotch Shake",
             "price": 85,
             "isComboMeal": false,
             "categoryID": "15",

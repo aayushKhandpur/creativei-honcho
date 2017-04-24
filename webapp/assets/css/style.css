@@ -2,6 +2,25 @@ body {
     background-color: whitesmoke;
 }
 
+/*dish type indicator panel starts*/
+
+.vegDishIcon{
+    width: 12px;
+    background-image: url(../images/veg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.nonVegDishIcon{
+    width: 12px;
+    background-image: url(../images/non-veg.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*dish type indicator panel ends*/
+
+
 /*color css panel starts here*/
 
 .greenColor{
@@ -12,11 +31,11 @@ body {
     background: #cb202d;
 }
 
-greyColor{
+.greyColor{
     background: gainsboro;
 }
 
-blueColor{
+.blueColor{
     background: #05132c;
 }
 
@@ -182,6 +201,7 @@ blueColor{
 
 /*category screen css starts*/
 
+/*
 .categoryContainer {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
@@ -194,6 +214,7 @@ blueColor{
 .unavailableCategoryCaption {
     color: #a2a2a2;
 }
+*/
 
 
 /*category screen css ends*/
@@ -233,53 +254,70 @@ blueColor{
 
 /*category header starts*/
 
+/*
 .wrapper {
     width: 90%;
     height: 48px;
     display: inline-block;
     position: relative;
-    /*    background: lightgrey;*/
+        background: lightgrey;
     overflow: hidden;
 }
+*/
 
+/*
 .categoryNav {
     width: 1470px;
     height: auto;
 }
+*/
 
+/*
 .categoryNav a {
     line-height: 32px;
-    /*    background: green;*/
+        background: green;
     margin: .5em;
     display: inline-block;
 }
+*/
 
+/*
 .categoryNav #category_1: hover {
     -webkit-transform: translateX(-20px);
     transform: translateX(-20px);
 }
+*/
 
+/*
 .arrowRight {
     position: absolute;
     right: 0;
     margin-right: .2em;
     top: 10%;
 }
+*/
 
+/*
 .arrowLeft {
     position: absolute;
     left: 0;
     margin-left: .2em;
     top: 10%;
 }
+*/
 
 
 /*category header ends*/
 
 .searchCategoryContainer {
+    height: 4.1rem;
     margin-top: 1rem;
     position: fixed;
     z-index: 9999;
+}
+
+.searchCategoryWrapper{
+    height: 100%;
 }
 
 .categoryContainer{
@@ -293,6 +331,7 @@ blueColor{
 }
 
 .searchBox {
+ height: 100%;
  -webkit-appearance: searchfield !important;
 }
 
@@ -333,6 +372,73 @@ blueColor{
 
 /*header CSS ends*/
 
+/*side menu css starts*/
+
+.sidenav {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #393740;
+            opacity: 0.9;
+            overflow-x: hidden;
+            -webkit-transition: 0.5s;
+            transition: 0.5s;
+            padding-top: 60px;
+        }
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+            display: block;
+            -webkit-transition: 0.3s;
+            transition: 0.3s;
+        }
+        
+        .sidenav a:hover,
+        .offcanvas a:focus {
+            color: #f1f1f1;
+        }
+        
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+        .sideMenuOrderIcon {
+            width: 24px;
+        }
+        .sideMenuWaitingIcon {
+            width: 20px;
+        }
+        
+        #main {
+            -webkit-transition: margin-left .5s;
+            transition: margin-left .5s;
+            padding: 16px;
+        }
+        
+        @media screen and (max-height: 450px) {
+            .sidenav {
+                padding-top: 15px;
+            }
+            .sidenav a {
+                font-size: 18px;
+            }
+        }
+.horizontalLine {
+    border-top: 1px solid #424242;
+}
+
+.logOutClass {
+	cursor: pointer;
+}
+/*side menu css ends*/
 
 /*Build Order State Header CSS Starts*/
 
@@ -346,6 +452,7 @@ blueColor{
 .menuTab {
     top: 3rem;
     height: 17px;
+    cursor: pointer;
     background-image: url(../images/menu_tabIcon.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -661,7 +768,7 @@ color: #f12f63;
 
 .orderCartSection {
     height: 35px;
-    line-height: 35px;
+/*    line-height: 35px;*/
 }
 
 .orderCartTitle{
@@ -978,9 +1085,6 @@ input.cartSearch {
 .feedbackContent {
 	margin-top: 14rem;
 }
-.feedQues {
-    margin-top: 3rem;
-}
 
 .feedback {
     font-weight: lighter;
@@ -994,80 +1098,21 @@ input.cartSearch {
     font-weight: lighter;
 }
 
-.starRating {
-    height: 35px;
+.rating{
+    font-size: 2rem;
+}
+.rated{
+    color: #1dab76;
 }
 
-.questionWrapper {
+.feedbackQuestionWrapper{
     background-color: white;
     box-shadow: 2px 2px 10px 0px rgba(0, 0, 0, 0.2);
+    margin-top: 2rem;
+    padding: 1.5rem;
 }
 
-
-/****** Style Star Rating Widget starts *****/
-
-.rating {
-    border: none;
-    float: left;
-}
-
-.rating > input {
-    display: none;
-}
-
-.rating > label:before {
-    margin: 5px;
-    font-size: 1.25em;
-    font-family: FontAwesome;
-    display: inline-block;
-    content: "\f005";
-}
-
-.rating > label {
-    color: #ddd;
-    float: right;
-}
-
-
-/***** CSS Magic to Highlight Stars on Hover *****/
-
-.rating > input:checked ~ label,
-
-/* show gold star when clicked */
-
-.rating:not(:checked) > label:hover,
-
-/* hover current star */
-
-.rating:not(:checked) > label:hover ~ label {
-    color: #1dab76;
-}
-
-
-/* hover previous stars in list */
-
-.rating > input:checked + label:hover,
-
-/* hover current star when changing rating */
-
-.rating > input:checked ~ label:hover,
-.rating > label:hover ~ input:checked ~ label,
-
-/* lighten current selection */
-
-.rating > input:checked ~ label:hover ~ label {
-    color: #1dab76;
-}
-
-
-/****** Style Star Rating Widget ends *****/
-
-.questionNumOne,
-.questionNumTwo,
-.questionNumThree,
-.questionNumFour,
-.additionalComments,
-.submitButton {
+.additionalComments,.submitButton {
     margin-top: 2rem;
 }
 
@@ -1155,3 +1200,167 @@ input.cartSearch {
   animation-duration: 1s;
 }
 /*state animation end*/
+
+/*thankyou screen css starts*/
+.thankyouScreenRow {
+    margin-top: 16em;
+}
+.thankyouIcon {
+    height: 9em;
+    opacity: 1;
+	background-image: url(../images/thankyou%20icon.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.greetingRow {
+	margin-top: 1em;
+}
+.greetingLine {
+    font-size: 2em;
+    color: #808080;
+    font-family: open sans;
+    font-weight: lighter;
+}
+.completeOrderButton {
+    width: 100%;
+    height: 2.5em;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    color: white;
+}
+.completeOrderButtonRow {
+	margin-top: 3em;
+}
+/*thankyou screen css ends*/
+/*log out screen css starts here*/
+
+.bistroLogoLogoutScreen {
+    height: 60px;
+    background-image: url(../../assets/images/bistro-logo158.png);
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.thankyouRowLogoutScreen {
+    margin-top: 5em;
+}
+
+.thankyouLogoutScreenPara {
+    font-family: open sans;
+    font-size: xx-large;
+}
+.loggedOutParaLogoutScreen {
+    font-family: open sans;
+    color: #9e9e9e;
+}
+.loginAgainButtonRow {
+	margin-top: 2em;
+}
+.loginAgainButton {
+    width: 100%;
+    height: 2.5em;
+    border-radius: 6px;
+    outline: none;
+    border: none;
+    color: white;
+}
+/*log out screen ends here*/
+/*state animation end*/
+
+
+/*angucomplete directive css starts*/
+#trackCartSearch{
+    width: 77%;
+}
+#trackCartSearch_value{
+    -webkit-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;
+    width: 32%;
+    float: right;
+}
+.trackCartSearchFull{
+    -webkit-transition: width .5s ease-in-out;
+    transition: width .5s ease-in-out;
+    width: 100% !important;
+}
+.angucomplete-holder {
+    position: relative;
+}
+
+.angucomplete-dropdown {
+    border-color: #ececec;
+    border-width: 1px;
+    border-style: solid;
+    border-radius: 2px;
+    width: 250px;
+    padding: 6px;
+    cursor: pointer;
+    z-index: 9999;
+    position: absolute;
+    /*top: 32px;
+    left: 0px;
+    */
+    margin-top: 3rem;
+    background-color: #ffffff;
+}
+
+.angucomplete-searching {
+    color: #acacac;
+    font-size: 14px;
+}
+
+.angucomplete-description {
+    font-size: 14px;
+}
+
+.angucomplete-row {
+    padding: 5px;
+    color: #000000;
+    margin-bottom: 4px;
+    clear: both;
+}
+
+.angucomplete-selected-row {
+    background-color: lightblue;
+    color: #ffffff;
+}
+
+.angucomplete-image-holder {
+    padding-top: 2px;
+    float: left;
+    margin-right: 10px;
+    margin-left: 5px;
+}
+
+.angucomplete-image {
+/*
+    height: 34px;
+    width: 34px;
+    border-radius: 50%;
+    border-color: #ececec;
+    border-style: solid;
+    border-width: 1px;
+*/
+    padding-bottom: 34px;
+}
+
+.angucomplete-image-default {
+    /* Add your own default image here
+     background-image: url('/assets/default.png');
+    */
+    background-position: center;
+    background-size: contain;
+    height: 34px;
+    width: 34px;
+}
+
+.highlight {
+	color: #ff0000;
+}
+
+.angucomplete-dropdown {
+    width: 100%;
+    overflow-y: auto;
+    max-height: 50vh;
+}
+/*angucomplete directive css ends*/

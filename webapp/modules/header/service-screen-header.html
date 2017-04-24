@@ -1,8 +1,22 @@
 <div class="headerContainer">
     <div class="row header">
-        <div class="col-md-1 col-sm-1 col-xs-1 menuTab ">
-            <!--                <img class="img-responsive" src="images/menu_tabIcon.png" alt="menuTab">-->
+        <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                <a href="#"><span><img class="sideMenuOrderIcon" src="../../assets/images/sideMenuOrderIcon.png"></span> &nbsp;Order</a>
+                <hr class="horizontalLine">
+                <a href="#"><span><img class="sideMenuWaitingIcon" src="../../assets/images/sideMenuWaitingIcon.png"></span>&nbsp; Waiting</a>
+                <hr class="horizontalLine">
+                <a class="logOutClass" ui-sref="logout">Log Out</a>
+
         </div>
+
+        <a style="cursor:pointer" onclick="openNav()" id="main">
+            <div class="col-md-1 col-sm-1 col-xs-1 menuTab ">
+                <!--                    <span class="glyphicon glyphicon-menu-hamburger menuIcon" aria-hidden="true"></span>-->
+
+
+            </div>
+        </a>
         <div class="col-md-4 col-xs-4 col-sm-4"></div>
         <div class="col-md-2  col-sm-2  col-xs-2 lazyLogo">
             <!--                <img class="img-responsive" src="images/logo_lazy-_210.png" alt="lazymojo">-->
